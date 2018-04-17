@@ -1,0 +1,11 @@
+uuid: 51948582-825c-467e-8c81-c53ffe7fefa8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.adrien_content
+id: node.adrien_content
+target_entity_type_id: node
+target_bundle: adrien_content
+default_langcode: site_default
+language_alterable: false

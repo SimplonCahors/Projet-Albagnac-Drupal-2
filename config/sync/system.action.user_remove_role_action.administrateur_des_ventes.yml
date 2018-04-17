@@ -1,0 +1,14 @@
+uuid: e3c967eb-bc3e-44d6-8b41-9879de5b66b2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.administrateur_des_ventes
+  module:
+    - user
+id: user_remove_role_action.administrateur_des_ventes
+label: 'Enlever le rôle Administrateur des ventes des utilisateurs sélectionnés'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: administrateur_des_ventes

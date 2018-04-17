@@ -1,0 +1,14 @@
+uuid: 924bfb33-cca3-4afa-9cef-a186831ce12a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.administrateur_des_ventes
+  module:
+    - user
+id: user_add_role_action.administrateur_des_ventes
+label: 'Ajouter le rôle Administrateur des ventes aux utilisateurs sélectionnés'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: administrateur_des_ventes
