@@ -1,0 +1,22 @@
+uuid: 7c31b3d8-21fe-47e1-9400-89181630a101
+langcode: fr
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - seven
+_core:
+  default_config_hash: IItlF4SKHgxduIysVQdvirDJ_v3HGuAviOkidAOJYRE
+id: seven_login
+theme: seven
+region: content
+weight: 10
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'Connexion utilisateur'
+  provider: user
+  label_display: visible
+visibility: {  }
