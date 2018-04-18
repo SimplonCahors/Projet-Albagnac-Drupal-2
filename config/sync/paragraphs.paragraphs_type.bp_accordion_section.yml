@@ -1,0 +1,11 @@
+uuid: f25da261-d17f-4417-9e3a-670a6eb1f6e5
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: wHtg6KfNIFZjjWqrg2XnUkHTR-9owISmWOsc27tT-zg
+id: bp_accordion_section
+label: 'Accordion Section'
+icon_uuid: null
+description: null
+behavior_plugins: {  }

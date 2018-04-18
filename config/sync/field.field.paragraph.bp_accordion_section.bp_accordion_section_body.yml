@@ -1,0 +1,79 @@
+uuid: 14a30645-7b78-49db-871c-6d92261e260b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.bp_accordion_section_body
+    - paragraphs.paragraphs_type.bp_accordion
+    - paragraphs.paragraphs_type.bp_accordion_section
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: 3alLeNHMVDXMxWShInYNi9TZe1FF61W8dIWYQT6a2I0
+id: paragraph.bp_accordion_section.bp_accordion_section_body
+field_name: bp_accordion_section_body
+entity_type: paragraph
+bundle: bp_accordion_section
+label: 'Accordion Section Body'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      bp_accordion: bp_accordion
+      bp_accordion_section: bp_accordion_section
+    target_bundles_drag_drop:
+      bp_simple:
+        weight: -31
+        enabled: false
+      bp_image:
+        weight: -30
+        enabled: false
+      bp_blank:
+        weight: -29
+        enabled: false
+      bp_columns:
+        weight: -28
+        enabled: false
+      bp_columns_three_uneven:
+        weight: -27
+        enabled: false
+      bp_columns_two_uneven:
+        weight: -26
+        enabled: false
+      bp_block:
+        weight: -25
+        enabled: false
+      bp_modal:
+        weight: -24
+        enabled: false
+      bp_view:
+        weight: -23
+        enabled: false
+      bp_accordion:
+        enabled: true
+        weight: -22
+      bp_accordion_section:
+        enabled: true
+        weight: -21
+      bp_carousel:
+        weight: -20
+        enabled: false
+      bp_tabs:
+        weight: -19
+        enabled: false
+      bp_tab_section:
+        weight: -18
+        enabled: false
+      bp_column_wrapper:
+        weight: 25
+        enabled: false
+      info_admin_demandeur:
+        enabled: true
+        weight: 32
+field_type: entity_reference_revisions

@@ -3,24 +3,12 @@ langcode: fr
 status: true
 dependencies:
   config:
-    - field.field.node.dso.body
     - node.type.dso
-  module:
-    - text
 id: node.dso.default
 targetEntityType: node
 bundle: dso
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 2
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-    third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 1

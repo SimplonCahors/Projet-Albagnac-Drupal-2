@@ -3,23 +3,14 @@ langcode: fr
 status: true
 dependencies:
   config:
-    - field.field.node.dso.body
     - node.type.dso
   module:
-    - text
     - user
 id: node.dso.default
 targetEntityType: node
 bundle: dso
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 101
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   links:
     weight: 100
     region: content
