@@ -1,0 +1,11 @@
+uuid: 69e26c28-8751-43e3-8598-e55e0ee676e1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.dso
+id: node.dso
+target_entity_type_id: node
+target_bundle: dso
+default_langcode: site_default
+language_alterable: false
