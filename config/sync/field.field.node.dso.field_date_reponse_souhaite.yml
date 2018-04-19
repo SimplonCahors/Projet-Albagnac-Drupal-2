@@ -1,0 +1,21 @@
+uuid: 2df756b8-16de-4066-b8a2-8d4c2037fd93
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_reponse_souhaite
+    - node.type.dso
+  module:
+    - datetime
+id: node.dso.field_date_reponse_souhaite
+field_name: field_date_reponse_souhaite
+entity_type: node
+bundle: dso
+label: 'Date de la réponse souhaitée'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

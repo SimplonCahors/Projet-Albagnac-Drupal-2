@@ -1,0 +1,93 @@
+uuid: 2a039f42-06f8-424b-a14d-70f8211fe99a
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_pays
+field_name: field_pays
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Allemagne
+      label: Allemagne
+    -
+      value: Brésil
+      label: Brésil
+    -
+      value: Chine
+      label: Chine
+    -
+      value: Danemark
+      label: Danemark
+    -
+      value: Espagne
+      label: Espagne
+    -
+      value: France
+      label: France
+    -
+      value: Guinée
+      label: Guinée
+    -
+      value: Hongrie
+      label: Hongrie
+    -
+      value: Italie
+      label: Italie
+    -
+      value: Jamaïque
+      label: Jamaïque
+    -
+      value: Kenya
+      label: Kenya
+    -
+      value: Luxembourg
+      label: Luxembourg
+    -
+      value: Maroc
+      label: Maroc
+    -
+      value: Nouvelle-Zélande
+      label: Nouvelle-Zélande
+    -
+      value: Ouzbekistan
+      label: Ouzbekistan
+    -
+      value: Portugal
+      label: Portugal
+    -
+      value: Quatar
+      label: Quatar
+    -
+      value: Russie
+      label: Russie
+    -
+      value: Suède
+      label: Suède
+    -
+      value: Tunisie
+      label: Tunisie
+    -
+      value: Ukraine
+      label: Ukraine
+    -
+      value: Vénézuela
+      label: Vénézuela
+    -
+      value: Yemen
+      label: Yemen
+    -
+      value: Zimbabwe
+      label: Zimbabwe
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
