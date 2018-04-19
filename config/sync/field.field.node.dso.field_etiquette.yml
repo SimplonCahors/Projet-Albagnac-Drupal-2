@@ -1,0 +1,19 @@
+uuid: a553aa5a-c6c2-4ee8-a4dc-6e2c9f1599b7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_etiquette
+    - node.type.dso
+id: node.dso.field_etiquette
+field_name: field_etiquette
+entity_type: node
+bundle: dso
+label: etiquette
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

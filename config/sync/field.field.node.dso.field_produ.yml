@@ -1,0 +1,21 @@
+uuid: adc590af-8e66-4bd5-8c0c-78abbb27f4d6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_produ
+    - node.type.dso
+  module:
+    - options
+id: node.dso.field_produ
+field_name: field_produ
+entity_type: node
+bundle: dso
+label: 'materiau produit'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

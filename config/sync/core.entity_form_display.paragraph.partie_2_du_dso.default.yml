@@ -1,0 +1,33 @@
+uuid: 073ad696-149c-42e5-9575-4fd61fffcb5b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.partie_2_du_dso.field_etiquette_
+    - field.field.paragraph.partie_2_du_dso.field_produit
+    - paragraphs.paragraphs_type.partie_2_du_dso
+id: paragraph.partie_2_du_dso.default
+targetEntityType: paragraph
+bundle: partie_2_du_dso
+mode: default
+content:
+  field_etiquette_:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_produit:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

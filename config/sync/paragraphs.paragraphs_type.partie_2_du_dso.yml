@@ -1,0 +1,9 @@
+uuid: 1741248f-2b5d-42da-8e89-1a3d97756faa
+langcode: fr
+status: true
+dependencies: {  }
+id: partie_2_du_dso
+label: 'partie 2 du DSO'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

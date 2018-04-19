@@ -11,3 +11,6 @@ permissions:
   - 'access user profiles'
   - 'administer comment types'
   - 'administer users'
+  - 'delete any dso content'
+  - 'delete dso revisions'
+  - 'edit any dso content'

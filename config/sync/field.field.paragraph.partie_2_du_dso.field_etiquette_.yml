@@ -1,0 +1,19 @@
+uuid: 679304cc-5c43-4bad-8a03-94d71e0f23e9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_etiquette_
+    - paragraphs.paragraphs_type.partie_2_du_dso
+id: paragraph.partie_2_du_dso.field_etiquette_
+field_name: field_etiquette_
+entity_type: paragraph
+bundle: partie_2_du_dso
+label: 'etiquette :'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
