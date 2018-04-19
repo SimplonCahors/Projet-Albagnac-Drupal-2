@@ -29,6 +29,168 @@ dependencies:
     - datetime
     - paragraphs
     - telephone
+third_party_settings:
+  field_group:
+    group_onglet1:
+      children:
+        - group_onglet_b_1
+        - group_informations_commerciales
+        - group_emballages_etiquettes
+        - group_environnement_machine
+        - group_materiels_imposes_impressi
+        - group_remarques_contraintes_even
+      parent_name: group_onglets_dso
+      weight: 4
+      format_type: tab
+      format_settings:
+        label: 'Demande de devis'
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Demande de devis'
+    group_onglet2:
+      children: {  }
+      parent_name: group_onglets_dso
+      weight: 5
+      format_type: tab
+      format_settings:
+        label: Emballage
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Emballage
+    group_onglet_b_1:
+      children:
+        - field_text_test2
+      parent_name: group_onglet1
+      weight: 22
+      format_type: tab
+      format_settings:
+        label: 'Informations administratives du demandeur'
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Informations administratives du demandeur'
+    group_informations_dso:
+      children:
+        - field_text_test1
+      parent_name: group_onglets_dso
+      weight: 3
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: 'informations DSO'
+    group_informations_commerciales:
+      children: {  }
+      parent_name: group_onglet1
+      weight: 23
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Informations commerciales'
+    group_emballages_etiquettes:
+      children: {  }
+      parent_name: group_onglet1
+      weight: 24
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Emballages, Etiquettes'
+    group_environnement_machine:
+      children:
+        - field_text_test3_req
+      parent_name: group_onglet1
+      weight: 25
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Environnement machine'
+    group_materiels_imposes_impressi:
+      children: {  }
+      parent_name: group_onglet1
+      weight: 26
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Materiels imposés, Impression'
+    group_remarques_contraintes_even:
+      children: {  }
+      parent_name: group_onglet1
+      weight: 27
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Remarques, contraintes éventuelles'
+    group_etiquette:
+      children:
+        - field_text_test4_req
+      parent_name: group_onglets_dso
+      weight: 6
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Etiquette
+    group_combinaison:
+      children: {  }
+      parent_name: group_onglets_dso
+      weight: 7
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Combinaison
+    group_onglets_dso:
+      children:
+        - group_informations_dso
+        - group_onglet1
+        - group_onglet2
+        - group_etiquette
+        - group_combinaison
+      parent_name: ''
+      weight: 2
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: 'onglets DSO'
 id: node.dso.default
 targetEntityType: node
 bundle: dso
