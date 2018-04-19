@@ -28,6 +28,12 @@ dependencies:
     - datetime
     - entity_reference_revisions
     - options
+    - field.field.node.dso.field_text_test1
+    - field.field.node.dso.field_text_test2
+    - field.field.node.dso.field_text_test3_req
+    - field.field.node.dso.field_text_test4_req
+    - node.type.dso
+  module:
     - user
 id: node.dso.default
 targetEntityType: node
@@ -36,6 +42,8 @@ mode: default
 content:
   field_adresse_postale:
     weight: 113
+  field_text_test1:
+    weight: 1
     label: above
     settings:
       link_to_entity: false
@@ -136,12 +144,15 @@ content:
     region: content
   field_nom_de_client:
     weight: 110
+  field_text_test2:
+    weight: 2
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
+<<<<<<< HEAD
   field_num_sieret:
     weight: 121
     label: above
@@ -181,20 +192,31 @@ content:
     region: content
   field_telephone:
     weight: 114
+=======
+  field_text_test3_req:
+    weight: 3
+>>>>>>> 446cc037cc825e3147ce8c49142ab38b33e4bc47
     label: above
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    type: basic_string
+    type: string
     region: content
+<<<<<<< HEAD
   field_type_client:
     weight: 120
+=======
+  field_text_test4_req:
+    weight: 4
+>>>>>>> 446cc037cc825e3147ce8c49142ab38b33e4bc47
     label: above
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    type: list_default
+    type: string
     region: content
   links:
-    weight: 100
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }

@@ -3,6 +3,7 @@ langcode: fr
 status: true
 dependencies:
   config:
+<<<<<<< HEAD
     - field.field.node.dso.field_adresse_postale
     - field.field.node.dso.field_categorie
     - field.field.node.dso.field_choix
@@ -23,6 +24,12 @@ dependencies:
     - field.field.node.dso.field_sous_secteur
     - field.field.node.dso.field_telephone
     - field.field.node.dso.field_type_client
+=======
+    - field.field.node.dso.field_text_test1
+    - field.field.node.dso.field_text_test2
+    - field.field.node.dso.field_text_test3_req
+    - field.field.node.dso.field_text_test4_req
+>>>>>>> 446cc037cc825e3147ce8c49142ab38b33e4bc47
     - node.type.dso
   module:
     - datetime
@@ -31,6 +38,7 @@ dependencies:
     - telephone
 third_party_settings:
   field_group:
+<<<<<<< HEAD
     group_demande_devis:
       children:
         - field_nom_commercial
@@ -42,6 +50,59 @@ third_party_settings:
         - group_info_administrative
       parent_name: ''
       weight: 2
+=======
+    group_onglet1:
+      children:
+        - group_onglet_b_1
+        - group_informations_commerciales
+        - group_emballages_etiquettes
+        - group_environnement_machine
+        - group_materiels_imposes_impressi
+        - group_remarques_contraintes_even
+      parent_name: group_onglets_dso
+      weight: 4
+      format_type: tab
+      format_settings:
+        label: 'Demande de devis'
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Demande de devis'
+    group_onglet2:
+      children: {  }
+      parent_name: group_onglets_dso
+      weight: 5
+      format_type: tab
+      format_settings:
+        label: Emballage
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Emballage
+    group_onglet_b_1:
+      children:
+        - field_text_test2
+      parent_name: group_onglet1
+      weight: 22
+      format_type: tab
+      format_settings:
+        label: 'Informations administratives du demandeur'
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Informations administratives du demandeur'
+    group_informations_dso:
+      children:
+        - field_text_test1
+      parent_name: group_onglets_dso
+      weight: 3
+>>>>>>> 446cc037cc825e3147ce8c49142ab38b33e4bc47
       format_type: tab
       format_settings:
         id: ''
@@ -49,6 +110,7 @@ third_party_settings:
         formatter: open
         description: ''
         required_fields: true
+<<<<<<< HEAD
       label: 'Demande de devis'
     group_info_administrative:
       children:
@@ -106,6 +168,12 @@ third_party_settings:
         - field_contact_technique
       parent_name: group_info_administrative
       weight: 19
+=======
+      label: 'informations DSO'
+    group_informations_commerciales:
+      children: {  }
+      parent_name: group_onglet1
+      weight: 23
       format_type: tab
       format_settings:
         id: ''
@@ -113,6 +181,33 @@ third_party_settings:
         formatter: closed
         description: ''
         required_fields: true
+      label: 'Informations commerciales'
+    group_emballages_etiquettes:
+      children: {  }
+      parent_name: group_onglet1
+      weight: 24
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Emballages, Etiquettes'
+    group_environnement_machine:
+      children:
+        - field_text_test3_req
+      parent_name: group_onglet1
+      weight: 25
+>>>>>>> 446cc037cc825e3147ce8c49142ab38b33e4bc47
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+<<<<<<< HEAD
       label: 'Contact technique'
     group_etat_des_lieux:
       children:
@@ -120,6 +215,13 @@ third_party_settings:
         - group_besoin
       parent_name: group_info_commerciale
       weight: 20
+=======
+      label: 'Environnement machine'
+    group_materiels_imposes_impressi:
+      children: {  }
+      parent_name: group_onglet1
+      weight: 26
+>>>>>>> 446cc037cc825e3147ce8c49142ab38b33e4bc47
       format_type: tab
       format_settings:
         id: ''
@@ -127,11 +229,19 @@ third_party_settings:
         formatter: closed
         description: ''
         required_fields: true
+<<<<<<< HEAD
       label: 'État des lieux'
     group_perspectives_commerciales:
       children: {  }
       parent_name: group_info_commerciale
       weight: 21
+=======
+      label: 'Materiels imposés, Impression'
+    group_remarques_contraintes_even:
+      children: {  }
+      parent_name: group_onglet1
+      weight: 27
+>>>>>>> 446cc037cc825e3147ce8c49142ab38b33e4bc47
       format_type: tab
       format_settings:
         id: ''
@@ -139,6 +249,7 @@ third_party_settings:
         formatter: closed
         description: ''
         required_fields: true
+<<<<<<< HEAD
       label: 'Perspectives commerciales'
     group_besoin:
       children:
@@ -153,6 +264,49 @@ third_party_settings:
         description: ''
         required_fields: true
       label: Besoin
+=======
+      label: 'Remarques, contraintes éventuelles'
+    group_etiquette:
+      children:
+        - field_text_test4_req
+      parent_name: group_onglets_dso
+      weight: 6
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Etiquette
+    group_combinaison:
+      children: {  }
+      parent_name: group_onglets_dso
+      weight: 7
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Combinaison
+    group_onglets_dso:
+      children:
+        - group_informations_dso
+        - group_onglet1
+        - group_onglet2
+        - group_etiquette
+        - group_combinaison
+      parent_name: ''
+      weight: 2
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: 'onglets DSO'
+>>>>>>> 446cc037cc825e3147ce8c49142ab38b33e4bc47
 id: node.dso.default
 targetEntityType: node
 bundle: dso
@@ -164,14 +318,20 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+<<<<<<< HEAD
   field_adresse_postale:
     weight: 8
+=======
+  field_text_test1:
+    weight: 28
+>>>>>>> 446cc037cc825e3147ce8c49142ab38b33e4bc47
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
+<<<<<<< HEAD
   field_categorie:
     weight: 12
     settings: {  }
@@ -247,20 +407,30 @@ content:
     region: content
   field_nom_commercial:
     weight: 2
+=======
+  field_text_test2:
+    weight: 29
+>>>>>>> 446cc037cc825e3147ce8c49142ab38b33e4bc47
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
+<<<<<<< HEAD
   field_nom_de_client:
     weight: 7
+=======
+  field_text_test3_req:
+    weight: 30
+>>>>>>> 446cc037cc825e3147ce8c49142ab38b33e4bc47
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
+<<<<<<< HEAD
   field_num_sieret:
     weight: 16
     settings:
@@ -304,8 +474,15 @@ content:
   field_type_client:
     weight: 15
     settings: {  }
+=======
+  field_text_test4_req:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ''
+>>>>>>> 446cc037cc825e3147ce8c49142ab38b33e4bc47
     third_party_settings: {  }
-    type: options_select
+    type: string_textfield
     region: content
   title:
     type: string_textfield
