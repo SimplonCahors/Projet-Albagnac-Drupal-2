@@ -3,19 +3,43 @@ langcode: fr
 status: true
 dependencies:
   config:
-    - field.field.node.dso.field_entreprise
-    - field.field.node.dso.field_etiquette
-    - field.field.node.dso.field_mail
-    - field.field.node.dso.field_produ
+    - field.field.node.dso.field_adresse_postale
+    - field.field.node.dso.field_categorie
+    - field.field.node.dso.field_choix
+    - field.field.node.dso.field_contact_commercial
+    - field.field.node.dso.field_contact_technique
+    - field.field.node.dso.field_date_creation_fiche
+    - field.field.node.dso.field_date_demande_client
+    - field.field.node.dso.field_date_envoi_offre
+    - field.field.node.dso.field_date_livraison_souhaite
+    - field.field.node.dso.field_date_reponse_souhaite
+    - field.field.node.dso.field_fax
+    - field.field.node.dso.field_nom_commercial
+    - field.field.node.dso.field_nom_de_client
+    - field.field.node.dso.field_num_sieret
+    - field.field.node.dso.field_pays
+    - field.field.node.dso.field_remarques
+    - field.field.node.dso.field_secteur
+    - field.field.node.dso.field_sous_secteur
+    - field.field.node.dso.field_telephone
+    - field.field.node.dso.field_type_client
     - node.type.dso
   module:
+    - datetime
     - field_group
+    - paragraphs
+    - telephone
 third_party_settings:
   field_group:
-    group_tab1:
+    group_demande_devis:
       children:
-        - field_entreprise
-        - field_mail
+        - field_nom_commercial
+        - field_date_demande_client
+        - field_date_envoi_offre
+        - field_date_creation_fiche
+        - field_date_reponse_souhaite
+        - field_date_livraison_souhaite
+        - group_info_administrative
       parent_name: ''
       weight: 2
       format_type: tab
@@ -25,13 +49,23 @@ third_party_settings:
         formatter: open
         description: ''
         required_fields: true
-      label: tab1
-    group_tab2:
+      label: 'Demande de devis'
+    group_info_administrative:
       children:
-        - field_etiquette
-        - field_produ
-      parent_name: ''
-      weight: 5
+        - field_nom_de_client
+        - field_adresse_postale
+        - field_telephone
+        - field_fax
+        - field_pays
+        - field_categorie
+        - field_secteur
+        - field_sous_secteur
+        - field_type_client
+        - field_num_sieret
+        - group_contact_commercial
+        - group_contact_technique
+      parent_name: group_demande_devis
+      weight: 8
       format_type: tab
       format_settings:
         id: ''
@@ -39,7 +73,86 @@ third_party_settings:
         formatter: closed
         description: ''
         required_fields: true
-      label: tab2
+      label: 'Informations administratives du demandeur'
+    group_info_commerciale:
+      children:
+        - group_etat_des_lieux
+        - group_perspectives_commerciales
+      parent_name: ''
+      weight: 9
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Informations commerciales'
+    group_contact_commercial:
+      children:
+        - field_contact_commercial
+      parent_name: group_info_administrative
+      weight: 18
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Contact commercial'
+    group_contact_technique:
+      children:
+        - field_contact_technique
+      parent_name: group_info_administrative
+      weight: 19
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Contact technique'
+    group_etat_des_lieux:
+      children:
+        - field_besoin
+        - group_besoin
+      parent_name: group_info_commerciale
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'État des lieux'
+    group_perspectives_commerciales:
+      children: {  }
+      parent_name: group_info_commerciale
+      weight: 21
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Perspectives commerciales'
+    group_besoin:
+      children:
+        - field_choix
+        - field_remarques
+      parent_name: group_etat_des_lieux
+      weight: 27
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Besoin
 id: node.dso.default
 targetEntityType: node
 bundle: dso
@@ -51,32 +164,145 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_entreprise:
+  field_adresse_postale:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_categorie:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_choix:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_contact_commercial:
+    type: entity_reference_paragraphs
+    weight: 18
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_contact_technique:
+    type: entity_reference_paragraphs
+    weight: 17
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_date_creation_fiche:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_demande_client:
     weight: 3
-    settings:
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: string_textfield
+    type: datetime_default
     region: content
-  field_etiquette:
-    weight: 6
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_mail:
+  field_date_envoi_offre:
     weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_livraison_souhaite:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_reponse_souhaite:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_fax:
+    weight: 10
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_nom_commercial:
+    weight: 2
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: email_default
+    type: string_textfield
     region: content
-  field_produ:
+  field_nom_de_client:
     weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_num_sieret:
+    weight: 16
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_pays:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_remarques:
+    weight: 28
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_secteur:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_sous_secteur:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_telephone:
+    weight: 9
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_type_client:
+    weight: 15
     settings: {  }
     third_party_settings: {  }
     type: options_select
