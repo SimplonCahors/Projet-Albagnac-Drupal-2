@@ -22,6 +22,7 @@ dependencies:
     - field.field.node.dso.field_secteur
     - field.field.node.dso.field_sous_secteur
     - field.field.node.dso.field_telephone
+    - field.field.node.dso.field_test
     - field.field.node.dso.field_type_client
     - node.type.dso
   module:
@@ -175,6 +176,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: telephone_default
+    region: content
+  field_test:
+    weight: 29
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_type_client:
     weight: 15
