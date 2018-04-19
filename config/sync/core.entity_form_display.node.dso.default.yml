@@ -3,21 +3,63 @@ langcode: fr
 status: true
 dependencies:
   config:
-    - field.field.node.dso.field_entreprise
-    - field.field.node.dso.field_etiquette
-    - field.field.node.dso.field_mail
-    - field.field.node.dso.field_produ
     - node.type.dso
   module:
     - field_group
 third_party_settings:
   field_group:
-    group_tab1:
+    group_onglet1:
+      children:
+        - group_onglet_b_1
+        - group_informations_commerciales
+        - group_emballages_etiquettes
+        - group_environnement_machine
+        - group_materiels_imposes_impressi
+        - group_remarques_contraintes_even
+      parent_name: group_onglets_dso
+      weight: 4
+      format_type: tab
+      format_settings:
+        label: 'Demande de devis'
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Demande de devis'
+    group_onglet2:
+      children:
+        - field_produ
+      parent_name: group_onglets_dso
+      weight: 5
+      format_type: tab
+      format_settings:
+        label: Emballage
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Emballage
+    group_onglet_b_1:
+      children:
+        - field_mail
+      parent_name: group_onglet1
+      weight: 22
+      format_type: tab
+      format_settings:
+        label: 'Informations administratives du demandeur'
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Informations administratives du demandeur'
+    group_informations_dso:
       children:
         - field_entreprise
-        - field_mail
-      parent_name: ''
-      weight: 2
+      parent_name: group_onglets_dso
+      weight: 3
       format_type: tab
       format_settings:
         id: ''
@@ -25,13 +67,12 @@ third_party_settings:
         formatter: open
         description: ''
         required_fields: true
-      label: tab1
-    group_tab2:
+      label: 'informations DSO'
+    group_informations_commerciales:
       children:
-        - field_etiquette
-        - field_produ
-      parent_name: ''
-      weight: 5
+        - field_liste_de_nombres
+      parent_name: group_onglet1
+      weight: 23
       format_type: tab
       format_settings:
         id: ''
@@ -39,7 +80,96 @@ third_party_settings:
         formatter: closed
         description: ''
         required_fields: true
-      label: tab2
+      label: 'Informations commerciales'
+    group_emballages_etiquettes:
+      children:
+        - field_du_texte
+      parent_name: group_onglet1
+      weight: 24
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Emballages, Etiquettes'
+    group_environnement_machine:
+      children: {  }
+      parent_name: group_onglet1
+      weight: 25
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Environnement machine'
+    group_materiels_imposes_impressi:
+      children: {  }
+      parent_name: group_onglet1
+      weight: 26
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Materiels imposés, Impression'
+    group_remarques_contraintes_even:
+      children: {  }
+      parent_name: group_onglet1
+      weight: 27
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Remarques, contraintes éventuelles'
+    group_etiquette:
+      children:
+        - field_etiquette
+      parent_name: group_onglets_dso
+      weight: 6
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Etiquette
+    group_combinaison:
+      children: {  }
+      parent_name: group_onglets_dso
+      weight: 7
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Combinaison
+    group_onglets_dso:
+      children:
+        - group_informations_dso
+        - group_onglet1
+        - group_onglet2
+        - group_etiquette
+        - group_combinaison
+      parent_name: ''
+      weight: 2
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: 'onglets DSO'
 id: node.dso.default
 targetEntityType: node
 bundle: dso
@@ -51,36 +181,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_entreprise:
-    weight: 3
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_etiquette:
-    weight: 6
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_mail:
-    weight: 4
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: email_default
-    region: content
-  field_produ:
-    weight: 7
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   title:
     type: string_textfield
     weight: 0
