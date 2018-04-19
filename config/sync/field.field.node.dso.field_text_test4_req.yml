@@ -1,0 +1,19 @@
+uuid: 5dbdd05a-a128-46f3-b6f0-1524c8aaa398
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_text_test4_req
+    - node.type.dso
+id: node.dso.field_text_test4_req
+field_name: field_text_test4_req
+entity_type: node
+bundle: dso
+label: text_test4_req
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

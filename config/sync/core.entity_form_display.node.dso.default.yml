@@ -3,6 +3,10 @@ langcode: fr
 status: true
 dependencies:
   config:
+    - field.field.node.dso.field_text_test1
+    - field.field.node.dso.field_text_test2
+    - field.field.node.dso.field_text_test3_req
+    - field.field.node.dso.field_text_test4_req
     - node.type.dso
   module:
     - field_group
@@ -28,8 +32,7 @@ third_party_settings:
         classes: ''
       label: 'Demande de devis'
     group_onglet2:
-      children:
-        - field_produ
+      children: {  }
       parent_name: group_onglets_dso
       weight: 5
       format_type: tab
@@ -43,7 +46,7 @@ third_party_settings:
       label: Emballage
     group_onglet_b_1:
       children:
-        - field_mail
+        - field_text_test2
       parent_name: group_onglet1
       weight: 22
       format_type: tab
@@ -57,7 +60,7 @@ third_party_settings:
       label: 'Informations administratives du demandeur'
     group_informations_dso:
       children:
-        - field_entreprise
+        - field_text_test1
       parent_name: group_onglets_dso
       weight: 3
       format_type: tab
@@ -69,8 +72,7 @@ third_party_settings:
         required_fields: true
       label: 'informations DSO'
     group_informations_commerciales:
-      children:
-        - field_liste_de_nombres
+      children: {  }
       parent_name: group_onglet1
       weight: 23
       format_type: tab
@@ -82,8 +84,7 @@ third_party_settings:
         required_fields: true
       label: 'Informations commerciales'
     group_emballages_etiquettes:
-      children:
-        - field_du_texte
+      children: {  }
       parent_name: group_onglet1
       weight: 24
       format_type: tab
@@ -95,7 +96,8 @@ third_party_settings:
         required_fields: true
       label: 'Emballages, Etiquettes'
     group_environnement_machine:
-      children: {  }
+      children:
+        - field_text_test3_req
       parent_name: group_onglet1
       weight: 25
       format_type: tab
@@ -132,7 +134,7 @@ third_party_settings:
       label: 'Remarques, contraintes éventuelles'
     group_etiquette:
       children:
-        - field_etiquette
+        - field_text_test4_req
       parent_name: group_onglets_dso
       weight: 6
       format_type: tab
@@ -181,6 +183,38 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_text_test1:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_test2:
+    weight: 29
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_test3_req:
+    weight: 30
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_test4_req:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   title:
     type: string_textfield
     weight: 0
