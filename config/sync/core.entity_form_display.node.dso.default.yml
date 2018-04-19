@@ -116,7 +116,6 @@ third_party_settings:
       label: 'Contact technique'
     group_etat_des_lieux:
       children:
-        - field_besoin
         - group_besoin
       parent_name: group_info_commerciale
       weight: 20
