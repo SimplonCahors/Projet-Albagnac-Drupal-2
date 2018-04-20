@@ -1,4 +1,4 @@
-uuid: a43a03b5-7502-4888-99ac-0845e248c20a
+uuid: cf4c9e13-0f9a-48cc-adfa-9e6cfbfafba9
 langcode: fr
 status: true
 dependencies:
@@ -6,12 +6,13 @@ dependencies:
     - field.storage.node.field_date_creation_fiche
     - node.type.dso
     - system.menu.main
+    - user.role.administrator
   module:
     - datetime
     - node
     - user
-id: liste_dso
-label: 'Liste DSO'
+id: liste_de_tous_les_dso_
+label: 'Liste de tous les DSO '
 module: views
 description: ''
 tag: ''
@@ -26,9 +27,10 @@ display:
     position: 0
     display_options:
       access:
-        type: perm
+        type: role
         options:
-          perm: 'access content'
+          role:
+            administrator: administrator
       cache:
         type: tag
         options: {  }
@@ -379,7 +381,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'Liste DSO'
+      title: 'Liste de tous les DSO'
       header: {  }
       footer: {  }
       empty: {  }
@@ -393,7 +395,7 @@ display:
         - 'languages:language_interface'
         - url.query_args
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.node.field_date_creation_fiche'
   page_1:
@@ -403,10 +405,15 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: liste-dso
+      path: liste-de-tous-les-dso
       menu:
         type: normal
-        title: 'Liste DSO'
+        title: 'Liste de tous les DSO'
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
         menu_name: main
     cache_metadata:
       max-age: -1
@@ -415,6 +422,6 @@ display:
         - 'languages:language_interface'
         - url.query_args
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.node.field_date_creation_fiche'
