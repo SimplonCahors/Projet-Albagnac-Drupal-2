@@ -1,0 +1,19 @@
+uuid: bf1c4e27-cd72-46a4-9eb9-a6a789318fbc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_type_machines
+    - paragraphs.paragraphs_type.machine_amont
+id: paragraph.machine_amont.field_type_machines
+field_name: field_type_machines
+entity_type: paragraph
+bundle: machine_amont
+label: 'Type de machines AMONT'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

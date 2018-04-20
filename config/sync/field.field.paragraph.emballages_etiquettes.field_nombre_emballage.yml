@@ -1,0 +1,23 @@
+uuid: 403eff8c-345b-4a94-8178-23da3ccefb0a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_nombre_emballage
+    - paragraphs.paragraphs_type.emballages_etiquettes
+id: paragraph.emballages_etiquettes.field_nombre_emballage
+field_name: field_nombre_emballage
+entity_type: paragraph
+bundle: emballages_etiquettes
+label: 'Nombre d''emballage'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

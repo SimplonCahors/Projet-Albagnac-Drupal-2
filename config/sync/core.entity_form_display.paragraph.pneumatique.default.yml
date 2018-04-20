@@ -1,0 +1,31 @@
+uuid: 709e595c-0ccf-4f7a-afb6-ce26dad98077
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pneumatique.field_debit_m3_h
+    - field.field.paragraph.pneumatique.field_pression_bar_
+    - paragraphs.paragraphs_type.pneumatique
+id: paragraph.pneumatique.default
+targetEntityType: paragraph
+bundle: pneumatique
+mode: default
+content:
+  field_debit_m3_h:
+    weight: 0
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_pression_bar_:
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

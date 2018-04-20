@@ -1,0 +1,9 @@
+uuid: acbd983a-57e7-4bfd-a3cc-2f92106dc6d8
+langcode: fr
+status: true
+dependencies: {  }
+id: materiel_impose
+label: 'Materiel imposé par le client'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,19 @@
+uuid: f86e9b02-28c4-42b0-b9ad-0345fe8190ef
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_implantation_sites
+    - node.type.dso
+id: node.dso.field_implantation_sites
+field_name: field_implantation_sites
+entity_type: node
+bundle: dso
+label: 'Implantation des sites en cas de groupe industriel'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,19 +1,21 @@
-uuid: 01a58b08-b6e3-466c-bc86-58c3d9ab25cb
+uuid: 2e6bf405-6a2c-4d83-8fea-b9cc1fe07ec2
 langcode: fr
 status: true
 dependencies:
   config:
-    - field.storage.node.field_test
+    - field.storage.node.field_sur_mach
     - node.type.dso
-id: node.dso.field_test
-field_name: field_test
+  module:
+    - options
+id: node.dso.field_sur_mach
+field_name: field_sur_mach
 entity_type: node
 bundle: dso
-label: Test
+label: 'Sur machine'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string
+field_type: list_string

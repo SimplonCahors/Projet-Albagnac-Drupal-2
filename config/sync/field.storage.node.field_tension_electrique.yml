@@ -1,0 +1,27 @@
+uuid: fcd31c59-23c5-43ef-b229-891bff2ab346
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_tension_electrique
+field_name: field_tension_electrique
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '380 V Triphasé'
+      label: '380 V Triphasé'
+    -
+      value: '220 V Monophasé'
+      label: '220 V Monophasé'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

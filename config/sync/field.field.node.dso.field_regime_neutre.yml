@@ -1,0 +1,21 @@
+uuid: 82fcf173-ce47-46ca-9789-357befdb1c1b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_regime_neutre
+    - node.type.dso
+  module:
+    - options
+id: node.dso.field_regime_neutre
+field_name: field_regime_neutre
+entity_type: node
+bundle: dso
+label: 'Régime du neutre'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

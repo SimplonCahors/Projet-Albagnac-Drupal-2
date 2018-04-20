@@ -1,0 +1,23 @@
+uuid: e162934e-078b-418b-bc25-92ba768bdf4c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_eti_num
+    - paragraphs.paragraphs_type.impression_emballage
+id: paragraph.impression_emballage.field_eti_num
+field_name: field_eti_num
+entity_type: paragraph
+bundle: impression_emballage
+label: 'ETI n°'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

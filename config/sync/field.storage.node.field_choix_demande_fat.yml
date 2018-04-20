@@ -1,0 +1,27 @@
+uuid: de6e2a2a-e9f6-400e-b9dd-14fe48dbbc77
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_choix_demande_fat
+field_name: field_choix_demande_fat
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Oui
+      label: Oui
+    -
+      value: Non
+      label: Non
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

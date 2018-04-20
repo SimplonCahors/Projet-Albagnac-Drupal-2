@@ -1,0 +1,21 @@
+uuid: 7190779d-f216-4df2-b154-8f11b1ee7613
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_transfert_amont
+    - paragraphs.paragraphs_type.machine_amont
+  module:
+    - options
+id: paragraph.machine_amont.field_transfert_amont
+field_name: field_transfert_amont
+entity_type: paragraph
+bundle: machine_amont
+label: 'Transfert AMONT'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

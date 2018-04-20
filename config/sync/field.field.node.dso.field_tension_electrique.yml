@@ -1,0 +1,21 @@
+uuid: 5b83ba1f-7d5b-4a76-83fd-6f5f57780344
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tension_electrique
+    - node.type.dso
+  module:
+    - options
+id: node.dso.field_tension_electrique
+field_name: field_tension_electrique
+entity_type: node
+bundle: dso
+label: 'Tension électrique'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

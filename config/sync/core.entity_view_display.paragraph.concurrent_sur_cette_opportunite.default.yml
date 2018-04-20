@@ -1,0 +1,38 @@
+uuid: 0c048837-9bb3-4fb2-97a2-6bd161a6987f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.concurrent_sur_cette_opportunite.field_nom_concurent
+    - field.field.paragraph.concurrent_sur_cette_opportunite.field_remarques
+    - field.field.paragraph.concurrent_sur_cette_opportunite.field_type
+    - paragraphs.paragraphs_type.concurrent_sur_cette_opportunite
+id: paragraph.concurrent_sur_cette_opportunite.default
+targetEntityType: paragraph
+bundle: concurrent_sur_cette_opportunite
+mode: default
+content:
+  field_nom_concurent:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_remarques:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_type:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

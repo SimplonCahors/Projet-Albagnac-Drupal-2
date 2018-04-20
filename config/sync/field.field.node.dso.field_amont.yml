@@ -1,0 +1,91 @@
+uuid: a9d64dd6-c66b-4d09-ad62-dd5a1e703a46
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_amont
+    - node.type.dso
+    - paragraphs.paragraphs_type.machine_amont
+  module:
+    - entity_reference_revisions
+id: node.dso.field_amont
+field_name: field_amont
+entity_type: node
+bundle: dso
+label: AMONT
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      machine_amont: machine_amont
+    target_bundles_drag_drop:
+      aval:
+        weight: 22
+        enabled: false
+      bp_accordion:
+        weight: 23
+        enabled: false
+      bp_accordion_section:
+        weight: 24
+        enabled: false
+      bp_blank:
+        weight: 25
+        enabled: false
+      bp_block:
+        weight: 26
+        enabled: false
+      bp_carousel:
+        weight: 27
+        enabled: false
+      bp_column_wrapper:
+        weight: 28
+        enabled: false
+      bp_columns:
+        weight: 29
+        enabled: false
+      bp_columns_three_uneven:
+        weight: 30
+        enabled: false
+      bp_columns_two_uneven:
+        weight: 31
+        enabled: false
+      bp_image:
+        weight: 32
+        enabled: false
+      bp_modal:
+        weight: 33
+        enabled: false
+      bp_simple:
+        weight: 34
+        enabled: false
+      bp_tab_section:
+        weight: 35
+        enabled: false
+      bp_tabs:
+        weight: 36
+        enabled: false
+      bp_view:
+        weight: 37
+        enabled: false
+      concurrent_sur_cette_opportunite:
+        weight: 38
+        enabled: false
+      contact:
+        weight: 39
+        enabled: false
+      emballages_etiquettes:
+        weight: 40
+        enabled: false
+      etiquettes:
+        weight: 41
+        enabled: false
+      machine_amont:
+        enabled: true
+        weight: 42
+field_type: entity_reference_revisions

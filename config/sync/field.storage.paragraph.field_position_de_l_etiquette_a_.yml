@@ -1,0 +1,21 @@
+uuid: d7b5e529-6782-4349-957a-4dbec8fe470a
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_position_de_l_etiquette_a_
+field_name: field_position_de_l_etiquette_a_
+entity_type: paragraph
+type: string
+settings:
+  max_length: 260
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

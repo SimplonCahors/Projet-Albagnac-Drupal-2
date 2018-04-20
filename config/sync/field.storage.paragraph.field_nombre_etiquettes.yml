@@ -1,0 +1,20 @@
+uuid: 7189838d-ac89-4250-9f61-52a0b1752653
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_nombre_etiquettes
+field_name: field_nombre_etiquettes
+entity_type: paragraph
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

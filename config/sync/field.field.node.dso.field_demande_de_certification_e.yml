@@ -1,0 +1,21 @@
+uuid: fea84298-9283-4acb-8937-e4de7d77c2a0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_demande_de_certification_e
+    - node.type.dso
+  module:
+    - options
+id: node.dso.field_demande_de_certification_e
+field_name: field_demande_de_certification_e
+entity_type: node
+bundle: dso
+label: 'Demande de certification externe'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

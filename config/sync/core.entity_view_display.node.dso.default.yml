@@ -4,25 +4,67 @@ status: true
 dependencies:
   config:
     - field.field.node.dso.field_adresse_postale
+    - field.field.node.dso.field_amont
+    - field.field.node.dso.field_aval
+    - field.field.node.dso.field_avertissements
+    - field.field.node.dso.field_cadence_souhaitee
     - field.field.node.dso.field_categorie
+    - field.field.node.dso.field_cd
     - field.field.node.dso.field_choix
+    - field.field.node.dso.field_choix_demande_fat
+    - field.field.node.dso.field_concurent_opportunite
     - field.field.node.dso.field_contact_commercial
     - field.field.node.dso.field_contact_technique
+    - field.field.node.dso.field_controle_conformite_spe
     - field.field.node.dso.field_date_creation_fiche
     - field.field.node.dso.field_date_demande_client
+    - field.field.node.dso.field_date_desiree
     - field.field.node.dso.field_date_envoi_offre
     - field.field.node.dso.field_date_livraison_souhaite
     - field.field.node.dso.field_date_reponse_souhaite
+    - field.field.node.dso.field_demande_cem
+    - field.field.node.dso.field_demande_certif_externe
+    - field.field.node.dso.field_demande_de_certification_e
+    - field.field.node.dso.field_emballages
+    - field.field.node.dso.field_en_salle
+    - field.field.node.dso.field_environnement_concurrentie
+    - field.field.node.dso.field_espace_disponible_sol
+    - field.field.node.dso.field_etiquettes
     - field.field.node.dso.field_fax
+    - field.field.node.dso.field_fournisseur_actuel
+    - field.field.node.dso.field_hauteur_convoyeur
+    - field.field.node.dso.field_implantation_sites
+    - field.field.node.dso.field_impression
+    - field.field.node.dso.field_impression_emballages
+    - field.field.node.dso.field_installation_chez_client
+    - field.field.node.dso.field_langue
+    - field.field.node.dso.field_materiel_impose_par_le_cli
+    - field.field.node.dso.field_milieu
+    - field.field.node.dso.field_mise_en_route_machine
     - field.field.node.dso.field_nom_commercial
     - field.field.node.dso.field_nom_de_client
+    - field.field.node.dso.field_nombre_de_
+    - field.field.node.dso.field_nombre_de_jour
+    - field.field.node.dso.field_nombre_type_machine
     - field.field.node.dso.field_num_sieret
+    - field.field.node.dso.field_numerique
+    - field.field.node.dso.field_papier
     - field.field.node.dso.field_pays
+    - field.field.node.dso.field_plan_de_prevention
+    - field.field.node.dso.field_pneumatique
+    - field.field.node.dso.field_quantite
+    - field.field.node.dso.field_regime_neutre
     - field.field.node.dso.field_remarques
+    - field.field.node.dso.field_remarques_contraintes
     - field.field.node.dso.field_secteur
+    - field.field.node.dso.field_sens_machine
+    - field.field.node.dso.field_site_de_production
     - field.field.node.dso.field_sous_secteur
+    - field.field.node.dso.field_sur_mach
     - field.field.node.dso.field_telephone
-    - field.field.node.dso.field_test
+    - field.field.node.dso.field_tempe_local_travail
+    - field.field.node.dso.field_tension_electrique
+    - field.field.node.dso.field_transport_a_la_charge_de
     - field.field.node.dso.field_type_client
     - node.type.dso
   module:
@@ -43,8 +85,50 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_amont:
+    type: entity_reference_revisions_entity_view
+    weight: 137
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_aval:
+    type: entity_reference_revisions_entity_view
+    weight: 138
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_avertissements:
+    type: entity_reference_revisions_entity_view
+    weight: 145
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_cadence_souhaitee:
+    weight: 140
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_categorie:
     weight: 117
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_cd:
+    weight: 166
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -56,6 +140,22 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_choix_demande_fat:
+    weight: 154
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_concurent_opportunite:
+    type: entity_reference_revisions_entity_view
+    weight: 130
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
     region: content
   field_contact_commercial:
     type: entity_reference_revisions_entity_view
@@ -75,6 +175,13 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
+  field_controle_conformite_spe:
+    weight: 150
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_date_creation_fiche:
     weight: 109
     label: above
@@ -86,6 +193,15 @@ content:
     region: content
   field_date_demande_client:
     weight: 107
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_desiree:
+    weight: 155
     label: above
     settings:
       format_type: medium
@@ -120,12 +236,152 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_demande_cem:
+    weight: 152
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_demande_certif_externe:
+    weight: 153
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_demande_de_certification_e:
+    weight: 159
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_emballages:
+    type: entity_reference_revisions_entity_view
+    weight: 135
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_en_salle:
+    weight: 161
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_environnement_concurrentie:
+    weight: 134
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_espace_disponible_sol:
+    weight: 143
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_etiquettes:
+    type: entity_reference_revisions_entity_view
+    weight: 136
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
   field_fax:
     weight: 115
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_fournisseur_actuel:
+    weight: 129
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_hauteur_convoyeur:
+    weight: 142
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_implantation_sites:
+    weight: 133
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_impression:
+    type: entity_reference_revisions_entity_view
+    weight: 171
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_impression_emballages:
+    type: entity_reference_revisions_entity_view
+    weight: 172
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_installation_chez_client:
+    weight: 156
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_langue:
+    weight: 168
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_materiel_impose_par_le_cli:
+    type: entity_reference_revisions_entity_view
+    weight: 170
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_milieu:
+    weight: 141
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_mise_en_route_machine:
+    weight: 158
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_nom_commercial:
     weight: 106
@@ -143,6 +399,32 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_nombre_de_:
+    weight: 163
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_nombre_de_jour:
+    weight: 162
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_nombre_type_machine:
+    weight: 131
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_num_sieret:
     weight: 121
     label: above
@@ -152,8 +434,56 @@ content:
     third_party_settings: {  }
     type: number_integer
     region: content
+  field_numerique:
+    weight: 167
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_papier:
+    weight: 164
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_pays:
     weight: 116
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_plan_de_prevention:
+    weight: 157
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_pneumatique:
+    type: entity_reference_revisions_entity_view
+    weight: 148
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_quantite:
+    weight: 165
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_regime_neutre:
+    weight: 147
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -166,6 +496,15 @@ content:
     third_party_settings: {  }
     type: basic_string
     region: content
+  field_remarques_contraintes:
+    type: entity_reference_revisions_entity_view
+    weight: 173
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
   field_secteur:
     weight: 118
     label: above
@@ -173,8 +512,30 @@ content:
     third_party_settings: {  }
     type: list_default
     region: content
+  field_sens_machine:
+    weight: 139
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_site_de_production:
+    weight: 132
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_sous_secteur:
     weight: 119
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_sur_mach:
+    weight: 160
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -187,13 +548,30 @@ content:
     third_party_settings: {  }
     type: basic_string
     region: content
-  field_test:
-    weight: 128
+  field_tempe_local_travail:
+    weight: 144
     label: above
     settings:
-      link_to_entity: false
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
     third_party_settings: {  }
-    type: string
+    type: number_decimal
+    region: content
+  field_tension_electrique:
+    weight: 149
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_transport_a_la_charge_de:
+    weight: 169
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_type_client:
     weight: 120

@@ -1,0 +1,21 @@
+uuid: e04cd0b6-41ac-41d9-b7fd-c7ffcf5b839a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_type_d_emballage
+    - paragraphs.paragraphs_type.emballages_etiquettes
+  module:
+    - options
+id: paragraph.emballages_etiquettes.field_type_d_emballage
+field_name: field_type_d_emballage
+entity_type: paragraph
+bundle: emballages_etiquettes
+label: 'Type d''emballage'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

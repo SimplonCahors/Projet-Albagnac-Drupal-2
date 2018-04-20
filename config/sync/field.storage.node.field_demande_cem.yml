@@ -1,0 +1,27 @@
+uuid: 9169c11c-8cb8-4059-81eb-7e7b2238c80b
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_demande_cem
+field_name: field_demande_cem
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Oui
+      label: Oui
+    -
+      value: Non
+      label: Non
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

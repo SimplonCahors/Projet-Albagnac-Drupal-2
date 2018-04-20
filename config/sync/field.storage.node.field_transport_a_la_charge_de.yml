@@ -1,0 +1,33 @@
+uuid: dcdd5827-0927-4933-8e73-88b2e608eee8
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_transport_a_la_charge_de
+field_name: field_transport_a_la_charge_de
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Albagnac
+      label: Albagnac
+    -
+      value: Client
+      label: Client
+    -
+      value: 'Albagnac et Client'
+      label: 'Albagnac et Client'
+    -
+      value: Aucun
+      label: Aucun
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

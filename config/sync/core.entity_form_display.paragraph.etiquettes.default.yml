@@ -1,0 +1,37 @@
+uuid: 3007d4a8-6f25-4c3e-9122-024b9518a25f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.etiquettes.field_matiere_etiquette
+    - field.field.paragraph.etiquettes.field_nombre_etiquettes
+    - field.field.paragraph.etiquettes.field_type_d_e
+    - paragraphs.paragraphs_type.etiquettes
+id: paragraph.etiquettes.default
+targetEntityType: paragraph
+bundle: etiquettes
+mode: default
+content:
+  field_matiere_etiquette:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_nombre_etiquettes:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_type_d_e:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
