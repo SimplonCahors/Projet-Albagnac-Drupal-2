@@ -27,12 +27,14 @@ dependencies:
     - node.type.dso
   module:
     - datetime
+    - field_group
     - paragraphs
     - telephone
 third_party_settings:
   field_group:
     group_onglet1:
       children:
+        - group_informations_dso
         - group_onglet_b_1
         - group_informations_commerciales
         - group_emballages_etiquettes
@@ -65,9 +67,20 @@ third_party_settings:
       label: Emballage
     group_onglet_b_1:
       children:
-        - field_text_test2
+        - field_nom_de_client
+        - field_adresse_postale
+        - field_telephone
+        - field_fax
+        - field_pays
+        - field_categorie
+        - field_secteur
+        - field_sous_secteur
+        - field_type_client
+        - field_num_sieret
+        - field_contact_technique
+        - field_contact_commercial
       parent_name: group_onglet1
-      weight: 22
+      weight: 6
       format_type: tab
       format_settings:
         label: 'Informations administratives du demandeur'
@@ -79,8 +92,13 @@ third_party_settings:
       label: 'Informations administratives du demandeur'
     group_informations_dso:
       children:
-        - field_text_test1
-      parent_name: group_onglets_dso
+        - field_nom_commercial
+        - field_date_demande_client
+        - field_date_envoi_offre
+        - field_date_creation_fiche
+        - field_date_reponse_souhaite
+        - field_date_livraison_souhaite
+      parent_name: group_onglet1
       weight: 3
       format_type: tab
       format_settings:
@@ -91,9 +109,10 @@ third_party_settings:
         required_fields: true
       label: 'informations DSO'
     group_informations_commerciales:
-      children: {  }
+      children:
+        - group_besoin
       parent_name: group_onglet1
-      weight: 23
+      weight: 7
       format_type: tab
       format_settings:
         id: ''
@@ -105,7 +124,7 @@ third_party_settings:
     group_emballages_etiquettes:
       children: {  }
       parent_name: group_onglet1
-      weight: 24
+      weight: 8
       format_type: tab
       format_settings:
         id: ''
@@ -115,10 +134,9 @@ third_party_settings:
         required_fields: true
       label: 'Emballages, Etiquettes'
     group_environnement_machine:
-      children:
-        - field_text_test3_req
+      children: {  }
       parent_name: group_onglet1
-      weight: 25
+      weight: 9
       format_type: tab
       format_settings:
         id: ''
@@ -130,7 +148,7 @@ third_party_settings:
     group_materiels_imposes_impressi:
       children: {  }
       parent_name: group_onglet1
-      weight: 26
+      weight: 10
       format_type: tab
       format_settings:
         id: ''
@@ -142,7 +160,7 @@ third_party_settings:
     group_remarques_contraintes_even:
       children: {  }
       parent_name: group_onglet1
-      weight: 27
+      weight: 11
       format_type: tab
       format_settings:
         id: ''
@@ -152,8 +170,7 @@ third_party_settings:
         required_fields: true
       label: 'Remarques, contraintes éventuelles'
     group_etiquette:
-      children:
-        - field_text_test4_req
+      children: {  }
       parent_name: group_onglets_dso
       weight: 6
       format_type: tab
@@ -178,7 +195,6 @@ third_party_settings:
       label: Combinaison
     group_onglets_dso:
       children:
-        - group_informations_dso
         - group_onglet1
         - group_onglet2
         - group_etiquette
@@ -191,6 +207,19 @@ third_party_settings:
         classes: ''
         direction: vertical
       label: 'onglets DSO'
+    group_besoin:
+      children:
+        - field_choix
+        - field_remarques
+      parent_name: group_informations_commerciales
+      weight: 6
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Besoin
 id: node.dso.default
 targetEntityType: node
 bundle: dso
@@ -217,7 +246,7 @@ content:
     type: options_select
     region: content
   field_choix:
-    weight: 27
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -247,31 +276,31 @@ content:
     third_party_settings: {  }
     region: content
   field_date_creation_fiche:
-    weight: 5
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_date_demande_client:
-    weight: 3
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_date_envoi_offre:
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_date_livraison_souhaite:
     weight: 7
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
-  field_date_reponse_souhaite:
+  field_date_demande_client:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_envoi_offre:
     weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_livraison_souhaite:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_reponse_souhaite:
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
@@ -284,7 +313,7 @@ content:
     type: telephone_default
     region: content
   field_nom_commercial:
-    weight: 2
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -313,7 +342,7 @@ content:
     type: options_select
     region: content
   field_remarques:
-    weight: 28
+    weight: 6
     settings:
       rows: 5
       placeholder: ''
@@ -340,7 +369,7 @@ content:
     type: telephone_default
     region: content
   field_test:
-    weight: 29
+    weight: 4
     settings:
       size: 60
       placeholder: ''
