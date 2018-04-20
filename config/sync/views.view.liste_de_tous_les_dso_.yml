@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_date_creation_fiche
     - node.type.dso
     - system.menu.main
+    - user.role.administrateur_des_ventes
     - user.role.administrator
   module:
     - datetime
@@ -30,6 +31,7 @@ display:
         type: role
         options:
           role:
+            administrateur_des_ventes: administrateur_des_ventes
             administrator: administrator
       cache:
         type: tag
