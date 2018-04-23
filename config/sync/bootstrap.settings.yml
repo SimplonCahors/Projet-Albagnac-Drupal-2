@@ -19,3 +19,4 @@ logo:
   path: 'public://albagnac.jpeg'
   url: ''
   use_default: true
+langcode: fr

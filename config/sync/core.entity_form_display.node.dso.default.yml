@@ -66,6 +66,7 @@ dependencies:
     - field.field.node.dso.field_telephone
     - field.field.node.dso.field_tempe_local_travail
     - field.field.node.dso.field_tension_electrique
+    - field.field.node.dso.field_test
     - field.field.node.dso.field_transport_a_la_charge_de
     - field.field.node.dso.field_type_client
     - node.type.dso
@@ -1008,6 +1009,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  field_test: true
   langcode: true
   path: true
   promote: true
