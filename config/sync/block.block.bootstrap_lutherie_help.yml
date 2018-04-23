@@ -1,0 +1,22 @@
+uuid: fae00df1-7b2a-46e4-813c-24b5e3ef6809
+langcode: fr
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - bootstrap_lutherie
+_core:
+  default_config_hash: MhtNdV__HKRTab0ZPjkPNfYL4Ng4UPBucDLoC7Rg5Eo
+id: bootstrap_lutherie_help
+theme: bootstrap_lutherie
+region: help
+weight: -7
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

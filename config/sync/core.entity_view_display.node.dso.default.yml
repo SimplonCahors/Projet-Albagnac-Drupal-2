@@ -71,16 +71,25 @@ dependencies:
     - node.type.dso
   module:
     - datetime
+    - entity_print
     - entity_reference_revisions
     - options
     - user
+third_party_settings:
+  entity_print:
+    pdf_label: 'Voir / Télécharger en PDF'
 id: node.dso.default
 targetEntityType: node
 bundle: dso
 mode: default
 content:
+  entity_print_view_pdf:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_adresse_postale:
-    weight: 113
+    weight: 9
     label: above
     settings:
       link_to_entity: false
@@ -89,7 +98,7 @@ content:
     region: content
   field_amont:
     type: entity_reference_revisions_entity_view
-    weight: 137
+    weight: 30
     label: above
     settings:
       view_mode: default
@@ -98,7 +107,7 @@ content:
     region: content
   field_aval:
     type: entity_reference_revisions_entity_view
-    weight: 138
+    weight: 31
     label: above
     settings:
       view_mode: default
@@ -107,7 +116,7 @@ content:
     region: content
   field_avertissements:
     type: entity_reference_revisions_entity_view
-    weight: 145
+    weight: 38
     label: above
     settings:
       view_mode: default
@@ -115,7 +124,7 @@ content:
     third_party_settings: {  }
     region: content
   field_cadence_souhaitee:
-    weight: 140
+    weight: 33
     label: above
     settings:
       link_to_entity: false
@@ -123,28 +132,28 @@ content:
     type: string
     region: content
   field_categorie:
-    weight: 117
+    weight: 13
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_cd:
-    weight: 166
+    weight: 57
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_choix:
-    weight: 126
+    weight: 20
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_choix_demande_fat:
-    weight: 154
+    weight: 45
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -152,7 +161,7 @@ content:
     region: content
   field_concurent_opportunite:
     type: entity_reference_revisions_entity_view
-    weight: 130
+    weight: 23
     label: above
     settings:
       view_mode: default
@@ -161,7 +170,7 @@ content:
     region: content
   field_contact_commercial:
     type: entity_reference_revisions_entity_view
-    weight: 123
+    weight: 18
     label: above
     settings:
       view_mode: default
@@ -170,7 +179,7 @@ content:
     region: content
   field_contact_technique:
     type: entity_reference_revisions_entity_view
-    weight: 124
+    weight: 19
     label: above
     settings:
       view_mode: default
@@ -178,14 +187,14 @@ content:
     third_party_settings: {  }
     region: content
   field_controle_conformite_spe:
-    weight: 150
+    weight: 42
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_date_creation_fiche:
-    weight: 109
+    weight: 5
     label: above
     settings:
       format_type: medium
@@ -194,7 +203,7 @@ content:
     type: datetime_default
     region: content
   field_date_demande_client:
-    weight: 107
+    weight: 3
     label: above
     settings:
       format_type: medium
@@ -203,7 +212,7 @@ content:
     type: datetime_default
     region: content
   field_date_desiree:
-    weight: 155
+    weight: 46
     label: above
     settings:
       format_type: medium
@@ -212,7 +221,7 @@ content:
     type: datetime_default
     region: content
   field_date_envoi_offre:
-    weight: 108
+    weight: 4
     label: above
     settings:
       format_type: medium
@@ -221,7 +230,7 @@ content:
     type: datetime_default
     region: content
   field_date_livraison_souhaite:
-    weight: 112
+    weight: 8
     label: above
     settings:
       format_type: medium
@@ -230,7 +239,7 @@ content:
     type: datetime_default
     region: content
   field_date_reponse_souhaite:
-    weight: 111
+    weight: 7
     label: above
     settings:
       format_type: medium
@@ -239,21 +248,21 @@ content:
     type: datetime_default
     region: content
   field_demande_cem:
-    weight: 152
+    weight: 43
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_demande_certif_externe:
-    weight: 153
+    weight: 44
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_demande_de_certification_e:
-    weight: 159
+    weight: 50
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -261,7 +270,7 @@ content:
     region: content
   field_descr:
     type: entity_reference_revisions_entity_view
-    weight: 175
+    weight: 66
     label: above
     settings:
       view_mode: default
@@ -270,7 +279,7 @@ content:
     region: content
   field_description_emballage:
     type: entity_reference_revisions_entity_view
-    weight: 174
+    weight: 65
     label: above
     settings:
       view_mode: default
@@ -279,7 +288,7 @@ content:
     region: content
   field_emballages:
     type: entity_reference_revisions_entity_view
-    weight: 135
+    weight: 28
     label: above
     settings:
       view_mode: default
@@ -287,14 +296,14 @@ content:
     third_party_settings: {  }
     region: content
   field_en_salle:
-    weight: 161
+    weight: 52
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_environnement_concurrentie:
-    weight: 134
+    weight: 27
     label: above
     settings:
       link_to_entity: false
@@ -302,7 +311,7 @@ content:
     type: string
     region: content
   field_espace_disponible_sol:
-    weight: 143
+    weight: 36
     label: above
     settings:
       link_to_entity: false
@@ -311,7 +320,7 @@ content:
     region: content
   field_etiquettes:
     type: entity_reference_revisions_entity_view
-    weight: 136
+    weight: 29
     label: above
     settings:
       view_mode: default
@@ -319,21 +328,22 @@ content:
     third_party_settings: {  }
     region: content
   field_fax:
-    weight: 115
+    weight: 11
     label: above
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    type: basic_string
+    type: string
     region: content
   field_fournisseur_actuel:
-    weight: 129
+    weight: 22
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_hauteur_convoyeur:
-    weight: 142
+    weight: 35
     label: above
     settings:
       link_to_entity: false
@@ -341,7 +351,7 @@ content:
     type: string
     region: content
   field_implantation_sites:
-    weight: 133
+    weight: 26
     label: above
     settings:
       link_to_entity: false
@@ -350,7 +360,7 @@ content:
     region: content
   field_impression:
     type: entity_reference_revisions_entity_view
-    weight: 171
+    weight: 62
     label: above
     settings:
       view_mode: default
@@ -359,7 +369,7 @@ content:
     region: content
   field_impression_emballages:
     type: entity_reference_revisions_entity_view
-    weight: 172
+    weight: 63
     label: above
     settings:
       view_mode: default
@@ -367,14 +377,14 @@ content:
     third_party_settings: {  }
     region: content
   field_installation_chez_client:
-    weight: 156
+    weight: 47
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_langue:
-    weight: 168
+    weight: 59
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -382,7 +392,7 @@ content:
     region: content
   field_materiel_impose_par_le_cli:
     type: entity_reference_revisions_entity_view
-    weight: 170
+    weight: 61
     label: above
     settings:
       view_mode: default
@@ -390,21 +400,21 @@ content:
     third_party_settings: {  }
     region: content
   field_milieu:
-    weight: 141
+    weight: 34
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_mise_en_route_machine:
-    weight: 158
+    weight: 49
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_nom_commercial:
-    weight: 106
+    weight: 2
     label: above
     settings:
       link_to_entity: false
@@ -412,7 +422,7 @@ content:
     type: string
     region: content
   field_nom_de_client:
-    weight: 110
+    weight: 6
     label: above
     settings:
       link_to_entity: false
@@ -420,7 +430,7 @@ content:
     type: string
     region: content
   field_nombre_de_:
-    weight: 163
+    weight: 54
     label: above
     settings:
       thousand_separator: ''
@@ -429,7 +439,7 @@ content:
     type: number_integer
     region: content
   field_nombre_de_jour:
-    weight: 162
+    weight: 53
     label: above
     settings:
       thousand_separator: ''
@@ -438,7 +448,7 @@ content:
     type: number_integer
     region: content
   field_nombre_type_machine:
-    weight: 131
+    weight: 24
     label: above
     settings:
       link_to_entity: false
@@ -446,7 +456,7 @@ content:
     type: string
     region: content
   field_num_sieret:
-    weight: 121
+    weight: 17
     label: above
     settings:
       thousand_separator: ''
@@ -455,28 +465,28 @@ content:
     type: number_integer
     region: content
   field_numerique:
-    weight: 167
+    weight: 58
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_papier:
-    weight: 164
+    weight: 55
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_pays:
-    weight: 116
+    weight: 12
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_plan_de_prevention:
-    weight: 157
+    weight: 48
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -484,7 +494,7 @@ content:
     region: content
   field_pneumatique:
     type: entity_reference_revisions_entity_view
-    weight: 148
+    weight: 40
     label: above
     settings:
       view_mode: default
@@ -492,7 +502,7 @@ content:
     third_party_settings: {  }
     region: content
   field_quantite:
-    weight: 165
+    weight: 56
     label: above
     settings:
       thousand_separator: ''
@@ -503,14 +513,14 @@ content:
     type: number_decimal
     region: content
   field_regime_neutre:
-    weight: 147
+    weight: 39
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_remarques:
-    weight: 127
+    weight: 21
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -518,7 +528,7 @@ content:
     region: content
   field_remarques_contraintes:
     type: entity_reference_revisions_entity_view
-    weight: 173
+    weight: 64
     label: above
     settings:
       view_mode: default
@@ -526,21 +536,21 @@ content:
     third_party_settings: {  }
     region: content
   field_secteur:
-    weight: 118
+    weight: 14
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_sens_machine:
-    weight: 139
+    weight: 32
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_site_de_production:
-    weight: 132
+    weight: 25
     label: above
     settings:
       link_to_entity: false
@@ -548,28 +558,29 @@ content:
     type: string
     region: content
   field_sous_secteur:
-    weight: 119
+    weight: 15
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_sur_mach:
-    weight: 160
+    weight: 51
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_telephone:
-    weight: 114
+    weight: 10
     label: above
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    type: basic_string
+    type: string
     region: content
   field_tempe_local_travail:
-    weight: 144
+    weight: 37
     label: above
     settings:
       thousand_separator: ''
@@ -580,31 +591,32 @@ content:
     type: number_decimal
     region: content
   field_tension_electrique:
-    weight: 149
+    weight: 41
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_transport_a_la_charge_de:
-    weight: 169
+    weight: 60
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_type_client:
-    weight: 120
+    weight: 16
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   links:
-    weight: 100
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_test: true
+  entity_print_view_epub: true
+  entity_print_view_word_docx: true
   langcode: true
