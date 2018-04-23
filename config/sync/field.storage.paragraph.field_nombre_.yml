@@ -1,17 +1,16 @@
-uuid: f6fc4350-989f-4eab-a788-a01c251032aa
+uuid: 70401837-318d-476d-9a9a-496eb80d1450
 langcode: fr
 status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_diametre_mm
-field_name: field_diametre_mm
+id: paragraph.field_nombre_
+field_name: field_nombre_
 entity_type: paragraph
-type: string
+type: integer
 settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
+  unsigned: false
+  size: normal
 module: core
 locked: false
 cardinality: 1

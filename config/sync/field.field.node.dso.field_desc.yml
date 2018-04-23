@@ -1,15 +1,15 @@
-uuid: 388a5323-d7e1-4c61-90eb-7722f8584581
+uuid: cdd59a33-3c7f-480e-b126-54594b0747e6
 langcode: fr
 status: true
 dependencies:
   config:
-    - field.storage.node.field_descr
+    - field.storage.node.field_desc
     - node.type.dso
     - paragraphs.paragraphs_type.description_etiquettes
   module:
     - entity_reference_revisions
-id: node.dso.field_descr
-field_name: field_descr
+id: node.dso.field_desc
+field_name: field_desc
 entity_type: node
 bundle: dso
 label: 'Description Étiquettes'

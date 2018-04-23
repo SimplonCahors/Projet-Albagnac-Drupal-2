@@ -25,7 +25,7 @@ dependencies:
     - field.field.node.dso.field_demande_cem
     - field.field.node.dso.field_demande_certif_externe
     - field.field.node.dso.field_demande_de_certification_e
-    - field.field.node.dso.field_descr
+    - field.field.node.dso.field_desc
     - field.field.node.dso.field_description_emballage
     - field.field.node.dso.field_emballages
     - field.field.node.dso.field_en_salle
@@ -73,6 +73,7 @@ dependencies:
     - datetime
     - entity_reference_revisions
     - options
+    - telephone
     - user
 id: node.dso.default
 targetEntityType: node
@@ -259,7 +260,7 @@ content:
     third_party_settings: {  }
     type: list_default
     region: content
-  field_descr:
+  field_desc:
     type: entity_reference_revisions_entity_view
     weight: 175
     label: above
@@ -321,9 +322,10 @@ content:
   field_fax:
     weight: 115
     label: above
-    settings: {  }
+    settings:
+      title: ''
     third_party_settings: {  }
-    type: basic_string
+    type: telephone_link
     region: content
   field_fournisseur_actuel:
     weight: 129
@@ -564,9 +566,10 @@ content:
   field_telephone:
     weight: 114
     label: above
-    settings: {  }
+    settings:
+      title: ''
     third_party_settings: {  }
-    type: basic_string
+    type: telephone_link
     region: content
   field_tempe_local_travail:
     weight: 144

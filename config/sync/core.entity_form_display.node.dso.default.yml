@@ -25,7 +25,7 @@ dependencies:
     - field.field.node.dso.field_demande_cem
     - field.field.node.dso.field_demande_certif_externe
     - field.field.node.dso.field_demande_de_certification_e
-    - field.field.node.dso.field_descr
+    - field.field.node.dso.field_desc
     - field.field.node.dso.field_description_emballage
     - field.field.node.dso.field_emballages
     - field.field.node.dso.field_en_salle
@@ -122,8 +122,8 @@ third_party_settings:
         - field_sous_secteur
         - field_type_client
         - field_num_sieret
-        - field_contact_technique
-        - field_contact_commercial
+        - group_conta
+        - group_contact
       parent_name: group_onglet1
       weight: 4
       format_type: tab
@@ -238,7 +238,7 @@ third_party_settings:
       label: 'Remarques / Contraintes éventuelles'
     group_etiquette:
       children:
-        - field_descr
+        - field_desc
       parent_name: group_onglets_dso
       weight: 6
       format_type: tab
@@ -250,7 +250,8 @@ third_party_settings:
         required_fields: true
       label: Etiquette
     group_combinaison:
-      children: {  }
+      children:
+        - field_liste_te
       parent_name: group_onglets_dso
       weight: 7
       format_type: tab
@@ -450,6 +451,32 @@ third_party_settings:
         description: ''
         required_fields: true
       label: Impression
+    group_contact:
+      children:
+        - field_contact_commercial
+      parent_name: group_onglet_b_1
+      weight: 19
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Contact commercial'
+    group_conta:
+      children:
+        - field_contact_technique
+      parent_name: group_onglet_b_1
+      weight: 17
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Contact technique'
 id: node.dso.default
 targetEntityType: node
 bundle: dso
@@ -551,7 +578,7 @@ content:
     region: content
   field_contact_commercial:
     type: entity_reference_paragraphs
-    weight: 18
+    weight: 19
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -563,7 +590,7 @@ content:
     region: content
   field_contact_technique:
     type: entity_reference_paragraphs
-    weight: 17
+    weight: 18
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -633,7 +660,7 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
-  field_descr:
+  field_desc:
     type: entity_reference_paragraphs
     weight: 67
     settings:
@@ -811,14 +838,14 @@ content:
     type: string_textfield
     region: content
   field_nombre_de_:
-    weight: 38
+    weight: 39
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_nombre_de_jour:
-    weight: 37
+    weight: 38
     settings:
       placeholder: ''
     third_party_settings: {  }

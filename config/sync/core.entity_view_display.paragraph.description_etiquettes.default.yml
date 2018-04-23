@@ -1,19 +1,19 @@
-uuid: b7abe700-42df-4faa-a507-2d9556eb8592
+uuid: 087e5960-e1d7-49a0-96ac-eafe46112f0f
 langcode: fr
 status: true
 dependencies:
   config:
     - field.field.paragraph.description_etiquettes.field_diametre_bobine_d_
-    - field.field.paragraph.description_etiquettes.field_diametre_mandrin_d
-    - field.field.paragraph.description_etiquettes.field_diametre_mm
+    - field.field.paragraph.description_etiquettes.field_diametre_mandrin_d_
+    - field.field.paragraph.description_etiquettes.field_diametre_mm_
     - field.field.paragraph.description_etiquettes.field_enroulement
-    - field.field.paragraph.description_etiquettes.field_etiquette_num
-    - field.field.paragraph.description_etiquettes.field_hauteur_h_
-    - field.field.paragraph.description_etiquettes.field_hauteur_mm_
-    - field.field.paragraph.description_etiquettes.field_largeur_mm
-    - field.field.paragraph.description_etiquettes.field_nombre_d_etiquettes
+    - field.field.paragraph.description_etiquettes.field_etiquette_ndeg
+    - field.field.paragraph.description_etiquettes.field_hauteur
+    - field.field.paragraph.description_etiquettes.field_hauteur_mm
+    - field.field.paragraph.description_etiquettes.field_larg
+    - field.field.paragraph.description_etiquettes.field_nombre_
     - field.field.paragraph.description_etiquettes.field_observations
-    - field.field.paragraph.description_etiquettes.field_photo
+    - field.field.paragraph.description_etiquettes.field_photo_etiquette
     - paragraphs.paragraphs_type.description_etiquettes
   module:
     - image
@@ -23,22 +23,6 @@ bundle: description_etiquettes
 mode: default
 content:
   field_diametre_bobine_d_:
-    weight: 6
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_diametre_mandrin_d:
-    weight: 7
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_diametre_mm:
     weight: 2
     label: above
     settings:
@@ -46,41 +30,15 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_enroulement:
-    weight: 9
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
-  field_etiquette_num:
-    weight: 10
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
-  field_hauteur_h_:
-    weight: 5
+  field_diametre_mandrin_d_:
+    weight: 3
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-  field_hauteur_mm_:
-    weight: 0
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_largeur_mm:
+  field_diametre_mm_:
     weight: 1
     label: above
     settings:
@@ -88,7 +46,49 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_nombre_d_etiquettes:
+  field_enroulement:
+    weight: 4
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_etiquette_ndeg:
+    weight: 0
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_hauteur:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_hauteur_mm:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_larg:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_nombre_:
     weight: 8
     label: above
     settings:
@@ -98,15 +98,15 @@ content:
     type: number_integer
     region: content
   field_observations:
-    weight: 3
+    weight: 9
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-  field_photo:
-    weight: 4
+  field_photo_etiquette:
+    weight: 10
     label: above
     settings:
       image_style: ''

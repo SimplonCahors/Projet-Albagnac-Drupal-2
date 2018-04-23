@@ -1,20 +1,20 @@
-uuid: 42f1ed98-b604-4ef7-a9f8-496fae718c2d
+uuid: f1a0d6fd-0c70-4dc4-b958-c8355532e6ab
 langcode: fr
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_photo
+    - field.storage.paragraph.field_photo_etiquette
     - paragraphs.paragraphs_type.description_etiquettes
   module:
     - image
-id: paragraph.description_etiquettes.field_photo
-field_name: field_photo
+id: paragraph.description_etiquettes.field_photo_etiquette
+field_name: field_photo_etiquette
 entity_type: paragraph
 bundle: description_etiquettes
 label: Photo
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

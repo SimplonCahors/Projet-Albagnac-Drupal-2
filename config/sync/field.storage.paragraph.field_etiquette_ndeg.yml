@@ -1,17 +1,16 @@
-uuid: 0b7a2b73-132d-4d17-9ae7-1417401a92cf
+uuid: d2541e7b-c319-410f-83a6-7c412d400233
 langcode: fr
 status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_largeur_mm
-field_name: field_largeur_mm
+id: paragraph.field_etiquette_ndeg
+field_name: field_etiquette_ndeg
 entity_type: paragraph
-type: string
+type: integer
 settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
+  unsigned: false
+  size: normal
 module: core
 locked: false
 cardinality: 1

@@ -1,15 +1,15 @@
-uuid: b755c17a-d0dd-4e6f-993d-dbaccc4f0164
+uuid: 9dfe6284-3be2-410c-b5b4-a04e973cfa8a
 langcode: fr
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_etiquette_num
+    - field.storage.paragraph.field_nombre_
     - paragraphs.paragraphs_type.description_etiquettes
-id: paragraph.description_etiquettes.field_etiquette_num
-field_name: field_etiquette_num
+id: paragraph.description_etiquettes.field_nombre_
+field_name: field_nombre_
 entity_type: paragraph
 bundle: description_etiquettes
-label: 'Étiquette N°'
+label: 'Nombre d''étiquettes'
 description: ''
 required: false
 translatable: false
