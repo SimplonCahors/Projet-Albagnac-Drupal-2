@@ -1,0 +1,23 @@
+uuid: f849adcf-4841-4cbc-b29c-2f860496a759
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_debit_m3_h
+    - paragraphs.paragraphs_type.pneumatique
+id: paragraph.pneumatique.field_debit_m3_h
+field_name: field_debit_m3_h
+entity_type: paragraph
+bundle: pneumatique
+label: 'Débit m3/h'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

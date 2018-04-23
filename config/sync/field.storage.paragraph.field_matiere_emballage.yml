@@ -1,0 +1,33 @@
+uuid: 73699d4e-da69-4e55-8331-92cae3bc471d
+langcode: fr
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_matiere_emballage
+field_name: field_matiere_emballage
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Métal
+      label: Métal
+    -
+      value: Plastique
+      label: Plastique
+    -
+      value: Verre
+      label: Verre
+    -
+      value: Autre
+      label: Autre
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

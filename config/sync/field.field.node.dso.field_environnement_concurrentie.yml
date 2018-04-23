@@ -1,0 +1,19 @@
+uuid: 3bea84c0-99fe-4b03-9bde-d331fa659385
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_environnement_concurrentie
+    - node.type.dso
+id: node.dso.field_environnement_concurrentie
+field_name: field_environnement_concurrentie
+entity_type: node
+bundle: dso
+label: 'Environnement concurrentiel lié à la demande de devis'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

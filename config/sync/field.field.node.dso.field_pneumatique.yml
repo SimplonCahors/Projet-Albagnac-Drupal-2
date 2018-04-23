@@ -1,0 +1,100 @@
+uuid: e131a2e1-7503-45b9-88ae-688f8451abed
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pneumatique
+    - node.type.dso
+    - paragraphs.paragraphs_type.pneumatique
+  module:
+    - entity_reference_revisions
+id: node.dso.field_pneumatique
+field_name: field_pneumatique
+entity_type: node
+bundle: dso
+label: Pneumatique
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      pneumatique: pneumatique
+    target_bundles_drag_drop:
+      pneumatique:
+        enabled: true
+        weight: 25
+      aval:
+        weight: 26
+        enabled: false
+      avertissements:
+        weight: 27
+        enabled: false
+      bp_accordion:
+        weight: 28
+        enabled: false
+      bp_accordion_section:
+        weight: 29
+        enabled: false
+      bp_blank:
+        weight: 30
+        enabled: false
+      bp_block:
+        weight: 31
+        enabled: false
+      bp_carousel:
+        weight: 32
+        enabled: false
+      bp_column_wrapper:
+        weight: 33
+        enabled: false
+      bp_columns:
+        weight: 34
+        enabled: false
+      bp_columns_three_uneven:
+        weight: 35
+        enabled: false
+      bp_columns_two_uneven:
+        weight: 36
+        enabled: false
+      bp_image:
+        weight: 37
+        enabled: false
+      bp_modal:
+        weight: 38
+        enabled: false
+      bp_simple:
+        weight: 39
+        enabled: false
+      bp_tab_section:
+        weight: 40
+        enabled: false
+      bp_tabs:
+        weight: 41
+        enabled: false
+      bp_view:
+        weight: 42
+        enabled: false
+      concurrent_sur_cette_opportunite:
+        weight: 43
+        enabled: false
+      contact:
+        weight: 44
+        enabled: false
+      electrique:
+        weight: 45
+        enabled: false
+      emballages_etiquettes:
+        weight: 46
+        enabled: false
+      etiquettes:
+        weight: 47
+        enabled: false
+      machine_amont:
+        weight: 48
+        enabled: false
+field_type: entity_reference_revisions

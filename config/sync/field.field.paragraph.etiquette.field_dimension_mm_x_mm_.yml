@@ -1,0 +1,19 @@
+uuid: a169acc3-a842-4060-8233-311a47d37d1d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dimension_mm_x_mm_
+    - paragraphs.paragraphs_type.etiquette
+id: paragraph.etiquette.field_dimension_mm_x_mm_
+field_name: field_dimension_mm_x_mm_
+entity_type: paragraph
+bundle: etiquette
+label: 'Dimension (mm x mm)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

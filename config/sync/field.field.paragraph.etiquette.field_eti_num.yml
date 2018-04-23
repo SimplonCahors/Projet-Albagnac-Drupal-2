@@ -1,0 +1,23 @@
+uuid: c111a2e5-7c03-4013-be2e-2056f78b796f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_eti_num
+    - paragraphs.paragraphs_type.etiquette
+id: paragraph.etiquette.field_eti_num
+field_name: field_eti_num
+entity_type: paragraph
+bundle: etiquette
+label: 'ETI n°'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,189 @@
+uuid: e34749e3-f9b4-4892-8795-a6e3e7e81688
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.description_embellage.field_deformation_niveau_liste_e
+    - field.field.paragraph.description_embellage.field_diametre_ou_long_x_large
+    - field.field.paragraph.description_embellage.field_emballage_num
+    - field.field.paragraph.description_embellage.field_forme
+    - field.field.paragraph.description_embellage.field_hauteur_mm_
+    - field.field.paragraph.description_embellage.field_matiere
+    - field.field.paragraph.description_embellage.field_observations
+    - field.field.paragraph.description_embellage.field_photo
+    - field.field.paragraph.description_embellage.field_poids_produit
+    - field.field.paragraph.description_embellage.field_produits_pleins_ou_vides
+    - field.field.paragraph.description_embellage.field_reference_client
+    - field.field.paragraph.description_embellage.field_reference_interne
+    - field.field.paragraph.description_embellage.field_temperature_produit
+    - field.field.paragraph.description_embellage.field_tolerance_dimensionnelle
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.description_embellage
+  module:
+    - field_group
+    - image
+third_party_settings:
+  field_group:
+    group_dimension:
+      children:
+        - field_forme
+        - field_diametre_ou_long_x_large
+        - field_hauteur_mm_
+      parent_name: group_emballage_
+      weight: 4
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Dimension du produit'
+    group_caracteristique_produit_a_:
+      children:
+        - field_produits_pleins_ou_vides
+        - field_temperature_produit
+        - field_poids_produit
+        - field_matiere
+        - field_deformation_niveau_liste_e
+        - field_tolerance_dimensionnelle
+        - field_observations
+        - field_photo
+      parent_name: group_emballage_
+      weight: 5
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Caractéristique produit à l''etiquetage'
+    group_emballage_:
+      children:
+        - field_reference_interne
+        - field_reference_client
+        - group_dimension
+        - group_caracteristique_produit_a_
+      parent_name: ''
+      weight: 1
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Emballage N°'
+id: paragraph.description_embellage.default
+targetEntityType: paragraph
+bundle: description_embellage
+mode: default
+content:
+  field_deformation_niveau_liste_e:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_diametre_ou_long_x_large:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_emballage_num:
+    weight: 0
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_forme:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_hauteur_mm_:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_matiere:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_observations:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_photo:
+    weight: 11
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_poids_produit:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_produits_pleins_ou_vides:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_reference_client:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_reference_interne:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_temperature_produit:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tolerance_dimensionnelle:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

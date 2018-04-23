@@ -1,0 +1,27 @@
+uuid: d6287f40-1fcb-42e9-b61e-4baf0af907a4
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_controle_conformite_spe
+field_name: field_controle_conformite_spe
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Oui
+      label: Oui
+    -
+      value: Non
+      label: Non
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

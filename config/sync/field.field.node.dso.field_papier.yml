@@ -1,0 +1,21 @@
+uuid: 1d9bde74-a54f-4194-bcf3-a523332f4468
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_papier
+    - node.type.dso
+  module:
+    - options
+id: node.dso.field_papier
+field_name: field_papier
+entity_type: node
+bundle: dso
+label: Papier
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

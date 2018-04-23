@@ -1,0 +1,23 @@
+uuid: d80f6d70-0831-40ce-8737-9bf102c78926
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_quantite
+    - node.type.dso
+id: node.dso.field_quantite
+field_name: field_quantite
+entity_type: node
+bundle: dso
+label: Quantité
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

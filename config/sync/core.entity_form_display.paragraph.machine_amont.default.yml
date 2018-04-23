@@ -1,0 +1,47 @@
+uuid: 1c15b956-060e-44d0-bb09-0ac650b0a455
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.machine_amont.field_arrivee_produits_amont
+    - field.field.paragraph.machine_amont.field_transfert_amont
+    - field.field.paragraph.machine_amont.field_type_convoyage_amont
+    - field.field.paragraph.machine_amont.field_type_machines
+    - paragraphs.paragraphs_type.machine_amont
+id: paragraph.machine_amont.default
+targetEntityType: paragraph
+bundle: machine_amont
+mode: default
+content:
+  field_arrivee_produits_amont:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_transfert_amont:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_type_convoyage_amont:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_type_machines:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

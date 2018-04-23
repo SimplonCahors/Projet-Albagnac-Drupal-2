@@ -1,0 +1,19 @@
+uuid: e352a57b-6525-4d23-b8df-c7a7d3e975ae
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sortie_produit_aval
+    - paragraphs.paragraphs_type.aval
+id: paragraph.aval.field_sortie_produit_aval
+field_name: field_sortie_produit_aval
+entity_type: paragraph
+bundle: aval
+label: 'Sortie produits / AVAL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

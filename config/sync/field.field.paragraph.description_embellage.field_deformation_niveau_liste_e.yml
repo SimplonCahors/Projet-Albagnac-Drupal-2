@@ -1,0 +1,21 @@
+uuid: d03813c9-d75b-4033-9e25-24058a2b9380
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_deformation_niveau_liste_e
+    - paragraphs.paragraphs_type.description_embellage
+  module:
+    - options
+id: paragraph.description_embellage.field_deformation_niveau_liste_e
+field_name: field_deformation_niveau_liste_e
+entity_type: paragraph
+bundle: description_embellage
+label: 'Déformation (niveau)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

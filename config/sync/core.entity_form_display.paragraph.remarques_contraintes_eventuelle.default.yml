@@ -1,0 +1,33 @@
+uuid: aa51a73f-3fc0-40bb-93e6-d3232815e3f0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.remarques_contraintes_eventuelle.field_descriptif_remarques
+    - field.field.paragraph.remarques_contraintes_eventuelle.field_objet
+    - paragraphs.paragraphs_type.remarques_contraintes_eventuelle
+id: paragraph.remarques_contraintes_eventuelle.default
+targetEntityType: paragraph
+bundle: remarques_contraintes_eventuelle
+mode: default
+content:
+  field_descriptif_remarques:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_objet:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

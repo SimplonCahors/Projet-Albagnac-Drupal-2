@@ -1,0 +1,21 @@
+uuid: 51c3adaa-d75d-4660-8ebc-4445326bc99c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_demande_cem
+    - node.type.dso
+  module:
+    - options
+id: node.dso.field_demande_cem
+field_name: field_demande_cem
+entity_type: node
+bundle: dso
+label: 'Demande de CEM (Electromagnetisme)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

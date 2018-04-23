@@ -1,0 +1,21 @@
+uuid: 54b5c0f7-d772-4d25-87d1-7c0e69e9d8c9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mise_en_route_machine
+    - node.type.dso
+  module:
+    - options
+id: node.dso.field_mise_en_route_machine
+field_name: field_mise_en_route_machine
+entity_type: node
+bundle: dso
+label: 'Mise En Route de la machine'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

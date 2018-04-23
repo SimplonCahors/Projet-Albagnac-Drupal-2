@@ -1,0 +1,33 @@
+uuid: 71ad4d3f-02c6-44f4-92c0-c8974b79147a
+langcode: fr
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_arrivee_produits_amont
+field_name: field_arrivee_produits_amont
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Cadencé
+      label: Cadencé
+    -
+      value: 'Par vague'
+      label: 'Par vague'
+    -
+      value: Aléatoire
+      label: Aléatoire
+    -
+      value: Manuel
+      label: Manuel
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

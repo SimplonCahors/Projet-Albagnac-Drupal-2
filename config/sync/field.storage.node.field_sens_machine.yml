@@ -1,0 +1,27 @@
+uuid: 72876283-5982-4e9c-a9ec-5535e52420c8
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_sens_machine
+field_name: field_sens_machine
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Gauche / Droite'
+      label: 'Gauche / Droite'
+    -
+      value: 'Droite / Gauche'
+      label: 'Droite / Gauche'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

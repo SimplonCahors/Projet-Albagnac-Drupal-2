@@ -1,0 +1,21 @@
+uuid: 856c0463-1835-4a98-8da9-1a4b43fe9c4e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_controle_conformite_spe
+    - node.type.dso
+  module:
+    - options
+id: node.dso.field_controle_conformite_spe
+field_name: field_controle_conformite_spe
+entity_type: node
+bundle: dso
+label: 'Contrôle de conformité suivant spécialisations'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

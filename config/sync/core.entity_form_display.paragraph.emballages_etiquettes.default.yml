@@ -1,0 +1,37 @@
+uuid: 7b684c8b-edae-4ddf-8b48-d7b615324fda
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.emballages_etiquettes.field_matiere_emballage
+    - field.field.paragraph.emballages_etiquettes.field_nombre_emballage
+    - field.field.paragraph.emballages_etiquettes.field_type_d_emballage
+    - paragraphs.paragraphs_type.emballages_etiquettes
+id: paragraph.emballages_etiquettes.default
+targetEntityType: paragraph
+bundle: emballages_etiquettes
+mode: default
+content:
+  field_matiere_emballage:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_nombre_emballage:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_type_d_emballage:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

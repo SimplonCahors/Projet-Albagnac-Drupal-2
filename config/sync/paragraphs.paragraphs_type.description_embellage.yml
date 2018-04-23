@@ -1,0 +1,9 @@
+uuid: aa59cd8d-9f23-4001-8e32-698808d1f783
+langcode: fr
+status: true
+dependencies: {  }
+id: description_embellage
+label: 'Description emballage'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,21 @@
+uuid: 3f3fcaa6-da83-460c-8cda-1b2cbe853754
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_coupure_sur_bourrage
+    - paragraphs.paragraphs_type.avertissements
+  module:
+    - options
+id: paragraph.avertissements.field_coupure_sur_bourrage
+field_name: field_coupure_sur_bourrage
+entity_type: paragraph
+bundle: avertissements
+label: 'Coupure sur bourrage'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

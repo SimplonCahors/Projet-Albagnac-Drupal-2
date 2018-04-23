@@ -1,0 +1,85 @@
+uuid: 8fa99e18-ce38-4f34-b7af-d29f8b74dfb1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_emballages
+    - node.type.dso
+    - paragraphs.paragraphs_type.emballages_etiquettes
+  module:
+    - entity_reference_revisions
+id: node.dso.field_emballages
+field_name: field_emballages
+entity_type: node
+bundle: dso
+label: Emballages
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      emballages_etiquettes: emballages_etiquettes
+    target_bundles_drag_drop:
+      etiquettes:
+        weight: 20
+        enabled: false
+      bp_accordion:
+        weight: 21
+        enabled: false
+      bp_accordion_section:
+        weight: 22
+        enabled: false
+      bp_blank:
+        weight: 23
+        enabled: false
+      bp_block:
+        weight: 24
+        enabled: false
+      bp_carousel:
+        weight: 25
+        enabled: false
+      bp_column_wrapper:
+        weight: 26
+        enabled: false
+      bp_columns:
+        weight: 27
+        enabled: false
+      bp_columns_three_uneven:
+        weight: 28
+        enabled: false
+      bp_columns_two_uneven:
+        weight: 29
+        enabled: false
+      bp_image:
+        weight: 30
+        enabled: false
+      bp_modal:
+        weight: 31
+        enabled: false
+      bp_simple:
+        weight: 32
+        enabled: false
+      bp_tab_section:
+        weight: 33
+        enabled: false
+      bp_tabs:
+        weight: 34
+        enabled: false
+      bp_view:
+        weight: 35
+        enabled: false
+      concurrent_sur_cette_opportunite:
+        weight: 36
+        enabled: false
+      contact:
+        weight: 37
+        enabled: false
+      emballages_etiquettes:
+        enabled: true
+        weight: 38
+field_type: entity_reference_revisions

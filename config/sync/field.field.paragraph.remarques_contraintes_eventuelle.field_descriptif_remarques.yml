@@ -1,0 +1,19 @@
+uuid: ffb63f94-0b31-4aee-9d25-c2e98e3de464
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_descriptif_remarques
+    - paragraphs.paragraphs_type.remarques_contraintes_eventuelle
+id: paragraph.remarques_contraintes_eventuelle.field_descriptif_remarques
+field_name: field_descriptif_remarques
+entity_type: paragraph
+bundle: remarques_contraintes_eventuelle
+label: Descriptif
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

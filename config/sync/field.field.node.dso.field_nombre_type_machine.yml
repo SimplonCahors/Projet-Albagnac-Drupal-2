@@ -1,0 +1,19 @@
+uuid: 494fb3e5-f98f-4380-9aba-0420d4db7bae
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nombre_type_machine
+    - node.type.dso
+id: node.dso.field_nombre_type_machine
+field_name: field_nombre_type_machine
+entity_type: node
+bundle: dso
+label: 'Nombre et type potentiel de machines'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

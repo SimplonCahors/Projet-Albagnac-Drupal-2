@@ -1,0 +1,19 @@
+uuid: fc87eba6-64f7-4a3c-9636-7103867f7e03
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_type
+    - paragraphs.paragraphs_type.concurrent_sur_cette_opportunite
+id: paragraph.concurrent_sur_cette_opportunite.field_type
+field_name: field_type
+entity_type: paragraph
+bundle: concurrent_sur_cette_opportunite
+label: Type
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

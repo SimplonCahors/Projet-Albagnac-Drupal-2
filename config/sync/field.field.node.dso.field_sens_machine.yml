@@ -1,0 +1,21 @@
+uuid: 234457c4-376d-49c2-9068-0495cb94388a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sens_machine
+    - node.type.dso
+  module:
+    - options
+id: node.dso.field_sens_machine
+field_name: field_sens_machine
+entity_type: node
+bundle: dso
+label: 'Sens de la machine'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

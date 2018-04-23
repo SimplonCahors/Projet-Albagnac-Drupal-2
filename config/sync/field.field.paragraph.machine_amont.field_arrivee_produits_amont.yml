@@ -1,0 +1,21 @@
+uuid: 7130aac3-c1ed-479e-afb2-895c17d3cb0e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_arrivee_produits_amont
+    - paragraphs.paragraphs_type.machine_amont
+  module:
+    - options
+id: paragraph.machine_amont.field_arrivee_produits_amont
+field_name: field_arrivee_produits_amont
+entity_type: paragraph
+bundle: machine_amont
+label: 'Arrivée produits / AMONT'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
