@@ -25,6 +25,8 @@ dependencies:
     - field.field.node.dso.field_demande_cem
     - field.field.node.dso.field_demande_certif_externe
     - field.field.node.dso.field_demande_de_certification_e
+    - field.field.node.dso.field_descr
+    - field.field.node.dso.field_description_emballage
     - field.field.node.dso.field_emballages
     - field.field.node.dso.field_en_salle
     - field.field.node.dso.field_environnement_concurrentie
@@ -256,6 +258,24 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_descr:
+    type: entity_reference_revisions_entity_view
+    weight: 175
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_description_emballage:
+    type: entity_reference_revisions_entity_view
+    weight: 174
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
     region: content
   field_emballages:
     type: entity_reference_revisions_entity_view

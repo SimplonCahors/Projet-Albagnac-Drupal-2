@@ -25,6 +25,8 @@ dependencies:
     - field.field.node.dso.field_demande_cem
     - field.field.node.dso.field_demande_certif_externe
     - field.field.node.dso.field_demande_de_certification_e
+    - field.field.node.dso.field_descr
+    - field.field.node.dso.field_description_emballage
     - field.field.node.dso.field_emballages
     - field.field.node.dso.field_en_salle
     - field.field.node.dso.field_environnement_concurrentie
@@ -95,7 +97,8 @@ third_party_settings:
         classes: ''
       label: 'Demande de devis'
     group_onglet2:
-      children: {  }
+      children:
+        - field_description_emballage
       parent_name: group_onglets_dso
       weight: 5
       format_type: tab
@@ -234,7 +237,8 @@ third_party_settings:
         required_fields: true
       label: 'Remarques / Contraintes éventuelles'
     group_etiquette:
-      children: {  }
+      children:
+        - field_descr
       parent_name: group_onglets_dso
       weight: 6
       format_type: tab
@@ -628,6 +632,30 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_descr:
+    type: entity_reference_paragraphs
+    weight: 67
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_description_emballage:
+    type: entity_reference_paragraphs
+    weight: 66
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
     region: content
   field_emballages:
     type: entity_reference_paragraphs

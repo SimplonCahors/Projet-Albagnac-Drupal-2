@@ -1,0 +1,23 @@
+uuid: 3c649a20-41ec-469c-bdcd-8006261ce8d1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_emballage_num
+    - paragraphs.paragraphs_type.description_embellage
+id: paragraph.description_embellage.field_emballage_num
+field_name: field_emballage_num
+entity_type: paragraph
+bundle: description_embellage
+label: 'Emballage N°'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

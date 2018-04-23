@@ -1,0 +1,19 @@
+uuid: 163e14ca-9b31-4b9b-887e-6cfe18c3845f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_reference_client
+    - paragraphs.paragraphs_type.description_embellage
+id: paragraph.description_embellage.field_reference_client
+field_name: field_reference_client
+entity_type: paragraph
+bundle: description_embellage
+label: 'Référence client'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

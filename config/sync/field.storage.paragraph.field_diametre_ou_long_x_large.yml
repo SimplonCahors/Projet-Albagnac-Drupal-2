@@ -1,0 +1,21 @@
+uuid: eca017b3-f917-436c-acae-00f4bbbe4dc7
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_diametre_ou_long_x_large
+field_name: field_diametre_ou_long_x_large
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
