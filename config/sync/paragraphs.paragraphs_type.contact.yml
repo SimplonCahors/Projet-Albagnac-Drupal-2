@@ -1,0 +1,9 @@
+uuid: 21c59ac1-2a12-4b6f-8e0b-30f8c1eeff10
+langcode: fr
+status: true
+dependencies: {  }
+id: contact
+label: Contact
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,17 +1,17 @@
-uuid: 714fa2ee-bc04-4a0b-924d-a7af39131a6d
+uuid: 7ef3ab17-4c75-41c9-b898-d66ce8441d0e
 langcode: fr
 status: true
 dependencies:
   config:
-    - field.storage.node.field_text_test3_req
+    - field.storage.node.field_nom_de_client
     - node.type.dso
-id: node.dso.field_text_test3_req
-field_name: field_text_test3_req
+id: node.dso.field_nom_de_client
+field_name: field_nom_de_client
 entity_type: node
 bundle: dso
-label: text_test3_req
+label: 'Nom de client'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

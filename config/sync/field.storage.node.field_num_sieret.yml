@@ -1,17 +1,16 @@
-uuid: ebb576d2-1aea-4f13-9c15-2179acb8fbdf
+uuid: 48d5e2ae-110c-4424-b313-84c529d72ed7
 langcode: fr
 status: true
 dependencies:
   module:
     - node
-id: node.field_text_test3_req
-field_name: field_text_test3_req
+id: node.field_num_sieret
+field_name: field_num_sieret
 entity_type: node
-type: string
+type: integer
 settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
+  unsigned: false
+  size: normal
 module: core
 locked: false
 cardinality: 1

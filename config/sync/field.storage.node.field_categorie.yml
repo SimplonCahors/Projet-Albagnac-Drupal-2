@@ -1,0 +1,27 @@
+uuid: 45036366-bb74-46e3-a6ef-2cff6df8f733
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_categorie
+field_name: field_categorie
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Client
+      label: Client
+    -
+      value: Revendeur
+      label: Revendeur
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

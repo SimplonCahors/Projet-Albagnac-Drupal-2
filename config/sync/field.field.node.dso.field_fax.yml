@@ -1,0 +1,21 @@
+uuid: 3e95ea39-eb19-4feb-be01-88d479862885
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fax
+    - node.type.dso
+  module:
+    - telephone
+id: node.dso.field_fax
+field_name: field_fax
+entity_type: node
+bundle: dso
+label: Fax
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

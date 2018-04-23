@@ -1,11 +1,11 @@
-uuid: ef373219-4f89-45dc-9998-db44eee3a6b3
+uuid: e28af504-04b8-435c-b3f5-1fda8dcd660f
 langcode: fr
 status: true
 dependencies:
   module:
     - node
-id: node.field_text_test2
-field_name: field_text_test2
+id: node.field_nom_commercial
+field_name: field_nom_commercial
 entity_type: node
 type: string
 settings:

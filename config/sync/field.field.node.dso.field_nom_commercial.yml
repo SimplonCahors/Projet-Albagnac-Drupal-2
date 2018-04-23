@@ -1,17 +1,17 @@
-uuid: 5dbdd05a-a128-46f3-b6f0-1524c8aaa398
+uuid: 182c83d5-8247-409c-b45e-ad94d5f9515f
 langcode: fr
 status: true
 dependencies:
   config:
-    - field.storage.node.field_text_test4_req
+    - field.storage.node.field_nom_commercial
     - node.type.dso
-id: node.dso.field_text_test4_req
-field_name: field_text_test4_req
+id: node.dso.field_nom_commercial
+field_name: field_nom_commercial
 entity_type: node
 bundle: dso
-label: text_test4_req
+label: 'Nom du commercial'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

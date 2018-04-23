@@ -1,0 +1,27 @@
+uuid: a121b90e-c471-4652-b0e4-c822b4097367
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_secteur
+field_name: field_secteur
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Vinicole
+      label: Vinicole
+    -
+      value: Industrie
+      label: Industrie
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
