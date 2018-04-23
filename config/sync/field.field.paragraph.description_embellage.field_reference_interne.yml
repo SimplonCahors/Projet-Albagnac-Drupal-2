@@ -1,0 +1,19 @@
+uuid: d20ffc7b-5989-4a2d-b0ea-3c1b15f4bbf2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_reference_interne
+    - paragraphs.paragraphs_type.description_embellage
+id: paragraph.description_embellage.field_reference_interne
+field_name: field_reference_interne
+entity_type: paragraph
+bundle: description_embellage
+label: 'Référence interne'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

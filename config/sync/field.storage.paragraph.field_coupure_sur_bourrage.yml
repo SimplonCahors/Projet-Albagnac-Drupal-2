@@ -1,0 +1,27 @@
+uuid: 9c3b190c-194d-464d-81fb-4de9ff776016
+langcode: fr
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_coupure_sur_bourrage
+field_name: field_coupure_sur_bourrage
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Oui
+      label: Oui
+    -
+      value: Non
+      label: Non
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

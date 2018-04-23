@@ -1,0 +1,21 @@
+uuid: 9eb798e9-5b5b-424c-a72c-25838da73176
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_diametre_mandrin_d
+field_name: field_diametre_mandrin_d
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

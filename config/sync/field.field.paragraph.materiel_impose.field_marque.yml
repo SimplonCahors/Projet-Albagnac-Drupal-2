@@ -1,0 +1,19 @@
+uuid: a6c58dd1-5b4a-4685-a302-90fcdc59ba86
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_marque
+    - paragraphs.paragraphs_type.materiel_impose
+id: paragraph.materiel_impose.field_marque
+field_name: field_marque
+entity_type: paragraph
+bundle: materiel_impose
+label: Marque
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

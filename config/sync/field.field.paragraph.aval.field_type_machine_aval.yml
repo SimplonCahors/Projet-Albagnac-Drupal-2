@@ -1,0 +1,19 @@
+uuid: 44b75db4-bd35-43da-b3bd-89edfc47c421
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_type_machine_aval
+    - paragraphs.paragraphs_type.aval
+id: paragraph.aval.field_type_machine_aval
+field_name: field_type_machine_aval
+entity_type: paragraph
+bundle: aval
+label: 'Type de machine AVAL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

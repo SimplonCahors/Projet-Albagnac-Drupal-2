@@ -1,0 +1,19 @@
+uuid: 566a6da5-c72c-4db1-a0c8-694a91de5c74
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_type_convoyage_amont
+    - paragraphs.paragraphs_type.machine_amont
+id: paragraph.machine_amont.field_type_convoyage_amont
+field_name: field_type_convoyage_amont
+entity_type: paragraph
+bundle: machine_amont
+label: 'Type de convoyage AMONT'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: b40b96c0-2c2c-4318-bc95-76764fef0b19
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_diametre_ou_long_x_large
+    - paragraphs.paragraphs_type.description_embellage
+id: paragraph.description_embellage.field_diametre_ou_long_x_large
+field_name: field_diametre_ou_long_x_large
+entity_type: paragraph
+bundle: description_embellage
+label: 'Diamètre ou longueur x largeur (mm)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

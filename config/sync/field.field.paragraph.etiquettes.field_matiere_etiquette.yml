@@ -1,0 +1,21 @@
+uuid: 3e0eccfc-548a-46fd-a828-b06cec54936b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_matiere_etiquette
+    - paragraphs.paragraphs_type.etiquettes
+  module:
+    - options
+id: paragraph.etiquettes.field_matiere_etiquette
+field_name: field_matiere_etiquette
+entity_type: paragraph
+bundle: etiquettes
+label: 'Matière d''étiquette'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

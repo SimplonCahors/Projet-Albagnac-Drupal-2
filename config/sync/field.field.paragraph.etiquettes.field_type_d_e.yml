@@ -1,0 +1,21 @@
+uuid: d55b298f-1533-46c0-acaa-5ba71a345837
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_type_d_e
+    - paragraphs.paragraphs_type.etiquettes
+  module:
+    - options
+id: paragraph.etiquettes.field_type_d_e
+field_name: field_type_d_e
+entity_type: paragraph
+bundle: etiquettes
+label: 'Type d''étiquette'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

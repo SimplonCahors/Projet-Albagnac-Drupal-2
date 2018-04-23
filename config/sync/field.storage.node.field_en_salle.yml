@@ -1,0 +1,27 @@
+uuid: 3f60af56-61eb-4a23-91b0-e4c7e77168ff
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_en_salle
+field_name: field_en_salle
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Oui
+      label: Oui
+    -
+      value: Non
+      label: Non
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,36 @@
+uuid: dc33a4e9-ef77-41a6-81cd-706fd6e752e6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pneumatique.field_debit_m3_h
+    - field.field.paragraph.pneumatique.field_pression_bar_
+    - paragraphs.paragraphs_type.pneumatique
+id: paragraph.pneumatique.default
+targetEntityType: paragraph
+bundle: pneumatique
+mode: default
+content:
+  field_debit_m3_h:
+    weight: 0
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_pression_bar_:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+hidden: {  }

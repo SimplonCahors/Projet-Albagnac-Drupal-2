@@ -1,0 +1,19 @@
+uuid: 8aaeff38-b9b4-4474-822d-5a2ed5d8e149
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_observations
+    - paragraphs.paragraphs_type.description_embellage
+id: paragraph.description_embellage.field_observations
+field_name: field_observations
+entity_type: paragraph
+bundle: description_embellage
+label: Observations
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

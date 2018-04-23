@@ -1,0 +1,49 @@
+uuid: a30131de-99eb-49d2-a311-02bef33809e4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.etiquette.field_dimension_mm_x_mm_
+    - field.field.paragraph.etiquette.field_eti_num
+    - field.field.paragraph.etiquette.field_position_de_l_etiquette_a_
+    - field.field.paragraph.etiquette.field_remarques_impression
+    - paragraphs.paragraphs_type.etiquette
+id: paragraph.etiquette.default
+targetEntityType: paragraph
+bundle: etiquette
+mode: default
+content:
+  field_dimension_mm_x_mm_:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_eti_num:
+    weight: 0
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_position_de_l_etiquette_a_:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_remarques_impression:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

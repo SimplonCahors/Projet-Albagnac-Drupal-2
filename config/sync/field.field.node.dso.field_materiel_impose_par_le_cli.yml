@@ -1,0 +1,100 @@
+uuid: cabfaf84-169d-4f63-ac8d-ae30ef8ac04e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_materiel_impose_par_le_cli
+    - node.type.dso
+    - paragraphs.paragraphs_type.materiel_impose
+  module:
+    - entity_reference_revisions
+id: node.dso.field_materiel_impose_par_le_cli
+field_name: field_materiel_impose_par_le_cli
+entity_type: node
+bundle: dso
+label: 'materiel imposé par le client'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      materiel_impose: materiel_impose
+    target_bundles_drag_drop:
+      aval:
+        weight: 25
+        enabled: false
+      avertissements:
+        weight: 26
+        enabled: false
+      bp_accordion:
+        weight: 27
+        enabled: false
+      bp_accordion_section:
+        weight: 28
+        enabled: false
+      bp_blank:
+        weight: 29
+        enabled: false
+      bp_block:
+        weight: 30
+        enabled: false
+      bp_carousel:
+        weight: 31
+        enabled: false
+      bp_columns:
+        weight: 32
+        enabled: false
+      bp_columns_three_uneven:
+        weight: 33
+        enabled: false
+      bp_columns_two_uneven:
+        weight: 34
+        enabled: false
+      bp_column_wrapper:
+        weight: 35
+        enabled: false
+      bp_image:
+        weight: 36
+        enabled: false
+      bp_modal:
+        weight: 37
+        enabled: false
+      bp_simple:
+        weight: 38
+        enabled: false
+      bp_tabs:
+        weight: 39
+        enabled: false
+      bp_tab_section:
+        weight: 40
+        enabled: false
+      bp_view:
+        weight: 41
+        enabled: false
+      concurrent_sur_cette_opportunite:
+        weight: 42
+        enabled: false
+      contact:
+        weight: 43
+        enabled: false
+      emballages_etiquettes:
+        weight: 44
+        enabled: false
+      etiquettes:
+        weight: 45
+        enabled: false
+      machine_amont:
+        weight: 46
+        enabled: false
+      materiel_impose:
+        enabled: true
+        weight: 47
+      pneumatique:
+        weight: 48
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,78 @@
+uuid: 1dd41678-5541-461a-95e2-ebce0fbf7a0c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.impression_emballage.field_dimension_mm_x_mm_
+    - field.field.paragraph.impression_emballage.field_eti_num
+    - field.field.paragraph.impression_emballage.field_position_a_imprimer_sur_l_
+    - field.field.paragraph.impression_emballage.field_remarques_impression
+    - paragraphs.paragraphs_type.impression_emballage
+  module:
+    - field_group
+third_party_settings:
+  field_group:
+    group_reference_etiquette:
+      children:
+        - field_eti_num
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Référence étiquette'
+    group_def_zone_impression:
+      children:
+        - field_dimension_mm_x_mm_
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Définition de la zone d''impression'
+id: paragraph.impression_emballage.default
+targetEntityType: paragraph
+bundle: impression_emballage
+mode: default
+content:
+  field_dimension_mm_x_mm_:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_eti_num:
+    weight: 21
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_position_a_imprimer_sur_l_:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_remarques_impression:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

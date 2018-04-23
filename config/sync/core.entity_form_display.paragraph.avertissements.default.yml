@@ -1,0 +1,45 @@
+uuid: e07a759a-0719-40f7-98b5-2114b6db3b5f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.avertissements.field_com_machine_amont
+    - field.field.paragraph.avertissements.field_communication_avec_machine
+    - field.field.paragraph.avertissements.field_coupure_sur_bourrage
+    - field.field.paragraph.avertissements.field_descriptif
+    - paragraphs.paragraphs_type.avertissements
+id: paragraph.avertissements.default
+targetEntityType: paragraph
+bundle: avertissements
+mode: default
+content:
+  field_com_machine_amont:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_communication_avec_machine:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_coupure_sur_bourrage:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_descriptif:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

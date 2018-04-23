@@ -1,0 +1,19 @@
+uuid: dd13c0a9-b4a0-46f4-80bd-2d267c10a0a3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_modele_information
+    - paragraphs.paragraphs_type.materiel_impose
+id: paragraph.materiel_impose.field_modele_information
+field_name: field_modele_information
+entity_type: paragraph
+bundle: materiel_impose
+label: 'Modele / Information'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

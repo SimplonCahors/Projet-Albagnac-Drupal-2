@@ -1,0 +1,19 @@
+uuid: 6df4123a-fb58-4b0a-8112-c6127333cb1a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_temperature_produit
+    - paragraphs.paragraphs_type.description_embellage
+id: paragraph.description_embellage.field_temperature_produit
+field_name: field_temperature_produit
+entity_type: paragraph
+bundle: description_embellage
+label: 'Température produit (C°)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

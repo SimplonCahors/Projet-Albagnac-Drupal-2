@@ -1,0 +1,23 @@
+uuid: 579a0c5c-49e1-4dd9-b758-e08b4d1a3e6f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tempe_local_travail
+    - node.type.dso
+id: node.dso.field_tempe_local_travail
+field_name: field_tempe_local_travail
+entity_type: node
+bundle: dso
+label: 'T° du local de travail (°C)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal
