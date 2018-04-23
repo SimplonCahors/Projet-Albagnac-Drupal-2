@@ -981,6 +981,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  field_test: true
   langcode: true
   path: true
   promote: true
