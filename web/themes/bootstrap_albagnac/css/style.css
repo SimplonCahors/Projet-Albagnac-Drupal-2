@@ -1,0 +1,13 @@
+.content {
+    text-align: center;
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+
+.field--label{
+    border-top: 2px solid lightgrey;
+    font-size: 20px;
+}
+.field--item{
+    margin-bottom: 8px;
+}
