@@ -148,12 +148,13 @@ third_party_settings:
       weight: 3
       format_type: tab
       format_settings:
-        id: ''
-        classes: ''
-        formatter: open
+        label: 'Informations DSO'
+        formatter: closed
         description: ''
         required_fields: true
-      label: 'informations DSO'
+        id: ''
+        classes: ''
+      label: 'Informations DSO'
     group_informations_commerciales:
       children:
         - group_etat_lieux
@@ -184,9 +185,8 @@ third_party_settings:
       label: 'Emballages, Etiquettes'
     group_environnement_machine:
       children:
-        - group_notice
-        - field_amont
-        - field_aval
+        - group_type_de_machine_a
+        - group_type_de_machine_aval
         - field_sens_machine
         - field_cadence_souhaitee
         - field_milieu
@@ -251,8 +251,7 @@ third_party_settings:
         required_fields: true
       label: Etiquette
     group_combinaison:
-      children:
-        - field_liste_te
+      children: {  }
       parent_name: group_onglets_dso
       weight: 7
       format_type: tab
@@ -273,10 +272,11 @@ third_party_settings:
       weight: 2
       format_type: tabs
       format_settings:
+        label: 'Onglets DSO'
+        direction: vertical
         id: ''
         classes: ''
-        direction: vertical
-      label: 'onglets DSO'
+      label: 'Onglets DSO'
     group_besoin:
       children:
         - field_choix
@@ -327,7 +327,7 @@ third_party_settings:
         - field_regime_neutre
         - field_pneumatique
       parent_name: group_environnement_machine
-      weight: 30
+      weight: 32
       format_type: tab
       format_settings:
         id: ''
@@ -343,7 +343,7 @@ third_party_settings:
         - field_demande_cem
         - field_demande_certif_externe
       parent_name: group_environnement_machine
-      weight: 31
+      weight: 33
       format_type: tab
       format_settings:
         id: ''
@@ -372,7 +372,7 @@ third_party_settings:
         - field_mise_en_route_machine
         - field_demande_de_certification_e
       parent_name: group_environnement_machine
-      weight: 32
+      weight: 34
       format_type: tab
       format_settings:
         id: ''
@@ -388,7 +388,7 @@ third_party_settings:
         - field_nombre_de_jour
         - field_nombre_de_
       parent_name: group_environnement_machine
-      weight: 33
+      weight: 35
       format_type: tab
       format_settings:
         id: ''
@@ -401,7 +401,7 @@ third_party_settings:
       children:
         - field_transport_a_la_charge_de
       parent_name: group_environnement_machine
-      weight: 35
+      weight: 37
       format_type: tab
       format_settings:
         id: ''
@@ -410,17 +410,6 @@ third_party_settings:
         description: ''
         required_fields: true
       label: Transport
-    group_notice:
-      children: {  }
-      parent_name: group_environnement_machine
-      weight: 20
-      format_type: fieldset
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        required_fields: true
-      label: Notice
     group_notices:
       children:
         - field_papier
@@ -429,7 +418,7 @@ third_party_settings:
         - field_numerique
         - field_langue
       parent_name: group_environnement_machine
-      weight: 34
+      weight: 36
       format_type: tab
       format_settings:
         id: ''
@@ -478,6 +467,32 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Contact technique'
+    group_type_de_machine_a:
+      children:
+        - field_amont
+      parent_name: group_environnement_machine
+      weight: 22
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Type de machines AMONT'
+    group_type_de_machine_aval:
+      children:
+        - field_aval
+      parent_name: group_environnement_machine
+      weight: 23
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Type de machine AVAL'
 id: node.dso.default
 targetEntityType: node
 bundle: dso
@@ -511,7 +526,7 @@ content:
     region: content
   field_aval:
     type: entity_reference_paragraphs
-    weight: 22
+    weight: 24
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -523,7 +538,7 @@ content:
     region: content
   field_avertissements:
     type: entity_reference_paragraphs
-    weight: 29
+    weight: 31
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -534,7 +549,7 @@ content:
     third_party_settings: {  }
     region: content
   field_cadence_souhaitee:
-    weight: 24
+    weight: 26
     settings:
       size: 60
       placeholder: ''
@@ -712,7 +727,7 @@ content:
     type: string_textfield
     region: content
   field_espace_disponible_sol:
-    weight: 27
+    weight: 29
     settings:
       size: 60
       placeholder: ''
@@ -747,7 +762,7 @@ content:
     type: string_textarea
     region: content
   field_hauteur_convoyeur:
-    weight: 26
+    weight: 28
     settings:
       size: 60
       placeholder: ''
@@ -811,7 +826,7 @@ content:
     third_party_settings: {  }
     region: content
   field_milieu:
-    weight: 25
+    weight: 27
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -904,7 +919,7 @@ content:
     third_party_settings: {  }
     region: content
   field_quantite:
-    weight: 57
+    weight: 68
     settings:
       placeholder: ''
     third_party_settings: {  }
@@ -943,7 +958,7 @@ content:
     type: options_select
     region: content
   field_sens_machine:
-    weight: 23
+    weight: 25
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -976,7 +991,7 @@ content:
     type: telephone_default
     region: content
   field_tempe_local_travail:
-    weight: 28
+    weight: 30
     settings:
       placeholder: ''
     third_party_settings: {  }

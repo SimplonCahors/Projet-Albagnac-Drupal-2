@@ -101,7 +101,7 @@ content:
   field_amont:
     type: entity_reference_revisions_entity_view
     weight: 30
-    label: above
+    label: visually_hidden
     settings:
       view_mode: default
       link: ''
@@ -110,7 +110,7 @@ content:
   field_aval:
     type: entity_reference_revisions_entity_view
     weight: 31
-    label: above
+    label: visually_hidden
     settings:
       view_mode: default
       link: ''
@@ -504,15 +504,13 @@ content:
     third_party_settings: {  }
     region: content
   field_quantite:
-    weight: 56
+    weight: 67
     label: above
     settings:
       thousand_separator: ''
-      decimal_separator: .
-      scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_decimal
+    type: number_integer
     region: content
   field_regime_neutre:
     weight: 39
