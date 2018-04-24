@@ -1,0 +1,23 @@
+uuid: 1c98662b-e923-42d8-a121-0668945b1e67
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_etiquette_ndeg
+    - paragraphs.paragraphs_type.description_etiquettes
+id: paragraph.description_etiquettes.field_etiquette_ndeg
+field_name: field_etiquette_ndeg
+entity_type: paragraph
+bundle: description_etiquettes
+label: 'Étiquette N°'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

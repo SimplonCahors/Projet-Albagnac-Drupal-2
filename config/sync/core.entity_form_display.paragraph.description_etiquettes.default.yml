@@ -1,0 +1,166 @@
+uuid: 97c9a95c-c014-4fa1-b05e-455b60b78ecc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.description_etiquettes.field_diametre_bobine_d_
+    - field.field.paragraph.description_etiquettes.field_diametre_mandrin_d_
+    - field.field.paragraph.description_etiquettes.field_diametre_mm_
+    - field.field.paragraph.description_etiquettes.field_enroulement
+    - field.field.paragraph.description_etiquettes.field_etiquette_ndeg
+    - field.field.paragraph.description_etiquettes.field_hauteur
+    - field.field.paragraph.description_etiquettes.field_hauteur_mm
+    - field.field.paragraph.description_etiquettes.field_larg
+    - field.field.paragraph.description_etiquettes.field_nombre_
+    - field.field.paragraph.description_etiquettes.field_observations
+    - field.field.paragraph.description_etiquettes.field_photo_etiquette
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.description_etiquettes
+  module:
+    - field_group
+    - image
+third_party_settings:
+  field_group:
+    group_bobin:
+      children:
+        - field_hauteur
+        - field_diametre_bobine_d_
+        - field_diametre_mandrin_d_
+        - field_nombre_
+        - field_enroulement
+      parent_name: group_etique
+      weight: 21
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Bobine
+    group_etique:
+      children:
+        - group_dimensions
+        - group_bobin
+      parent_name: ''
+      weight: 1
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Étiquette
+    group_dimensions:
+      children:
+        - field_hauteur_mm
+        - field_larg
+        - field_diametre_mm_
+        - field_observations
+        - field_photo_etiquette
+      parent_name: group_etique
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Dimensions
+id: paragraph.description_etiquettes.default
+targetEntityType: paragraph
+bundle: description_etiquettes
+mode: default
+content:
+  field_diametre_bobine_d_:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_diametre_mandrin_d_:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_diametre_mm_:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_enroulement:
+    weight: 13
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_etiquette_ndeg:
+    weight: 0
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_hauteur:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_hauteur_mm:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_larg:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_nombre_:
+    weight: 12
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_observations:
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_photo_etiquette:
+    weight: 14
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

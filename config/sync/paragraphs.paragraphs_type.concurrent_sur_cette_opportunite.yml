@@ -1,0 +1,9 @@
+uuid: 3b07fe80-c28d-46fc-84cc-fe494f0afe0e
+langcode: fr
+status: true
+dependencies: {  }
+id: concurrent_sur_cette_opportunite
+label: 'Concurrent sur cette opportunité'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

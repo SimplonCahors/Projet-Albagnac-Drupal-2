@@ -1,0 +1,19 @@
+uuid: 074518d0-2640-4cc7-bd42-4429f1224e35
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_remarques
+    - paragraphs.paragraphs_type.concurrent_sur_cette_opportunite
+id: paragraph.concurrent_sur_cette_opportunite.field_remarques
+field_name: field_remarques
+entity_type: paragraph
+bundle: concurrent_sur_cette_opportunite
+label: Remarques
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

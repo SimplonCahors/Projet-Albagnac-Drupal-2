@@ -1,0 +1,115 @@
+uuid: cdd59a33-3c7f-480e-b126-54594b0747e6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_desc
+    - node.type.dso
+    - paragraphs.paragraphs_type.description_etiquettes
+  module:
+    - entity_reference_revisions
+id: node.dso.field_desc
+field_name: field_desc
+entity_type: node
+bundle: dso
+label: 'Description Étiquettes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      description_etiquettes: description_etiquettes
+    target_bundles_drag_drop:
+      description_etiquettes:
+        enabled: true
+        weight: 30
+      aval:
+        weight: 31
+        enabled: false
+      avertissements:
+        weight: 32
+        enabled: false
+      bp_accordion:
+        weight: 33
+        enabled: false
+      bp_accordion_section:
+        weight: 34
+        enabled: false
+      bp_blank:
+        weight: 35
+        enabled: false
+      bp_block:
+        weight: 36
+        enabled: false
+      bp_carousel:
+        weight: 37
+        enabled: false
+      bp_column_wrapper:
+        weight: 38
+        enabled: false
+      bp_columns:
+        weight: 39
+        enabled: false
+      bp_columns_three_uneven:
+        weight: 40
+        enabled: false
+      bp_columns_two_uneven:
+        weight: 41
+        enabled: false
+      bp_image:
+        weight: 42
+        enabled: false
+      bp_modal:
+        weight: 43
+        enabled: false
+      bp_simple:
+        weight: 44
+        enabled: false
+      bp_tab_section:
+        weight: 45
+        enabled: false
+      bp_tabs:
+        weight: 46
+        enabled: false
+      bp_view:
+        weight: 47
+        enabled: false
+      concurrent_sur_cette_opportunite:
+        weight: 48
+        enabled: false
+      contact:
+        weight: 49
+        enabled: false
+      description_embellage:
+        weight: 50
+        enabled: false
+      emballages_etiquettes:
+        weight: 51
+        enabled: false
+      etiquette:
+        weight: 52
+        enabled: false
+      etiquettes:
+        weight: 53
+        enabled: false
+      impression_emballage:
+        weight: 54
+        enabled: false
+      machine_amont:
+        weight: 55
+        enabled: false
+      materiel_impose:
+        weight: 56
+        enabled: false
+      pneumatique:
+        weight: 57
+        enabled: false
+      remarques_contraintes_eventuelle:
+        weight: 58
+        enabled: false
+field_type: entity_reference_revisions

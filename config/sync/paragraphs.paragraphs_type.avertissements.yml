@@ -1,0 +1,9 @@
+uuid: 9137937e-29eb-42cf-a90b-cdec02a4ecaa
+langcode: fr
+status: true
+dependencies: {  }
+id: avertissements
+label: Avertissements
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

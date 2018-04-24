@@ -1,0 +1,21 @@
+uuid: 73dfab35-fe46-4523-8321-e0847d36812a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pays
+    - node.type.dso
+  module:
+    - options
+id: node.dso.field_pays
+field_name: field_pays
+entity_type: node
+bundle: dso
+label: Pays
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

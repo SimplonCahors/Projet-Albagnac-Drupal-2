@@ -1,0 +1,19 @@
+uuid: da9d4676-9e93-455b-904e-3c5c2512a5d0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_experience
+    - paragraphs.paragraphs_type.contact
+id: paragraph.contact.field_experience
+field_name: field_experience
+entity_type: paragraph
+bundle: contact
+label: Expérience
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

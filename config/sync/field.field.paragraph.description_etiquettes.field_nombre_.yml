@@ -1,0 +1,23 @@
+uuid: 9dfe6284-3be2-410c-b5b4-a04e973cfa8a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_nombre_
+    - paragraphs.paragraphs_type.description_etiquettes
+id: paragraph.description_etiquettes.field_nombre_
+field_name: field_nombre_
+entity_type: paragraph
+bundle: description_etiquettes
+label: 'Nombre d''étiquettes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

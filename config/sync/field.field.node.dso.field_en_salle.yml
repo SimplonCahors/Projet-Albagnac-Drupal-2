@@ -1,0 +1,21 @@
+uuid: 650aae47-033a-4580-82a5-de3c9af9824a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_en_salle
+    - node.type.dso
+  module:
+    - options
+id: node.dso.field_en_salle
+field_name: field_en_salle
+entity_type: node
+bundle: dso
+label: 'En salle'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

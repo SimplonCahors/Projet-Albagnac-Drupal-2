@@ -1,0 +1,9 @@
+uuid: 3d894130-ab2d-473e-86b1-1643950e4f84
+langcode: fr
+status: true
+dependencies: {  }
+id: aval
+label: 'Type de machines AVAL'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

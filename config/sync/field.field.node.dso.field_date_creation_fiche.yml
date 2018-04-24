@@ -1,0 +1,24 @@
+uuid: a5ecfcca-58cd-45e0-be96-de89f4320713
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_creation_fiche
+    - node.type.dso
+  module:
+    - datetime
+id: node.dso.field_date_creation_fiche
+field_name: field_date_creation_fiche
+entity_type: node
+bundle: dso
+label: 'Date de création fiche'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

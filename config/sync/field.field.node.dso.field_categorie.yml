@@ -1,0 +1,21 @@
+uuid: 084a4889-e7a0-4947-a868-0fbd13bcd4f0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_categorie
+    - node.type.dso
+  module:
+    - options
+id: node.dso.field_categorie
+field_name: field_categorie
+entity_type: node
+bundle: dso
+label: Catégorie
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

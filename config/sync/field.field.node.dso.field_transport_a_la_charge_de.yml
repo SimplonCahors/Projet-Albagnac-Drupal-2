@@ -1,0 +1,21 @@
+uuid: 2616c265-94e0-471c-aa3c-f536f2d57912
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_transport_a_la_charge_de
+    - node.type.dso
+  module:
+    - options
+id: node.dso.field_transport_a_la_charge_de
+field_name: field_transport_a_la_charge_de
+entity_type: node
+bundle: dso
+label: 'Transport à la charge de'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

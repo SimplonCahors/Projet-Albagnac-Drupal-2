@@ -1,0 +1,23 @@
+uuid: a703d3d7-8ecf-4a16-9983-024cbbea6ffc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_num_sieret
+    - node.type.dso
+id: node.dso.field_num_sieret
+field_name: field_num_sieret
+entity_type: node
+bundle: dso
+label: 'N° SIERET'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

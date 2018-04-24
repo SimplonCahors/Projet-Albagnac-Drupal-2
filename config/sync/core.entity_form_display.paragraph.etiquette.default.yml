@@ -1,0 +1,78 @@
+uuid: 26e62dc6-bd8f-4f5e-a59e-a23014871fb7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.etiquette.field_dimension_mm_x_mm_
+    - field.field.paragraph.etiquette.field_eti_num
+    - field.field.paragraph.etiquette.field_position_de_l_etiquette_a_
+    - field.field.paragraph.etiquette.field_remarques_impression
+    - paragraphs.paragraphs_type.etiquette
+  module:
+    - field_group
+third_party_settings:
+  field_group:
+    group_reference_etiquette:
+      children:
+        - field_eti_num
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Référence étiquette'
+    group_definition_de_la_zone_d_im:
+      children:
+        - field_dimension_mm_x_mm_
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Définition de la zone d''impression'
+id: paragraph.etiquette.default
+targetEntityType: paragraph
+bundle: etiquette
+mode: default
+content:
+  field_dimension_mm_x_mm_:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_eti_num:
+    weight: 21
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_position_de_l_etiquette_a_:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_remarques_impression:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

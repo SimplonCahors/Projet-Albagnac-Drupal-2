@@ -1,0 +1,19 @@
+uuid: a043b56c-671c-4be1-b70e-3caea172b846
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hauteur
+    - paragraphs.paragraphs_type.description_etiquettes
+id: paragraph.description_etiquettes.field_hauteur
+field_name: field_hauteur
+entity_type: paragraph
+bundle: description_etiquettes
+label: 'Hauteur (H)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

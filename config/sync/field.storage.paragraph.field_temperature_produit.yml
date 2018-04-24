@@ -1,0 +1,21 @@
+uuid: f10ade14-7d2e-44d7-87ff-80e157c46f9b
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_temperature_produit
+field_name: field_temperature_produit
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

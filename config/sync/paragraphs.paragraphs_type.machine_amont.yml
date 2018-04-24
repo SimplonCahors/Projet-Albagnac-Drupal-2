@@ -1,0 +1,9 @@
+uuid: 40dff190-e4d3-4c6a-a2b7-db7369053b26
+langcode: fr
+status: true
+dependencies: {  }
+id: machine_amont
+label: 'Type de machines AMONT'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

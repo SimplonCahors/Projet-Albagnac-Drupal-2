@@ -1,0 +1,36 @@
+uuid: 372ebb88-6974-454e-b40e-d7cbe792fc9c
+langcode: fr
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_transfert_amont
+field_name: field_transfert_amont
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Plaque de glissement'
+      label: 'Plaque de glissement'
+    -
+      value: 'A rouleaux'
+      label: 'A rouleaux'
+    -
+      value: 'A courroies motorisées'
+      label: 'A courroies motorisées'
+    -
+      value: Jointif
+      label: Jointif
+    -
+      value: Aucun
+      label: Aucun
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

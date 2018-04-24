@@ -1,0 +1,21 @@
+uuid: d468b9a2-d3b8-4f33-affe-4e94166cd552
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_choix_demande_fat
+    - node.type.dso
+  module:
+    - options
+id: node.dso.field_choix_demande_fat
+field_name: field_choix_demande_fat
+entity_type: node
+bundle: dso
+label: Sélection
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

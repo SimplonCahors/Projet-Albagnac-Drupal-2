@@ -3,27 +3,419 @@ langcode: fr
 status: true
 dependencies:
   config:
-    - field.field.node.dso.field_text_test1
-    - field.field.node.dso.field_text_test2
-    - field.field.node.dso.field_text_test3_req
-    - field.field.node.dso.field_text_test4_req
+    - field.field.node.dso.field_adresse_postale
+    - field.field.node.dso.field_amont
+    - field.field.node.dso.field_aval
+    - field.field.node.dso.field_avertissements
+    - field.field.node.dso.field_cadence_souhaitee
+    - field.field.node.dso.field_categorie
+    - field.field.node.dso.field_cd
+    - field.field.node.dso.field_choix
+    - field.field.node.dso.field_choix_demande_fat
+    - field.field.node.dso.field_concurent_opportunite
+    - field.field.node.dso.field_contact_commercial
+    - field.field.node.dso.field_contact_technique
+    - field.field.node.dso.field_controle_conformite_spe
+    - field.field.node.dso.field_date_creation_fiche
+    - field.field.node.dso.field_date_demande_client
+    - field.field.node.dso.field_date_desiree
+    - field.field.node.dso.field_date_envoi_offre
+    - field.field.node.dso.field_date_livraison_souhaite
+    - field.field.node.dso.field_date_reponse_souhaite
+    - field.field.node.dso.field_demande_cem
+    - field.field.node.dso.field_demande_certif_externe
+    - field.field.node.dso.field_demande_de_certification_e
+    - field.field.node.dso.field_desc
+    - field.field.node.dso.field_description_emballage
+    - field.field.node.dso.field_emballages
+    - field.field.node.dso.field_en_salle
+    - field.field.node.dso.field_environnement_concurrentie
+    - field.field.node.dso.field_espace_disponible_sol
+    - field.field.node.dso.field_etiquettes
+    - field.field.node.dso.field_fax
+    - field.field.node.dso.field_fournisseur_actuel
+    - field.field.node.dso.field_hauteur_convoyeur
+    - field.field.node.dso.field_implantation_sites
+    - field.field.node.dso.field_impression
+    - field.field.node.dso.field_impression_emballages
+    - field.field.node.dso.field_installation_chez_client
+    - field.field.node.dso.field_langue
+    - field.field.node.dso.field_materiel_impose_par_le_cli
+    - field.field.node.dso.field_milieu
+    - field.field.node.dso.field_mise_en_route_machine
+    - field.field.node.dso.field_nom_commercial
+    - field.field.node.dso.field_nom_de_client
+    - field.field.node.dso.field_nombre_de_
+    - field.field.node.dso.field_nombre_de_jour
+    - field.field.node.dso.field_nombre_type_machine
+    - field.field.node.dso.field_num_sieret
+    - field.field.node.dso.field_numerique
+    - field.field.node.dso.field_papier
+    - field.field.node.dso.field_pays
+    - field.field.node.dso.field_plan_de_prevention
+    - field.field.node.dso.field_pneumatique
+    - field.field.node.dso.field_quantite
+    - field.field.node.dso.field_regime_neutre
+    - field.field.node.dso.field_remarques
+    - field.field.node.dso.field_remarques_contraintes
+    - field.field.node.dso.field_secteur
+    - field.field.node.dso.field_sens_machine
+    - field.field.node.dso.field_site_de_production
+    - field.field.node.dso.field_sous_secteur
+    - field.field.node.dso.field_sur_mach
+    - field.field.node.dso.field_telephone
+    - field.field.node.dso.field_tempe_local_travail
+    - field.field.node.dso.field_tension_electrique
+    - field.field.node.dso.field_test
+    - field.field.node.dso.field_transport_a_la_charge_de
+    - field.field.node.dso.field_type_client
     - node.type.dso
   module:
+    - datetime
+    - entity_print
+    - entity_reference_revisions
+    - options
+    - telephone
     - user
+third_party_settings:
+  entity_print:
+    pdf_label: 'Ouvrir / Télécharger au format PDF'
 id: node.dso.default
 targetEntityType: node
 bundle: dso
 mode: default
 content:
-  field_text_test1:
-    weight: 1
+  entity_print_view_pdf:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_adresse_postale:
+    weight: 9
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-  field_text_test2:
+  field_amont:
+    type: entity_reference_revisions_entity_view
+    weight: 30
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_aval:
+    type: entity_reference_revisions_entity_view
+    weight: 31
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_avertissements:
+    type: entity_reference_revisions_entity_view
+    weight: 38
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_cadence_souhaitee:
+    weight: 33
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_categorie:
+    weight: 13
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_cd:
+    weight: 57
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_choix:
+    weight: 20
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_choix_demande_fat:
+    weight: 45
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_concurent_opportunite:
+    type: entity_reference_revisions_entity_view
+    weight: 23
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_contact_commercial:
+    type: entity_reference_revisions_entity_view
+    weight: 18
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_contact_technique:
+    type: entity_reference_revisions_entity_view
+    weight: 19
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_controle_conformite_spe:
+    weight: 42
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_date_creation_fiche:
+    weight: 5
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_demande_client:
+    weight: 3
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_desiree:
+    weight: 46
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_envoi_offre:
+    weight: 4
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_livraison_souhaite:
+    weight: 8
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_reponse_souhaite:
+    weight: 7
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_demande_cem:
+    weight: 43
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_demande_certif_externe:
+    weight: 44
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_demande_de_certification_e:
+    weight: 50
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_desc:
+    type: entity_reference_revisions_entity_view
+    weight: 66
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_description_emballage:
+    type: entity_reference_revisions_entity_view
+    weight: 65
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_emballages:
+    type: entity_reference_revisions_entity_view
+    weight: 28
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_en_salle:
+    weight: 52
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_environnement_concurrentie:
+    weight: 27
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_espace_disponible_sol:
+    weight: 36
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_etiquettes:
+    type: entity_reference_revisions_entity_view
+    weight: 29
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_fax:
+    weight: 11
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+  field_fournisseur_actuel:
+    weight: 22
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_hauteur_convoyeur:
+    weight: 35
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_implantation_sites:
+    weight: 26
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_impression:
+    type: entity_reference_revisions_entity_view
+    weight: 62
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_impression_emballages:
+    type: entity_reference_revisions_entity_view
+    weight: 63
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_installation_chez_client:
+    weight: 47
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_langue:
+    weight: 59
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_materiel_impose_par_le_cli:
+    type: entity_reference_revisions_entity_view
+    weight: 61
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_milieu:
+    weight: 34
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_mise_en_route_machine:
+    weight: 49
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_nom_commercial:
     weight: 2
     label: above
     settings:
@@ -31,26 +423,201 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_text_test3_req:
-    weight: 3
+  field_nom_de_client:
+    weight: 6
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-  field_text_test4_req:
-    weight: 4
+  field_nombre_de_:
+    weight: 54
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_nombre_de_jour:
+    weight: 53
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_nombre_type_machine:
+    weight: 24
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_num_sieret:
+    weight: 17
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_numerique:
+    weight: 58
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_papier:
+    weight: 55
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_pays:
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_plan_de_prevention:
+    weight: 48
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_pneumatique:
+    type: entity_reference_revisions_entity_view
+    weight: 40
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_quantite:
+    weight: 67
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_regime_neutre:
+    weight: 39
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_remarques:
+    weight: 21
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_remarques_contraintes:
+    type: entity_reference_revisions_entity_view
+    weight: 64
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_secteur:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_sens_machine:
+    weight: 32
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_site_de_production:
+    weight: 25
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_sous_secteur:
+    weight: 15
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_sur_mach:
+    weight: 51
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_telephone:
+    weight: 10
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+  field_tempe_local_travail:
+    weight: 37
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_tension_electrique:
+    weight: 41
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_transport_a_la_charge_de:
+    weight: 60
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_type_client:
+    weight: 16
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   links:
-    weight: 0
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  entity_print_view_epub: true
+  entity_print_view_word_docx: true
+  field_test: true
   langcode: true

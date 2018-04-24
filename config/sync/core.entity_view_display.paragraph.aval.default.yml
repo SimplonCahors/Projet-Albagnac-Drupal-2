@@ -1,0 +1,49 @@
+uuid: 4df6b008-e3a7-46f5-b947-982a3647a1cd
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.aval.field_sortie_produit_aval
+    - field.field.paragraph.aval.field_transfert_aval
+    - field.field.paragraph.aval.field_type_convoyage_aval
+    - field.field.paragraph.aval.field_type_machine_aval
+    - paragraphs.paragraphs_type.aval
+  module:
+    - options
+id: paragraph.aval.default
+targetEntityType: paragraph
+bundle: aval
+mode: default
+content:
+  field_sortie_produit_aval:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_transfert_aval:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_type_convoyage_aval:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_type_machine_aval:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

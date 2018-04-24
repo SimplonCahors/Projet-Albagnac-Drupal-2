@@ -1,0 +1,21 @@
+uuid: 5c86665d-7610-49e2-a819-98461889cdff
+langcode: fr
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - node
+    - paragraphs
+id: node.field_materiel_impose_par_le_cli
+field_name: field_materiel_impose_par_le_cli
+entity_type: node
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

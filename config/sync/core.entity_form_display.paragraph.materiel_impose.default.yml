@@ -1,0 +1,51 @@
+uuid: 165cda37-8e46-4b4e-8061-55495dbba8bc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.materiel_impose.field_marque
+    - field.field.paragraph.materiel_impose.field_mise_en_route
+    - field.field.paragraph.materiel_impose.field_modele_information
+    - field.field.paragraph.materiel_impose.field_type_materiel_impose
+    - paragraphs.paragraphs_type.materiel_impose
+id: paragraph.materiel_impose.default
+targetEntityType: paragraph
+bundle: materiel_impose
+mode: default
+content:
+  field_marque:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_mise_en_route:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_modele_information:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_type_materiel_impose:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

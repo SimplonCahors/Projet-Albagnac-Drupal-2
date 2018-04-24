@@ -1,0 +1,19 @@
+uuid: ab77380b-2fef-4286-93ec-d352533afb78
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_larg
+    - paragraphs.paragraphs_type.description_etiquettes
+id: paragraph.description_etiquettes.field_larg
+field_name: field_larg
+entity_type: paragraph
+bundle: description_etiquettes
+label: 'Largeur (mm)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

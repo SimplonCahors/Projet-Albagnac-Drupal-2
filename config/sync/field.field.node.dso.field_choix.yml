@@ -1,0 +1,21 @@
+uuid: 3f2c2577-f208-4273-8e9a-914b00154756
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_choix
+    - node.type.dso
+  module:
+    - options
+id: node.dso.field_choix
+field_name: field_choix
+entity_type: node
+bundle: dso
+label: Choix
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

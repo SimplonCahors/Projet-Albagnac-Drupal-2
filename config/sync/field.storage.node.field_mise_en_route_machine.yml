@@ -1,0 +1,27 @@
+uuid: 8c4168e4-b9af-45da-adb4-d1d68f351c04
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_mise_en_route_machine
+field_name: field_mise_en_route_machine
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Oui
+      label: Oui
+    -
+      value: Non
+      label: Non
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
