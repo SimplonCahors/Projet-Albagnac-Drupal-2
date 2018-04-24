@@ -1,12 +1,12 @@
-uuid: ad3e792e-3140-443b-928f-fba572904a58
+uuid: 64a74da1-8ede-4e25-92a2-8d0286512a2f
 langcode: fr
 status: true
 dependencies:
   module:
-    - paragraphs
-id: paragraph.field_hauteur_h_
-field_name: field_hauteur_h_
-entity_type: paragraph
+    - node
+id: node.field_cadence_souhaitee
+field_name: field_cadence_souhaitee
+entity_type: node
 type: string
 settings:
   max_length: 255

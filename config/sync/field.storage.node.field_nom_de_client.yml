@@ -1,12 +1,12 @@
-uuid: 9eb798e9-5b5b-424c-a72c-25838da73176
+uuid: 29c5cd46-6151-4fd0-bbfb-43b9daaef33d
 langcode: fr
 status: true
 dependencies:
   module:
-    - paragraphs
-id: paragraph.field_diametre_mandrin_d
-field_name: field_diametre_mandrin_d
-entity_type: paragraph
+    - node
+id: node.field_nom_de_client
+field_name: field_nom_de_client
+entity_type: node
 type: string
 settings:
   max_length: 255
