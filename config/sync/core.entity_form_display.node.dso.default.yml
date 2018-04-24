@@ -66,7 +66,6 @@ dependencies:
     - field.field.node.dso.field_telephone
     - field.field.node.dso.field_tempe_local_travail
     - field.field.node.dso.field_tension_electrique
-    - field.field.node.dso.field_test
     - field.field.node.dso.field_transport_a_la_charge_de
     - field.field.node.dso.field_type_client
     - node.type.dso
@@ -123,8 +122,8 @@ third_party_settings:
         - field_sous_secteur
         - field_type_client
         - field_num_sieret
-        - group_conta
-        - group_contact
+        - field_contact_technique
+        - field_contact_commercial
       parent_name: group_onglet1
       weight: 4
       format_type: tab

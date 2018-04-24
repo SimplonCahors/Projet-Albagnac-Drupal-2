@@ -1,0 +1,21 @@
+uuid: 0b7a2b73-132d-4d17-9ae7-1417401a92cf
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_largeur_mm
+field_name: field_largeur_mm
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
