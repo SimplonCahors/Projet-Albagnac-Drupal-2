@@ -1,4 +1,4 @@
-uuid: 6456bfb9-312b-4a9a-ae07-4c64b5dce546
+uuid: 2df67f60-5b92-4c92-9f4e-266c09ae89c8
 langcode: fr
 status: true
 dependencies:
@@ -6,8 +6,8 @@ dependencies:
     - file
     - image
     - paragraphs
-id: paragraph.field_enroulement
-field_name: field_enroulement
+id: paragraph.field_photo_etiquette
+field_name: field_photo_etiquette
 entity_type: paragraph
 type: image
 settings:

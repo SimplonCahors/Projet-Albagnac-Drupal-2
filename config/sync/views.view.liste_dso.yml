@@ -3,9 +3,11 @@ langcode: fr
 status: true
 dependencies:
   config:
+    - field.storage.node.field_date_creation_fiche
     - node.type.dso
     - system.menu.main
   module:
+    - datetime
     - node
     - user
 id: liste_dso
@@ -67,10 +69,109 @@ display:
             previous: ‹‹
             next: ››
       style:
-        type: default
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          override: true
+          sticky: false
+          caption: ''
+          summary: ''
+          description: ''
+          columns:
+            field_date_creation_fiche: field_date_creation_fiche
+            title: title
+            link_to_revision: link_to_revision
+          info:
+            field_date_creation_fiche:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            title:
+              sortable: false
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: false
+              responsive: ''
+            link_to_revision:
+              align: views-align-center
+              separator: ''
+              empty_column: false
+              responsive: ''
+          default: '-1'
+          empty_table: false
       row:
         type: fields
       fields:
+        field_date_creation_fiche:
+          id: field_date_creation_fiche
+          table: node__field_date_creation_fiche
+          field: field_date_creation_fiche
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Date de création '
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_default
+          settings:
+            timezone_override: ''
+            format_type: short
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         title:
           id: title
           table: node_field_data
@@ -78,7 +179,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: 'Nom du DSO'
           exclude: false
           alter:
             alter_text: false
@@ -134,6 +235,57 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        link_to_revision:
+          id: link_to_revision
+          table: node_field_revision
+          field: link_to_revision
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Versions du DSO'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: 'Voir les Versions'
+          entity_type: node
+          plugin_id: node_revision_link
       filters:
         status:
           value: '1'
@@ -282,7 +434,8 @@ display:
         - user
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_date_creation_fiche'
   page_1:
     display_plugin: page
     id: page_1
@@ -305,4 +458,5 @@ display:
         - user
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_date_creation_fiche'

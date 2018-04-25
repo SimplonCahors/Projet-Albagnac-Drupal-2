@@ -1,4 +1,4 @@
-uuid: d80f6d70-0831-40ce-8737-9bf102c78926
+uuid: 88bed6b5-55f4-44db-8b73-f335a1080423
 langcode: fr
 status: true
 dependencies:
@@ -10,14 +10,14 @@ field_name: field_quantite
 entity_type: node
 bundle: dso
 label: Quantité
-description: ''
+description: 'Merci de ne rentrer que des chiffres'
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  min: null
+  min: 0
   max: null
   prefix: ''
   suffix: ''
-field_type: decimal
+field_type: integer

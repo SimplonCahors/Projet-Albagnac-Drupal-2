@@ -1,11 +1,11 @@
-uuid: ad3e792e-3140-443b-928f-fba572904a58
+uuid: 48ec7a1f-c3ec-478b-8ac5-c8e3dd98055f
 langcode: fr
 status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_hauteur_h_
-field_name: field_hauteur_h_
+id: paragraph.field_diametre_mm_
+field_name: field_diametre_mm_
 entity_type: paragraph
 type: string
 settings:

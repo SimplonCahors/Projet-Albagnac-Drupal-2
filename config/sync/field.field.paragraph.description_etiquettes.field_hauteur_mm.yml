@@ -1,15 +1,15 @@
-uuid: 904b1ed9-2f64-4851-83bb-a6d079f8d388
+uuid: a9cc4523-2166-4d6e-a3bb-98c3eafc2588
 langcode: fr
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_largeur_mm
+    - field.storage.paragraph.field_hauteur_mm
     - paragraphs.paragraphs_type.description_etiquettes
-id: paragraph.description_etiquettes.field_largeur_mm
-field_name: field_largeur_mm
+id: paragraph.description_etiquettes.field_hauteur_mm
+field_name: field_hauteur_mm
 entity_type: paragraph
 bundle: description_etiquettes
-label: 'Largeur (mm)'
+label: 'Hauteur (mm)'
 description: ''
 required: false
 translatable: false

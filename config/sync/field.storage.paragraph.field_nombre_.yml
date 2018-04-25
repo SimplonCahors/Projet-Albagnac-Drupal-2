@@ -1,11 +1,11 @@
-uuid: fc2e38b8-4eed-4cb0-9233-18483fdbdc6e
+uuid: 70401837-318d-476d-9a9a-496eb80d1450
 langcode: fr
 status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_etiquette_num
-field_name: field_etiquette_num
+id: paragraph.field_nombre_
+field_name: field_nombre_
 entity_type: paragraph
 type: integer
 settings:

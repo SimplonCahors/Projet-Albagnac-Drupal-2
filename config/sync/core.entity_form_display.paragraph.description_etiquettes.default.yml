@@ -1,19 +1,19 @@
-uuid: 5a6328bc-df0a-47f6-9967-4c1dc7a81636
+uuid: 97c9a95c-c014-4fa1-b05e-455b60b78ecc
 langcode: fr
 status: true
 dependencies:
   config:
     - field.field.paragraph.description_etiquettes.field_diametre_bobine_d_
-    - field.field.paragraph.description_etiquettes.field_diametre_mandrin_d
-    - field.field.paragraph.description_etiquettes.field_diametre_mm
+    - field.field.paragraph.description_etiquettes.field_diametre_mandrin_d_
+    - field.field.paragraph.description_etiquettes.field_diametre_mm_
     - field.field.paragraph.description_etiquettes.field_enroulement
-    - field.field.paragraph.description_etiquettes.field_etiquette_num
-    - field.field.paragraph.description_etiquettes.field_hauteur_h_
-    - field.field.paragraph.description_etiquettes.field_hauteur_mm_
-    - field.field.paragraph.description_etiquettes.field_largeur_mm
-    - field.field.paragraph.description_etiquettes.field_nombre_d_etiquettes
+    - field.field.paragraph.description_etiquettes.field_etiquette_ndeg
+    - field.field.paragraph.description_etiquettes.field_hauteur
+    - field.field.paragraph.description_etiquettes.field_hauteur_mm
+    - field.field.paragraph.description_etiquettes.field_larg
+    - field.field.paragraph.description_etiquettes.field_nombre_
     - field.field.paragraph.description_etiquettes.field_observations
-    - field.field.paragraph.description_etiquettes.field_photo
+    - field.field.paragraph.description_etiquettes.field_photo_etiquette
     - image.style.thumbnail
     - paragraphs.paragraphs_type.description_etiquettes
   module:
@@ -23,13 +23,13 @@ third_party_settings:
   field_group:
     group_bobin:
       children:
-        - field_hauteur_h_
+        - field_hauteur
         - field_diametre_bobine_d_
-        - field_diametre_mandrin_d
-        - field_nombre_d_etiquettes
+        - field_diametre_mandrin_d_
+        - field_nombre_
         - field_enroulement
-      parent_name: group_e
-      weight: 2
+      parent_name: group_etique
+      weight: 21
       format_type: tab
       format_settings:
         id: ''
@@ -38,15 +38,11 @@ third_party_settings:
         description: ''
         required_fields: true
       label: Bobine
-    group_dimensions:
+    group_etique:
       children:
-        - group_e
-        - field_hauteur_mm_
-        - field_largeur_mm
-        - field_diametre_mm
-        - field_observations
-        - field_photo
-      parent_name: group_e
+        - group_dimensions
+        - group_bobin
+      parent_name: ''
       weight: 1
       format_type: tab
       format_settings:
@@ -55,14 +51,16 @@ third_party_settings:
         formatter: closed
         description: ''
         required_fields: true
-      label: Dimension
-    group_e:
+      label: Étiquette
+    group_dimensions:
       children:
-        - field_etiquette_num
-        - group_dimensions
-        - group_bobin
-      parent_name: group_dimensions
-      weight: 2
+        - field_hauteur_mm
+        - field_larg
+        - field_diametre_mm_
+        - field_observations
+        - field_photo_etiquette
+      parent_name: group_etique
+      weight: 20
       format_type: tab
       format_settings:
         id: ''
@@ -70,30 +68,30 @@ third_party_settings:
         formatter: closed
         description: ''
         required_fields: true
-      label: 'Étiquette N°'
+      label: Dimensions
 id: paragraph.description_etiquettes.default
 targetEntityType: paragraph
 bundle: description_etiquettes
 mode: default
 content:
   field_diametre_bobine_d_:
-    weight: 7
+    weight: 10
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_diametre_mandrin_d:
-    weight: 8
+  field_diametre_mandrin_d_:
+    weight: 11
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_diametre_mm:
-    weight: 3
+  field_diametre_mm_:
+    weight: 12
     settings:
       size: 60
       placeholder: ''
@@ -101,61 +99,61 @@ content:
     type: string_textfield
     region: content
   field_enroulement:
-    weight: 10
+    weight: 13
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
     region: content
-  field_etiquette_num:
+  field_etiquette_ndeg:
     weight: 0
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
-  field_hauteur_h_:
-    weight: 6
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_hauteur_mm_:
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_largeur_mm:
-    weight: 2
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_nombre_d_etiquettes:
+  field_hauteur:
     weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_hauteur_mm:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_larg:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_nombre_:
+    weight: 12
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_observations:
-    weight: 4
+    weight: 13
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_photo:
-    weight: 5
+  field_photo_etiquette:
+    weight: 14
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
