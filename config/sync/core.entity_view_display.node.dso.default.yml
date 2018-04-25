@@ -79,7 +79,11 @@ dependencies:
     - user
 third_party_settings:
   entity_print:
+<<<<<<< HEAD
     pdf_label: 'Ouvrir / Télécharger au format PDF'
+=======
+    pdf_label: 'View PDF'
+>>>>>>> adrien
 id: node.dso.default
 targetEntityType: node
 bundle: dso
@@ -101,7 +105,11 @@ content:
   field_amont:
     type: entity_reference_revisions_entity_view
     weight: 30
+<<<<<<< HEAD
     label: visually_hidden
+=======
+    label: above
+>>>>>>> adrien
     settings:
       view_mode: default
       link: ''
@@ -110,7 +118,11 @@ content:
   field_aval:
     type: entity_reference_revisions_entity_view
     weight: 31
+<<<<<<< HEAD
     label: visually_hidden
+=======
+    label: above
+>>>>>>> adrien
     settings:
       view_mode: default
       link: ''
@@ -333,9 +345,15 @@ content:
     weight: 11
     label: above
     settings:
+<<<<<<< HEAD
       title: ''
     third_party_settings: {  }
     type: telephone_link
+=======
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+>>>>>>> adrien
     region: content
   field_fournisseur_actuel:
     weight: 22
@@ -504,7 +522,11 @@ content:
     third_party_settings: {  }
     region: content
   field_quantite:
+<<<<<<< HEAD
     weight: 67
+=======
+    weight: 56
+>>>>>>> adrien
     label: above
     settings:
       thousand_separator: ''
@@ -575,9 +597,15 @@ content:
     weight: 10
     label: above
     settings:
+<<<<<<< HEAD
       title: ''
     third_party_settings: {  }
     type: telephone_link
+=======
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+>>>>>>> adrien
     region: content
   field_tempe_local_travail:
     weight: 37
@@ -619,5 +647,8 @@ content:
 hidden:
   entity_print_view_epub: true
   entity_print_view_word_docx: true
+<<<<<<< HEAD
   field_test: true
+=======
+>>>>>>> adrien
   langcode: true

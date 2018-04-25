@@ -1,0 +1,22 @@
+uuid: 2d0141ca-cdda-495a-8621-290c7fe13301
+langcode: fr
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - bootstrap_albagnac
+_core:
+  default_config_hash: iggZSiUKz4mYP1YPJ8SsUfFu79HIgOTt6IDy3Up59aM
+id: bootstrap_albagnac_powered
+theme: bootstrap_albagnac
+region: footer
+weight: -7
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }
