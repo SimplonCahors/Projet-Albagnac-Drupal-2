@@ -10,7 +10,7 @@ field_name: field_nombre_de_jour
 entity_type: node
 bundle: dso
 label: 'Nombre de jour'
-description: ''
+description: 'Merci de ne rentrer que des chiffres'
 required: false
 translatable: false
 default_value: {  }

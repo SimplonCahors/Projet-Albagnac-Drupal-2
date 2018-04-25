@@ -104,13 +104,13 @@ third_party_settings:
       weight: 5
       format_type: tab
       format_settings:
-        label: Emballage
+        label: Emballages
         formatter: closed
         description: ''
         required_fields: true
         id: ''
         classes: ''
-      label: Emballage
+      label: Emballages
     group_onglet_b_1:
       children:
         - field_nom_de_client
@@ -244,12 +244,13 @@ third_party_settings:
       weight: 6
       format_type: tab
       format_settings:
-        id: ''
-        classes: ''
+        label: Etiquettes
         formatter: closed
         description: ''
         required_fields: true
-      label: Etiquette
+        id: ''
+        classes: ''
+      label: Etiquettes
     group_combinaison:
       children: {  }
       parent_name: group_onglets_dso
@@ -413,10 +414,10 @@ third_party_settings:
     group_notices:
       children:
         - field_papier
-        - field_quantite
         - field_cd
         - field_numerique
         - field_langue
+        - field_quantite
       parent_name: group_environnement_machine
       weight: 36
       format_type: tab

@@ -69,12 +69,13 @@ third_party_settings:
       weight: 1
       format_type: tab
       format_settings:
-        id: ''
-        classes: ''
+        label: Emballage
         formatter: closed
         description: ''
         required_fields: true
-      label: 'Emballage N°'
+        id: ''
+        classes: ''
+      label: Emballage
 id: paragraph.description_embellage.default
 targetEntityType: paragraph
 bundle: description_embellage

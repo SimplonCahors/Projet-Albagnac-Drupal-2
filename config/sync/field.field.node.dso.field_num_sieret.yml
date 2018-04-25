@@ -9,14 +9,14 @@ id: node.dso.field_num_sieret
 field_name: field_num_sieret
 entity_type: node
 bundle: dso
-label: 'N° SIERET'
+label: 'N° SIRET'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  min: null
+  min: 0
   max: null
   prefix: ''
   suffix: ''

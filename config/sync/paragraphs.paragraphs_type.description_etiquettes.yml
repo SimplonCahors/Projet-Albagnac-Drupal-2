@@ -3,7 +3,7 @@ langcode: fr
 status: true
 dependencies: {  }
 id: description_etiquettes
-label: 'Description Étiquettes'
+label: 'Description Étiquette'
 icon_uuid: null
 description: ''
 behavior_plugins: {  }
