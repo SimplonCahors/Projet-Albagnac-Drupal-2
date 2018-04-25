@@ -19,22 +19,73 @@ dependencies:
     - field.field.paragraph.description_embellage.field_tolerance_dimensionnelle
     - paragraphs.paragraphs_type.description_embellage
   module:
+    - field_group
     - image
     - options
+third_party_settings:
+  field_group:
+    group_em:
+      children:
+        - field_reference_interne
+        - field_reference_client
+        - group_dimension_du_produit
+        - group_car
+      parent_name: ''
+      weight: 1
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: 'Description emballage'
+    group_dimension_du_produit:
+      children:
+        - field_forme
+        - field_diametre_ou_long_x_large
+        - field_hauteur_mm_
+      parent_name: group_em
+      weight: 4
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: 'Dimension du produit'
+    group_car:
+      children:
+        - field_produits_pleins_ou_vides
+        - field_temperature_produit
+        - field_poids_produit
+        - field_matiere
+        - field_deformation_niveau_liste_e
+        - field_tolerance_dimensionnelle
+        - field_observations
+        - field_photo
+      parent_name: group_em
+      weight: 5
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: 'Caractéristique produit à l''etiquetage'
 id: paragraph.description_embellage.default
 targetEntityType: paragraph
 bundle: description_embellage
 mode: default
 content:
   field_deformation_niveau_liste_e:
-    weight: 11
+    weight: 6
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_diametre_ou_long_x_large:
-    weight: 4
+    weight: 3
     label: above
     settings:
       link_to_entity: false
@@ -42,7 +93,7 @@ content:
     type: string
     region: content
   field_emballage_num:
-    weight: 15
+    weight: 0
     label: above
     settings:
       thousand_separator: ''
@@ -51,14 +102,14 @@ content:
     type: number_integer
     region: content
   field_forme:
-    weight: 3
+    weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_hauteur_mm_:
-    weight: 5
+    weight: 4
     label: above
     settings:
       link_to_entity: false
@@ -66,14 +117,14 @@ content:
     type: string
     region: content
   field_matiere:
-    weight: 9
+    weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_observations:
-    weight: 13
+    weight: 8
     label: above
     settings:
       link_to_entity: false
@@ -81,7 +132,7 @@ content:
     type: string
     region: content
   field_photo:
-    weight: 14
+    weight: 9
     label: above
     settings:
       image_style: ''
@@ -90,7 +141,7 @@ content:
     type: image
     region: content
   field_poids_produit:
-    weight: 8
+    weight: 4
     label: above
     settings:
       link_to_entity: false
@@ -98,14 +149,14 @@ content:
     type: string
     region: content
   field_produits_pleins_ou_vides:
-    weight: 6
+    weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_reference_client:
-    weight: 2
+    weight: 3
     label: above
     settings:
       link_to_entity: false
@@ -113,7 +164,7 @@ content:
     type: string
     region: content
   field_reference_interne:
-    weight: 1
+    weight: 2
     label: above
     settings:
       link_to_entity: false
@@ -121,7 +172,7 @@ content:
     type: string
     region: content
   field_temperature_produit:
-    weight: 7
+    weight: 3
     label: above
     settings:
       link_to_entity: false
@@ -129,11 +180,14 @@ content:
     type: string
     region: content
   field_tolerance_dimensionnelle:
-    weight: 12
+    weight: 7
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-hidden: {  }
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
