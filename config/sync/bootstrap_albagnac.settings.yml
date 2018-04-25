@@ -1,0 +1,18 @@
+schemas:
+  bootstrap: 8000
+  bootstrap_albagnac: 8000
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: ''
+  url: 'http://127.0.0.1/themes/contrib/bootstrap/favicon.ico'
+  use_default: true
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+logo:
+  path: 'public://albagnac.jpeg'
+  url: ''
+  use_default: true
+langcode: fr

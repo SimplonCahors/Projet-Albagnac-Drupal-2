@@ -55,6 +55,9 @@ settings:
       bp_columns_two_uneven:
         weight: 31
         enabled: false
+      avertissements:
+        weight: 31
+        enabled: false
       bp_image:
         weight: 32
         enabled: false
@@ -87,5 +90,26 @@ settings:
         enabled: false
       machine_amont:
         weight: 42
+        enabled: false
+      description_embellage:
+        weight: 49
+        enabled: false
+      description_etiquettes:
+        weight: 50
+        enabled: false
+      etiquette:
+        weight: 52
+        enabled: false
+      impression_emballage:
+        weight: 54
+        enabled: false
+      materiel_impose:
+        weight: 56
+        enabled: false
+      pneumatique:
+        weight: 57
+        enabled: false
+      remarques_contraintes_eventuelle:
+        weight: 58
         enabled: false
 field_type: entity_reference_revisions

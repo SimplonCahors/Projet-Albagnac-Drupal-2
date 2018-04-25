@@ -1,16 +1,17 @@
-uuid: 4d497807-be43-4196-8230-f12996437732
+uuid: c4890d7f-213a-4d87-bce3-7f2f696e203d
 langcode: fr
 status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_nombre_d_etiquettes
-field_name: field_nombre_d_etiquettes
+id: paragraph.field_diametre_mandrin_d_
+field_name: field_diametre_mandrin_d_
 entity_type: paragraph
-type: integer
+type: string
 settings:
-  unsigned: false
-  size: normal
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1
