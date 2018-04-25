@@ -10,13 +10,13 @@ field_name: field_eti_num
 entity_type: paragraph
 bundle: impression_emballage
 label: 'ETI n°'
-description: ''
+description: 'Merci de ne rentrer que des chiffres'
 required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  min: null
+  min: 0
   max: null
   prefix: ''
   suffix: ''
