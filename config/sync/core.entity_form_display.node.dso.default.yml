@@ -85,8 +85,11 @@ third_party_settings:
         - group_environnement_machine
         - group_materiels_imposes_impressi
         - group_remarques_contraintes_even
+        - group_onglet2
+        - group_etiquette
+        - group_combinaison
       parent_name: group_onglets_dso
-      weight: 4
+      weight: 5
       format_type: tab
       format_settings:
         label: 'Demande de devis'
@@ -99,8 +102,8 @@ third_party_settings:
     group_onglet2:
       children:
         - field_description_emballage
-      parent_name: group_onglets_dso
-      weight: 5
+      parent_name: group_onglet1
+      weight: 10
       format_type: tab
       format_settings:
         label: Emballage
@@ -227,7 +230,7 @@ third_party_settings:
       children:
         - field_remarques_contraintes
       parent_name: group_onglet1
-      weight: 20
+      weight: 9
       format_type: tab
       format_settings:
         id: ''
@@ -239,8 +242,8 @@ third_party_settings:
     group_etiquette:
       children:
         - field_descr
-      parent_name: group_onglets_dso
-      weight: 6
+      parent_name: group_onglet1
+      weight: 11
       format_type: tab
       format_settings:
         id: ''
@@ -251,8 +254,8 @@ third_party_settings:
       label: Etiquette
     group_combinaison:
       children: {  }
-      parent_name: group_onglets_dso
-      weight: 7
+      parent_name: group_onglet1
+      weight: 12
       format_type: tab
       format_settings:
         id: ''
@@ -264,16 +267,14 @@ third_party_settings:
     group_onglets_dso:
       children:
         - group_onglet1
-        - group_onglet2
-        - group_etiquette
-        - group_combinaison
       parent_name: ''
       weight: 2
       format_type: tabs
       format_settings:
-        id: ''
-        classes: ''
+        label: 'onglets DSO'
         direction: vertical
+        id: ''
+        classes: test_malacon
       label: 'onglets DSO'
     group_besoin:
       children:
@@ -325,7 +326,7 @@ third_party_settings:
         - field_regime_neutre
         - field_pneumatique
       parent_name: group_environnement_machine
-      weight: 30
+      weight: 31
       format_type: tab
       format_settings:
         id: ''
@@ -341,7 +342,7 @@ third_party_settings:
         - field_demande_cem
         - field_demande_certif_externe
       parent_name: group_environnement_machine
-      weight: 31
+      weight: 32
       format_type: tab
       format_settings:
         id: ''
@@ -370,7 +371,7 @@ third_party_settings:
         - field_mise_en_route_machine
         - field_demande_de_certification_e
       parent_name: group_environnement_machine
-      weight: 32
+      weight: 33
       format_type: tab
       format_settings:
         id: ''
@@ -386,7 +387,7 @@ third_party_settings:
         - field_nombre_de_jour
         - field_nombre_de_
       parent_name: group_environnement_machine
-      weight: 33
+      weight: 34
       format_type: tab
       format_settings:
         id: ''
@@ -399,7 +400,7 @@ third_party_settings:
       children:
         - field_transport_a_la_charge_de
       parent_name: group_environnement_machine
-      weight: 35
+      weight: 36
       format_type: tab
       format_settings:
         id: ''
@@ -427,7 +428,7 @@ third_party_settings:
         - field_numerique
         - field_langue
       parent_name: group_environnement_machine
-      weight: 34
+      weight: 35
       format_type: tab
       format_settings:
         id: ''
@@ -441,7 +442,7 @@ third_party_settings:
         - field_impression
         - field_impression_emballages
       parent_name: group_materiels_imposes_impressi
-      weight: 63
+      weight: 64
       format_type: tab
       format_settings:
         id: ''
@@ -495,7 +496,7 @@ content:
     region: content
   field_avertissements:
     type: entity_reference_paragraphs
-    weight: 29
+    weight: 30
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -506,7 +507,7 @@ content:
     third_party_settings: {  }
     region: content
   field_cadence_souhaitee:
-    weight: 24
+    weight: 25
     settings:
       size: 60
       placeholder: ''
@@ -684,7 +685,7 @@ content:
     type: string_textfield
     region: content
   field_espace_disponible_sol:
-    weight: 27
+    weight: 28
     settings:
       size: 60
       placeholder: ''
@@ -719,7 +720,7 @@ content:
     type: string_textarea
     region: content
   field_hauteur_convoyeur:
-    weight: 26
+    weight: 27
     settings:
       size: 60
       placeholder: ''
@@ -783,7 +784,7 @@ content:
     third_party_settings: {  }
     region: content
   field_milieu:
-    weight: 25
+    weight: 26
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -948,7 +949,7 @@ content:
     type: telephone_default
     region: content
   field_tempe_local_travail:
-    weight: 28
+    weight: 29
     settings:
       placeholder: ''
     third_party_settings: {  }

@@ -1,8 +1,9 @@
-uuid: a09253d6-b6e7-47ba-ae41-342333ed2754
+uuid: 745d41f5-1b70-46a7-b9e1-6cfefe43e90e
 langcode: fr
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.pdf
     - field.field.node.dso.field_adresse_postale
     - field.field.node.dso.field_amont
     - field.field.node.dso.field_aval
@@ -160,10 +161,10 @@ third_party_settings:
         classes: ''
         direction: vertical
       label: tabs_sec
-id: node.dso.default
+id: node.dso.pdf
 targetEntityType: node
 bundle: dso
-mode: default
+mode: pdf
 content:
   entity_print_view_pdf:
     weight: 0
