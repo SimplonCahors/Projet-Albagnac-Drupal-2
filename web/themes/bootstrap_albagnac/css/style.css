@@ -1,13 +1,32 @@
+/* create dso : hide line weight display */
+.tabledrag-toggle-weight{
+    display: none;
+}
+
+/* create dso : hide cross drag & drop */
+.glyphicon-move{
+    display: none;  
+}
+
+/* view dso : center all text */
 .content {
     text-align: center;
     /* display: flex;
     flex-wrap: wrap; */
 }
 
+/*  view dso : all labels */
 .field--label{
     border-top: 2px solid lightgrey;
     font-size: 20px;
 }
+
+/*  view dso : all labels + value */
 .field--item{
     margin-bottom: 8px;
 }
+
+/*  view dso : title  */
+/* .page-header > span{
+    color: green;
+} */
