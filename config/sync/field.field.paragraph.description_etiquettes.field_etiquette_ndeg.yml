@@ -10,13 +10,13 @@ field_name: field_etiquette_ndeg
 entity_type: paragraph
 bundle: description_etiquettes
 label: 'Étiquette N°'
-description: ''
+description: 'Merci de ne rentrer que des chiffres'
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  min: null
+  min: 0
   max: null
   prefix: ''
   suffix: ''
