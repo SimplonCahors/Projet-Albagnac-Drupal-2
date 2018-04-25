@@ -12,7 +12,7 @@ id: node.dso.field_concurent_opportunite
 field_name: field_concurent_opportunite
 entity_type: node
 bundle: dso
-label: 'Concurent sur cette opportunité'
+label: 'Concurrent sur cette opportunité'
 description: ''
 required: false
 translatable: false
@@ -61,8 +61,14 @@ settings:
       bp_modal:
         weight: 29
         enabled: false
+      aval:
+        weight: 30
+        enabled: false
       bp_simple:
         weight: 30
+        enabled: false
+      avertissements:
+        weight: 31
         enabled: false
       bp_tab_section:
         weight: 31
@@ -75,5 +81,35 @@ settings:
         enabled: false
       contact:
         weight: 34
+        enabled: false
+      description_embellage:
+        weight: 49
+        enabled: false
+      description_etiquettes:
+        weight: 50
+        enabled: false
+      emballages_etiquettes:
+        weight: 51
+        enabled: false
+      etiquette:
+        weight: 52
+        enabled: false
+      etiquettes:
+        weight: 53
+        enabled: false
+      impression_emballage:
+        weight: 54
+        enabled: false
+      machine_amont:
+        weight: 55
+        enabled: false
+      materiel_impose:
+        weight: 56
+        enabled: false
+      pneumatique:
+        weight: 57
+        enabled: false
+      remarques_contraintes_eventuelle:
+        weight: 58
         enabled: false
 field_type: entity_reference_revisions

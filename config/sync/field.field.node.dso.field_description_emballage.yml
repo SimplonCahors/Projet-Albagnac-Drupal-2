@@ -12,7 +12,7 @@ id: node.dso.field_description_emballage
 field_name: field_description_emballage
 entity_type: node
 bundle: dso
-label: 'Description emballage'
+label: 'Description Emballage'
 description: ''
 required: false
 translatable: false
@@ -87,6 +87,9 @@ settings:
         enabled: false
       emballages_etiquettes:
         weight: 49
+        enabled: false
+      description_etiquettes:
+        weight: 50
         enabled: false
       etiquette:
         weight: 50
