@@ -9,14 +9,14 @@ id: paragraph.description_embellage.field_emballage_num
 field_name: field_emballage_num
 entity_type: paragraph
 bundle: description_embellage
-label: 'Emballage N°'
-description: ''
+label: Emballage
+description: 'Merci de ne rentrer que des chiffres'
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  min: null
+  min: 0
   max: null
   prefix: ''
   suffix: ''

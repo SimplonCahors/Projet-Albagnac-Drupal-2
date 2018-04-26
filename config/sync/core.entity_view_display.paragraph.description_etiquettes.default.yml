@@ -16,14 +16,62 @@ dependencies:
     - field.field.paragraph.description_etiquettes.field_photo_etiquette
     - paragraphs.paragraphs_type.description_etiquettes
   module:
+    - field_group
     - image
+third_party_settings:
+  field_group:
+    group_description_etiquettes:
+      children:
+        - group_dimensions
+        - group_bobi
+      parent_name: ''
+      weight: 1
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: 'Description Étiquettes'
+    group_dimensions:
+      children:
+        - field_hauteur_mm
+        - field_larg
+        - field_diametre_mm_
+        - field_observations
+        - field_photo_etiquette
+      parent_name: group_description_etiquettes
+      weight: 2
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: Dimensions
+    group_bobi:
+      children:
+        - field_hauteur
+        - field_diametre_bobine_d_
+        - field_diametre_mandrin_d_
+        - field_nombre_
+        - field_enroulement
+      parent_name: group_description_etiquettes
+      weight: 3
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: Bobine
 id: paragraph.description_etiquettes.default
 targetEntityType: paragraph
 bundle: description_etiquettes
 mode: default
 content:
   field_diametre_bobine_d_:
-    weight: 2
+    weight: 6
     label: above
     settings:
       link_to_entity: false
@@ -31,7 +79,7 @@ content:
     type: string
     region: content
   field_diametre_mandrin_d_:
-    weight: 3
+    weight: 7
     label: above
     settings:
       link_to_entity: false
@@ -39,7 +87,7 @@ content:
     type: string
     region: content
   field_diametre_mm_:
-    weight: 1
+    weight: 10
     label: above
     settings:
       link_to_entity: false
@@ -47,7 +95,7 @@ content:
     type: string
     region: content
   field_enroulement:
-    weight: 4
+    weight: 9
     label: above
     settings:
       image_style: ''
@@ -73,7 +121,7 @@ content:
     type: string
     region: content
   field_hauteur_mm:
-    weight: 6
+    weight: 8
     label: above
     settings:
       link_to_entity: false
@@ -81,7 +129,7 @@ content:
     type: string
     region: content
   field_larg:
-    weight: 7
+    weight: 9
     label: above
     settings:
       link_to_entity: false
@@ -98,7 +146,7 @@ content:
     type: number_integer
     region: content
   field_observations:
-    weight: 9
+    weight: 11
     label: above
     settings:
       link_to_entity: false
@@ -106,7 +154,7 @@ content:
     type: string
     region: content
   field_photo_etiquette:
-    weight: 10
+    weight: 12
     label: above
     settings:
       image_style: ''

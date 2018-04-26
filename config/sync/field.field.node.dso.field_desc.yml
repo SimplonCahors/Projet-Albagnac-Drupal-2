@@ -12,7 +12,7 @@ id: node.dso.field_desc
 field_name: field_desc
 entity_type: node
 bundle: dso
-label: 'Description Étiquettes'
+label: 'Description Étiquette'
 description: ''
 required: false
 translatable: false

@@ -16,21 +16,21 @@ bundle: avertissements
 mode: default
 content:
   field_com_machine_amont:
-    weight: 4
+    weight: 0
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_communication_avec_machine:
-    weight: 5
+    weight: 1
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_coupure_sur_bourrage:
-    weight: 6
+    weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -44,4 +44,7 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-hidden: {  }
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true

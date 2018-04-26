@@ -74,12 +74,412 @@ dependencies:
     - datetime
     - entity_print
     - entity_reference_revisions
+    - field_group
     - options
     - telephone
     - user
 third_party_settings:
   entity_print:
     pdf_label: 'Ouvrir / Télécharger au format PDF'
+  field_group:
+    group_demande_de_devis:
+      children:
+        - group_onglet_sous_categ
+      parent_name: group_onglets_dso
+      weight: 3
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: 'Demande de devis'
+    group_informations_ds:
+      children:
+        - field_nom_commercial
+        - field_date_demande_client
+        - field_date_envoi_offre
+        - field_date_creation_fiche
+        - field_date_reponse_souhaite
+        - field_date_livraison_souhaite
+      parent_name: group_onglet_sous_categ
+      weight: 8
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: 'Informations DSO'
+    group_informations_administrativ:
+      children:
+        - field_nom_de_client
+        - field_adresse_postale
+        - field_telephone
+        - field_fax
+        - field_pays
+        - field_categorie
+        - field_secteur
+        - field_sous_secteur
+        - field_type_client
+        - field_num_sieret
+        - group_contact_technique
+        - group_contact_commercial
+      parent_name: group_onglet_sous_categ
+      weight: 9
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: 'Informations administratives du demandeur'
+    group_contact_technique:
+      children:
+        - field_contact_technique
+      parent_name: group_informations_administrativ
+      weight: 13
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: 'Contact technique'
+    group_contact_commercial:
+      children:
+        - field_contact_commercial
+      parent_name: group_informations_administrativ
+      weight: 14
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: 'Contact commercial'
+    group_informations_commerciales:
+      children:
+        - group_et
+        - group_per
+      parent_name: group_onglet_sous_categ
+      weight: 10
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: 'Informations commerciales'
+    group_et:
+      children:
+        - group_besoin
+        - field_fournisseur_actuel
+        - field_concurent_opportunite
+      parent_name: group_informations_commerciales
+      weight: 6
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: 'État des lieux'
+    group_besoin:
+      children:
+        - field_choix
+        - field_remarques
+      parent_name: group_et
+      weight: 19
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: Besoin
+    group_per:
+      children:
+        - field_nombre_type_machine
+        - field_site_de_production
+        - field_implantation_sites
+        - field_environnement_concurrentie
+      parent_name: group_informations_commerciales
+      weight: 7
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: 'Perspectives commerciales'
+    group_emballages_etiquettes:
+      children:
+        - field_emballages
+        - field_etiquettes
+      parent_name: group_onglet_sous_categ
+      weight: 11
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: 'Emballages, Etiquettes'
+    group_environnement_machine:
+      children:
+        - group_type_de_machine_amon
+        - group_type_de_machine_a
+        - field_sens_machine
+        - field_cadence_souhaitee
+        - field_milieu
+        - field_hauteur_convoyeur
+        - field_espace_disponible_sol
+        - field_tempe_local_travail
+        - field_avertissements
+        - group_energies_disponi
+        - group_mode_de_controle_demande_p
+        - group_inst
+        - group_formation
+        - group_notices
+        - group_transport
+      parent_name: group_onglet_sous_categ
+      weight: 12
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: 'Environnement machine'
+    group_type_de_machine_amon:
+      children:
+        - field_amont
+      parent_name: group_environnement_machine
+      weight: 12
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: 'Type de machine AMONT'
+    group_type_de_machine_a:
+      children:
+        - field_aval
+      parent_name: group_environnement_machine
+      weight: 13
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: 'Type de machine AVAL'
+    group_energies_disponi:
+      children:
+        - field_tension_electrique
+        - field_regime_neutre
+        - field_pneumatique
+      parent_name: group_environnement_machine
+      weight: 21
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: 'Énergies disponibles'
+    group_mode_de_controle_demande_p:
+      children:
+        - field_controle_conformite_spe
+        - group_demande_de_fat_suivant_spe
+        - field_demande_cem
+        - field_demande_certif_externe
+      parent_name: group_environnement_machine
+      weight: 22
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: 'Mode de contrôle demandé par le client'
+    group_demande_de_fat_suivant_spe:
+      children:
+        - field_choix_demande_fat
+        - field_date_desiree
+      parent_name: group_mode_de_controle_demande_p
+      weight: 35
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: 'Demande de FAT suivant spécifications'
+    group_inst:
+      children:
+        - field_installation_chez_client
+        - field_plan_de_prevention
+        - field_mise_en_route_machine
+        - field_demande_de_certification_e
+      parent_name: group_environnement_machine
+      weight: 23
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: 'Installation et mise en route'
+    group_formation:
+      children:
+        - field_sur_mach
+        - field_en_salle
+        - field_nombre_de_jour
+        - field_nombre_de_
+      parent_name: group_environnement_machine
+      weight: 24
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: Formation
+    group_notices:
+      children:
+        - field_papier
+        - field_cd
+        - field_numerique
+        - field_langue
+        - field_quantite
+      parent_name: group_environnement_machine
+      weight: 25
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: Notices
+    group_transport:
+      children:
+        - field_transport_a_la_charge_de
+      parent_name: group_environnement_machine
+      weight: 26
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: Transport
+    group_materiels_imposes_impresio:
+      children:
+        - field_materiel_impose_par_le_cli
+        - group_impression
+      parent_name: group_onglet_sous_categ
+      weight: 13
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: 'Materiels imposés, Impresion'
+    group_impression:
+      children:
+        - field_impression
+        - field_impression_emballages
+      parent_name: group_materiels_imposes_impresio
+      weight: 13
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: Impression
+    group_remarques_contraintes_even:
+      children:
+        - field_remarques_contraintes
+      parent_name: group_onglet_sous_categ
+      weight: 14
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: 'Remarques / Contraintes éventuelles'
+    group_emballage:
+      children:
+        - field_description_emballage
+      parent_name: group_onglets_dso
+      weight: 4
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: Emballage
+    group_etiquette:
+      children:
+        - field_desc
+      parent_name: group_onglets_dso
+      weight: 5
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: Étiquette
+    group_combinaison:
+      children: {  }
+      parent_name: group_onglets_dso
+      weight: 6
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+      label: Combinaison
+    group_onglet_sous_categ:
+      children:
+        - group_informations_ds
+        - group_informations_administrativ
+        - group_informations_commerciales
+        - group_emballages_etiquettes
+        - group_environnement_machine
+        - group_materiels_imposes_impresio
+        - group_remarques_contraintes_even
+      parent_name: group_demande_de_devis
+      weight: 7
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: 'Onglet sous-catégorie'
+    group_onglets_dso:
+      children:
+        - group_demande_de_devis
+        - group_emballage
+        - group_etiquette
+        - group_combinaison
+      parent_name: ''
+      weight: 2
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: 'Onglets DSO'
 id: node.dso.default
 targetEntityType: node
 bundle: dso
@@ -91,7 +491,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_adresse_postale:
-    weight: 9
+    weight: 4
     label: above
     settings:
       link_to_entity: false
@@ -100,8 +500,8 @@ content:
     region: content
   field_amont:
     type: entity_reference_revisions_entity_view
-    weight: 30
-    label: visually_hidden
+    weight: 21
+    label: above
     settings:
       view_mode: default
       link: ''
@@ -109,8 +509,8 @@ content:
     region: content
   field_aval:
     type: entity_reference_revisions_entity_view
-    weight: 31
-    label: visually_hidden
+    weight: 7
+    label: above
     settings:
       view_mode: default
       link: ''
@@ -118,7 +518,7 @@ content:
     region: content
   field_avertissements:
     type: entity_reference_revisions_entity_view
-    weight: 38
+    weight: 20
     label: above
     settings:
       view_mode: default
@@ -126,7 +526,7 @@ content:
     third_party_settings: {  }
     region: content
   field_cadence_souhaitee:
-    weight: 33
+    weight: 15
     label: above
     settings:
       link_to_entity: false
@@ -134,28 +534,28 @@ content:
     type: string
     region: content
   field_categorie:
-    weight: 13
+    weight: 8
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_cd:
-    weight: 57
+    weight: 15
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_choix:
-    weight: 20
+    weight: 16
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_choix_demande_fat:
-    weight: 45
+    weight: 36
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -163,7 +563,7 @@ content:
     region: content
   field_concurent_opportunite:
     type: entity_reference_revisions_entity_view
-    weight: 23
+    weight: 21
     label: above
     settings:
       view_mode: default
@@ -172,7 +572,7 @@ content:
     region: content
   field_contact_commercial:
     type: entity_reference_revisions_entity_view
-    weight: 18
+    weight: 14
     label: above
     settings:
       view_mode: default
@@ -181,7 +581,7 @@ content:
     region: content
   field_contact_technique:
     type: entity_reference_revisions_entity_view
-    weight: 19
+    weight: 15
     label: above
     settings:
       view_mode: default
@@ -189,82 +589,82 @@ content:
     third_party_settings: {  }
     region: content
   field_controle_conformite_spe:
-    weight: 42
+    weight: 33
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_date_creation_fiche:
-    weight: 5
-    label: above
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_date_demande_client:
-    weight: 3
-    label: above
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_date_desiree:
-    weight: 46
-    label: above
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_date_envoi_offre:
-    weight: 4
-    label: above
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_date_livraison_souhaite:
-    weight: 8
-    label: above
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_date_reponse_souhaite:
     weight: 7
     label: above
     settings:
-      format_type: medium
       timezone_override: ''
+      date_format: d-m-Y
     third_party_settings: {  }
-    type: datetime_default
+    type: datetime_custom
+    region: content
+  field_date_demande_client:
+    weight: 4
+    label: above
+    settings:
+      timezone_override: ''
+      date_format: d-m-Y
+    third_party_settings: {  }
+    type: datetime_custom
+    region: content
+  field_date_desiree:
+    weight: 37
+    label: above
+    settings:
+      timezone_override: ''
+      date_format: d-m-Y
+    third_party_settings: {  }
+    type: datetime_custom
+    region: content
+  field_date_envoi_offre:
+    weight: 6
+    label: above
+    settings:
+      timezone_override: ''
+      date_format: d-m-Y
+    third_party_settings: {  }
+    type: datetime_custom
+    region: content
+  field_date_livraison_souhaite:
+    weight: 9
+    label: above
+    settings:
+      timezone_override: ''
+      date_format: d-m-Y
+    third_party_settings: {  }
+    type: datetime_custom
+    region: content
+  field_date_reponse_souhaite:
+    weight: 8
+    label: above
+    settings:
+      timezone_override: ''
+      date_format: d-m-Y
+    third_party_settings: {  }
+    type: datetime_custom
     region: content
   field_demande_cem:
-    weight: 43
+    weight: 36
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_demande_certif_externe:
-    weight: 44
+    weight: 37
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_demande_de_certification_e:
-    weight: 50
+    weight: 19
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -272,7 +672,7 @@ content:
     region: content
   field_desc:
     type: entity_reference_revisions_entity_view
-    weight: 66
+    weight: 13
     label: above
     settings:
       view_mode: default
@@ -281,7 +681,7 @@ content:
     region: content
   field_description_emballage:
     type: entity_reference_revisions_entity_view
-    weight: 65
+    weight: 12
     label: above
     settings:
       view_mode: default
@@ -290,7 +690,7 @@ content:
     region: content
   field_emballages:
     type: entity_reference_revisions_entity_view
-    weight: 28
+    weight: 23
     label: above
     settings:
       view_mode: default
@@ -298,14 +698,14 @@ content:
     third_party_settings: {  }
     region: content
   field_en_salle:
-    weight: 52
+    weight: 21
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_environnement_concurrentie:
-    weight: 27
+    weight: 18
     label: above
     settings:
       link_to_entity: false
@@ -313,7 +713,7 @@ content:
     type: string
     region: content
   field_espace_disponible_sol:
-    weight: 36
+    weight: 18
     label: above
     settings:
       link_to_entity: false
@@ -322,7 +722,7 @@ content:
     region: content
   field_etiquettes:
     type: entity_reference_revisions_entity_view
-    weight: 29
+    weight: 24
     label: above
     settings:
       view_mode: default
@@ -330,7 +730,7 @@ content:
     third_party_settings: {  }
     region: content
   field_fax:
-    weight: 11
+    weight: 6
     label: above
     settings:
       title: ''
@@ -338,14 +738,14 @@ content:
     type: telephone_link
     region: content
   field_fournisseur_actuel:
-    weight: 22
+    weight: 20
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_hauteur_convoyeur:
-    weight: 35
+    weight: 17
     label: above
     settings:
       link_to_entity: false
@@ -353,7 +753,7 @@ content:
     type: string
     region: content
   field_implantation_sites:
-    weight: 26
+    weight: 17
     label: above
     settings:
       link_to_entity: false
@@ -362,7 +762,7 @@ content:
     region: content
   field_impression:
     type: entity_reference_revisions_entity_view
-    weight: 62
+    weight: 13
     label: above
     settings:
       view_mode: default
@@ -371,7 +771,7 @@ content:
     region: content
   field_impression_emballages:
     type: entity_reference_revisions_entity_view
-    weight: 63
+    weight: 14
     label: above
     settings:
       view_mode: default
@@ -379,14 +779,14 @@ content:
     third_party_settings: {  }
     region: content
   field_installation_chez_client:
-    weight: 47
+    weight: 16
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_langue:
-    weight: 59
+    weight: 17
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -394,7 +794,7 @@ content:
     region: content
   field_materiel_impose_par_le_cli:
     type: entity_reference_revisions_entity_view
-    weight: 61
+    weight: 12
     label: above
     settings:
       view_mode: default
@@ -402,21 +802,21 @@ content:
     third_party_settings: {  }
     region: content
   field_milieu:
-    weight: 34
+    weight: 16
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_mise_en_route_machine:
-    weight: 49
+    weight: 18
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_nom_commercial:
-    weight: 2
+    weight: 3
     label: above
     settings:
       link_to_entity: false
@@ -424,7 +824,7 @@ content:
     type: string
     region: content
   field_nom_de_client:
-    weight: 6
+    weight: 3
     label: above
     settings:
       link_to_entity: false
@@ -432,7 +832,7 @@ content:
     type: string
     region: content
   field_nombre_de_:
-    weight: 54
+    weight: 23
     label: above
     settings:
       thousand_separator: ''
@@ -441,7 +841,7 @@ content:
     type: number_integer
     region: content
   field_nombre_de_jour:
-    weight: 53
+    weight: 22
     label: above
     settings:
       thousand_separator: ''
@@ -450,7 +850,7 @@ content:
     type: number_integer
     region: content
   field_nombre_type_machine:
-    weight: 24
+    weight: 15
     label: above
     settings:
       link_to_entity: false
@@ -458,7 +858,7 @@ content:
     type: string
     region: content
   field_num_sieret:
-    weight: 17
+    weight: 12
     label: above
     settings:
       thousand_separator: ''
@@ -467,28 +867,28 @@ content:
     type: number_integer
     region: content
   field_numerique:
-    weight: 58
+    weight: 16
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_papier:
-    weight: 55
+    weight: 14
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_pays:
-    weight: 12
+    weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_plan_de_prevention:
-    weight: 48
+    weight: 17
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -496,7 +896,7 @@ content:
     region: content
   field_pneumatique:
     type: entity_reference_revisions_entity_view
-    weight: 40
+    weight: 34
     label: above
     settings:
       view_mode: default
@@ -504,7 +904,7 @@ content:
     third_party_settings: {  }
     region: content
   field_quantite:
-    weight: 67
+    weight: 18
     label: above
     settings:
       thousand_separator: ''
@@ -513,14 +913,14 @@ content:
     type: number_integer
     region: content
   field_regime_neutre:
-    weight: 39
+    weight: 33
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_remarques:
-    weight: 21
+    weight: 18
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -528,7 +928,7 @@ content:
     region: content
   field_remarques_contraintes:
     type: entity_reference_revisions_entity_view
-    weight: 64
+    weight: 11
     label: above
     settings:
       view_mode: default
@@ -536,21 +936,21 @@ content:
     third_party_settings: {  }
     region: content
   field_secteur:
-    weight: 14
+    weight: 9
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_sens_machine:
-    weight: 32
+    weight: 14
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_site_de_production:
-    weight: 25
+    weight: 16
     label: above
     settings:
       link_to_entity: false
@@ -558,21 +958,21 @@ content:
     type: string
     region: content
   field_sous_secteur:
-    weight: 15
+    weight: 10
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_sur_mach:
-    weight: 51
+    weight: 20
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_telephone:
-    weight: 10
+    weight: 5
     label: above
     settings:
       title: ''
@@ -580,7 +980,7 @@ content:
     type: telephone_link
     region: content
   field_tempe_local_travail:
-    weight: 37
+    weight: 19
     label: above
     settings:
       thousand_separator: ''
@@ -591,21 +991,21 @@ content:
     type: number_decimal
     region: content
   field_tension_electrique:
-    weight: 41
+    weight: 32
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_transport_a_la_charge_de:
-    weight: 60
+    weight: 13
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_type_client:
-    weight: 16
+    weight: 11
     label: above
     settings: {  }
     third_party_settings: {  }

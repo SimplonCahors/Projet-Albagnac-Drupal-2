@@ -12,7 +12,7 @@ field_name: field_telephone
 entity_type: paragraph
 bundle: contact
 label: Téléphone
-description: ''
+description: 'Merci de ne rentrer que des chiffres'
 required: false
 translatable: false
 default_value: {  }
