@@ -7,16 +7,15 @@ favicon:
   path: ''
   url: 'http://albagnac.local/themes/contrib/bootstrap/favicon.ico'
   use_default: true
-cdn_jsdelivr_theme: slate
+cdn_jsdelivr_theme: spacelab
 table_responsive: '1'
 table: ''
+logo:
+  path: 'public://albagnac.jpeg'
+  url: ''
+  use_default: true
 features:
   comment_user_picture: true
   comment_user_verification: true
   favicon: true
   node_user_picture: true
-logo:
-  path: 'public://albagnac.jpeg'
-  url: ''
-  use_default: true
-langcode: fr
