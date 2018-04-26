@@ -83,6 +83,9 @@ settings:
     -
       value: Zimbabwe
       label: Zimbabwe
+    -
+      value: Autre
+      label: Autre
   allowed_values_function: ''
 module: options
 locked: false

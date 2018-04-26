@@ -4,8 +4,9 @@ schemas:
 favicon:
   mimetype: image/vnd.microsoft.icon
   path: ''
-  url: 'http://127.0.0.1/themes/contrib/bootstrap/favicon.ico'
+  url: 'http://albagnac.local/themes/bootstrap_albagnac/favicon.ico'
   use_default: true
+cdn_jsdelivr_theme: spacelab
 features:
   comment_user_picture: true
   comment_user_verification: true
@@ -16,3 +17,4 @@ logo:
   url: ''
   use_default: true
 langcode: fr
+table: ''

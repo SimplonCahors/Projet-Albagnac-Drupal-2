@@ -1,0 +1,21 @@
+global-styling:
+
+  css:
+
+    theme:
+
+      css/style.css: {}
+
+global-scripts:
+
+  js:
+
+    js/dso.js: {}
+
+print-styling:
+
+  css:
+
+    theme:
+
+      css/print-style.css: {}

@@ -1,0 +1,122 @@
+html{
+    scroll-behavior: smooth;
+}
+#toolbar-item-shortcut{
+    display: none;
+}
+/* create dso : hide line weight display */
+
+
+.tabledrag-toggle-weight {
+    display: none;
+}
+.breadcrumb{
+    display: none;
+}
+
+
+/* create dso : hide cross drag & drop */
+
+.glyphicon-move {
+    display: none;
+}
+
+/* view dso : center all text */
+
+.content {
+    text-align: center;
+    /* display: flex;
+
+    flex-wrap: wrap; */
+}
+
+/*  view dso : all labels */
+
+.field--label {
+    border-top: 2px solid lightgrey;
+    font-size: 20px;
+}
+
+/*  view dso : all labels + value */
+
+.field--item {
+    margin-bottom: 8px;
+}
+
+/*  view dso : title  */
+
+/* .page-header > span{
+
+    color: green;
+
+} */
+
+/* button to go on top of the page */
+#ok{
+    
+    width : 50px;
+    height : 50px;
+    background-color : rgba(100, 100, 100, 0.6);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius : 10%;
+    position : fixed;
+    left : 92%;
+    top : 80%;
+    z-index:9999;
+}
+#ok:hover{
+    background-color : rgba(100, 100, 100, 0.9);
+
+}
+@media screen and (max-width: 940px)
+{
+    #ok{
+        width : 50px;
+        height : 50px;
+        left : 85%;
+        top : 92%;
+    }
+
+}
+
+.content>.field-group-tabs-wrapper>div>ul.nav.nav-tabs {
+    padding-bottom: 0;
+    width: 100%;
+}
+
+.content>.field-group-tabs-wrapper>div>ul.nav.nav-tabs>li {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 2px;
+}
+
+.content>.field-group-tabs-wrapper>div>ul.nav.nav-tabs>li>a,
+.content>.field-group-tabs-wrapper>div>ul.nav.nav-tabs>li>a:hover,
+.content>.field-group-tabs-wrapper>div>ul.nav.nav-tabs>li.active>a {
+    border-bottom: 0 none;
+    border-color: #dddddd #dddddd rgba(0, 0, 0, 0) #dddddd;
+    border-radius: 4px 4px 0 0;
+    margin-bottom: 0;
+}
+
+
+.node-dso-edit-form.node-form>.field-group-tabs-wrapper>div>ul.nav.nav-tabs {
+    padding-bottom: 0;
+    width: 100%;
+}
+
+.node-dso-edit-form.node-form>.field-group-tabs-wrapper>div>ul.nav.nav-tabs>li {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 2px;
+}
+
+.node-dso-edit-form.node-form>.field-group-tabs-wrapper>div>ul.nav.nav-tabs>li>a,
+.node-dso-edit-form.node-form>.field-group-tabs-wrapper>div>ul.nav.nav-tabs>li>a:hover,
+.node-dso-edit-form.node-form>.field-group-tabs-wrapper>div>ul.nav.nav-tabs>li.active>a {
+    border-bottom: 0 none;
+    border-color: #dddddd #dddddd rgba(0, 0, 0, 0) #dddddd;
+    border-radius: 4px 4px 0 0;
+    margin-bottom: 0;
+}
