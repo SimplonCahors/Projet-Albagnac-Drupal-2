@@ -1,0 +1,19 @@
+uuid: 56d7b8ae-9e38-4196-ab45-dc830e414c28
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pays_custom
+    - node.type.dso
+id: node.dso.field_pays_custom
+field_name: field_pays_custom
+entity_type: node
+bundle: dso
+label: pays_custom
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -52,6 +52,7 @@ dependencies:
     - field.field.node.dso.field_numerique
     - field.field.node.dso.field_papier
     - field.field.node.dso.field_pays
+    - field.field.node.dso.field_pays_custom
     - field.field.node.dso.field_plan_de_prevention
     - field.field.node.dso.field_pneumatique
     - field.field.node.dso.field_quantite
@@ -69,6 +70,7 @@ dependencies:
     - field.field.node.dso.field_test
     - field.field.node.dso.field_transport_a_la_charge_de
     - field.field.node.dso.field_type_client
+    - field.field.node.dso.field_validation_dso
     - node.type.dso
   module:
     - datetime
@@ -79,15 +81,9 @@ third_party_settings:
   field_group:
     group_onglet1:
       children:
-        - group_informations_dso
-        - group_onglet_b_1
-        - group_informations_commerciales
-        - group_emballages_etiquettes
-        - group_environnement_machine
-        - group_materiels_imposes_impressi
-        - group_remarques_contraintes_even
-      parent_name: group_onglets_dso
-      weight: 4
+        - group_onglets_dso
+      parent_name: group_onglet_
+      weight: 3
       format_type: tab
       format_settings:
         label: 'Demande de devis'
@@ -100,8 +96,8 @@ third_party_settings:
     group_onglet2:
       children:
         - field_description_emballage
-      parent_name: group_onglets_dso
-      weight: 5
+      parent_name: group_onglet_
+      weight: 7
       format_type: tab
       format_settings:
         label: Emballages
@@ -118,15 +114,16 @@ third_party_settings:
         - field_telephone
         - field_fax
         - field_pays
+        - field_pays_custom
         - field_categorie
         - field_secteur
         - field_sous_secteur
         - field_type_client
         - field_num_sieret
-        - group_conta
         - group_contact
-      parent_name: group_onglet1
-      weight: 4
+        - group_conta
+      parent_name: group_onglets_dso
+      weight: 21
       format_type: tab
       format_settings:
         label: 'Informations administratives du demandeur'
@@ -136,31 +133,12 @@ third_party_settings:
         id: ''
         classes: ''
       label: 'Informations administratives du demandeur'
-    group_informations_dso:
-      children:
-        - field_nom_commercial
-        - field_date_demande_client
-        - field_date_envoi_offre
-        - field_date_creation_fiche
-        - field_date_reponse_souhaite
-        - field_date_livraison_souhaite
-      parent_name: group_onglet1
-      weight: 3
-      format_type: tab
-      format_settings:
-        label: 'Informations DSO'
-        formatter: closed
-        description: ''
-        required_fields: true
-        id: ''
-        classes: ''
-      label: 'Informations DSO'
     group_informations_commerciales:
       children:
         - group_etat_lieux
         - group_perspectives_commerciales
-      parent_name: group_onglet1
-      weight: 5
+      parent_name: group_onglets_dso
+      weight: 22
       format_type: tab
       format_settings:
         id: ''
@@ -173,8 +151,8 @@ third_party_settings:
       children:
         - field_emballages
         - field_etiquettes
-      parent_name: group_onglet1
-      weight: 6
+      parent_name: group_onglets_dso
+      weight: 23
       format_type: tab
       format_settings:
         id: ''
@@ -200,8 +178,8 @@ third_party_settings:
         - group_formation
         - group_notices
         - group_transport
-      parent_name: group_onglet1
-      weight: 7
+      parent_name: group_onglets_dso
+      weight: 24
       format_type: tab
       format_settings:
         id: ''
@@ -214,8 +192,9 @@ third_party_settings:
       children:
         - field_materiel_impose_par_le_cli
         - group_impression
-      parent_name: group_onglet1
-      weight: 8
+        - group_remarques_contraintes_even
+      parent_name: group_onglets_dso
+      weight: 25
       format_type: tab
       format_settings:
         id: ''
@@ -227,8 +206,8 @@ third_party_settings:
     group_remarques_contraintes_even:
       children:
         - field_remarques_contraintes
-      parent_name: group_onglet1
-      weight: 20
+      parent_name: group_materiels_imposes_impressi
+      weight: 2
       format_type: tab
       format_settings:
         id: ''
@@ -240,8 +219,8 @@ third_party_settings:
     group_etiquette:
       children:
         - field_desc
-      parent_name: group_onglets_dso
-      weight: 6
+      parent_name: group_onglet_
+      weight: 8
       format_type: tab
       format_settings:
         label: Etiquettes
@@ -253,8 +232,8 @@ third_party_settings:
       label: Etiquettes
     group_combinaison:
       children: {  }
-      parent_name: group_onglets_dso
-      weight: 7
+      parent_name: group_onglet_
+      weight: 9
       format_type: tab
       format_settings:
         id: ''
@@ -265,25 +244,27 @@ third_party_settings:
       label: Combinaison
     group_onglets_dso:
       children:
-        - group_onglet1
-        - group_onglet2
-        - group_etiquette
-        - group_combinaison
-      parent_name: ''
-      weight: 2
+        - group_informa
+        - group_onglet_b_1
+        - group_informations_commerciales
+        - group_emballages_etiquettes
+        - group_environnement_machine
+        - group_materiels_imposes_impressi
+      parent_name: group_onglet1
+      weight: 3
       format_type: tabs
       format_settings:
-        label: 'Onglets DSO'
+        label: 'Onglets Sous Categorie'
         direction: vertical
         id: ''
         classes: ''
-      label: 'Onglets DSO'
+      label: 'Onglets Sous Categorie'
     group_besoin:
       children:
         - field_choix
         - field_remarques
       parent_name: group_etat_lieux
-      weight: 21
+      weight: 3
       format_type: fieldset
       format_settings:
         id: ''
@@ -298,7 +279,7 @@ third_party_settings:
         - field_implantation_sites
         - field_environnement_concurrentie
       parent_name: group_informations_commerciales
-      weight: 23
+      weight: 15
       format_type: tab
       format_settings:
         id: ''
@@ -313,7 +294,7 @@ third_party_settings:
         - field_fournisseur_actuel
         - field_concurent_opportunite
       parent_name: group_informations_commerciales
-      weight: 20
+      weight: 14
       format_type: tab
       format_settings:
         id: ''
@@ -328,7 +309,7 @@ third_party_settings:
         - field_regime_neutre
         - field_pneumatique
       parent_name: group_environnement_machine
-      weight: 32
+      weight: 53
       format_type: tab
       format_settings:
         id: ''
@@ -342,9 +323,9 @@ third_party_settings:
         - field_controle_conformite_spe
         - group_demande_fat_specif
         - field_demande_cem
-        - field_demande_certif_externe
+        - field_demande_de_certification_e
       parent_name: group_environnement_machine
-      weight: 33
+      weight: 54
       format_type: tab
       format_settings:
         id: ''
@@ -358,7 +339,7 @@ third_party_settings:
         - field_choix_demande_fat
         - field_date_desiree
       parent_name: group_mode_controle_client
-      weight: 48
+      weight: 1
       format_type: fieldset
       format_settings:
         id: ''
@@ -371,9 +352,9 @@ third_party_settings:
         - field_installation_chez_client
         - field_plan_de_prevention
         - field_mise_en_route_machine
-        - field_demande_de_certification_e
+        - field_demande_certif_externe
       parent_name: group_environnement_machine
-      weight: 34
+      weight: 55
       format_type: tab
       format_settings:
         id: ''
@@ -389,7 +370,7 @@ third_party_settings:
         - field_nombre_de_jour
         - field_nombre_de_
       parent_name: group_environnement_machine
-      weight: 35
+      weight: 57
       format_type: tab
       format_settings:
         id: ''
@@ -402,7 +383,7 @@ third_party_settings:
       children:
         - field_transport_a_la_charge_de
       parent_name: group_environnement_machine
-      weight: 37
+      weight: 59
       format_type: tab
       format_settings:
         id: ''
@@ -419,7 +400,7 @@ third_party_settings:
         - field_langue
         - field_quantite
       parent_name: group_environnement_machine
-      weight: 36
+      weight: 58
       format_type: tab
       format_settings:
         id: ''
@@ -433,7 +414,7 @@ third_party_settings:
         - field_impression
         - field_impression_emballages
       parent_name: group_materiels_imposes_impressi
-      weight: 63
+      weight: 1
       format_type: tab
       format_settings:
         id: ''
@@ -446,7 +427,7 @@ third_party_settings:
       children:
         - field_contact_commercial
       parent_name: group_onglet_b_1
-      weight: 19
+      weight: 10
       format_type: tab
       format_settings:
         id: ''
@@ -459,7 +440,7 @@ third_party_settings:
       children:
         - field_contact_technique
       parent_name: group_onglet_b_1
-      weight: 17
+      weight: 11
       format_type: tab
       format_settings:
         id: ''
@@ -472,7 +453,7 @@ third_party_settings:
       children:
         - field_amont
       parent_name: group_environnement_machine
-      weight: 22
+      weight: 44
       format_type: tab
       format_settings:
         id: ''
@@ -485,7 +466,7 @@ third_party_settings:
       children:
         - field_aval
       parent_name: group_environnement_machine
-      weight: 23
+      weight: 45
       format_type: tab
       format_settings:
         id: ''
@@ -494,6 +475,39 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Type de machine AVAL'
+    group_onglet_:
+      children:
+        - group_onglet1
+        - group_onglet2
+        - group_etiquette
+        - group_combinaison
+      parent_name: ''
+      weight: 2
+      format_type: tabs
+      format_settings:
+        label: 'Onglet DSO'
+        direction: vertical
+        id: ''
+        classes: ''
+      label: 'Onglet DSO'
+    group_informa:
+      children:
+        - field_nom_commercial
+        - field_date_demande_client
+        - field_date_envoi_offre
+        - field_date_creation_fiche
+        - field_date_reponse_souhaite
+        - field_date_livraison_souhaite
+      parent_name: group_onglets_dso
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Informations DSO'
 id: node.dso.default
 targetEntityType: node
 bundle: dso
@@ -506,515 +520,610 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_adresse_postale:
-    weight: 8
+    type: string_textfield
+    weight: 1
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_amont:
-    type: entity_reference_paragraphs
-    weight: 21
+    type: paragraphs
+    weight: 0
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
       edit_mode: open
+      closed_mode: summary
+      autocollapse: none
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
-    region: content
   field_aval:
-    type: entity_reference_paragraphs
-    weight: 24
+    type: paragraphs
+    weight: 0
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
       edit_mode: open
+      closed_mode: summary
+      autocollapse: none
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
-    region: content
   field_avertissements:
-    type: entity_reference_paragraphs
-    weight: 31
+    type: paragraphs
+    weight: 52
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
       edit_mode: open
+      closed_mode: summary
+      autocollapse: none
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
-    region: content
   field_cadence_souhaitee:
-    weight: 26
+    type: string_textfield
+    weight: 47
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_categorie:
-    weight: 12
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    weight: 5
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_cd:
-    weight: 58
+    type: options_select
+    weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_choix:
-    weight: 5
+    type: options_select
+    weight: 43
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_choix_demande_fat:
-    weight: 50
+    type: options_select
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_concurent_opportunite:
-    type: entity_reference_paragraphs
-    weight: 23
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-    third_party_settings: {  }
-    region: content
-  field_contact_commercial:
-    type: entity_reference_paragraphs
-    weight: 19
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-    third_party_settings: {  }
-    region: content
-  field_contact_technique:
-    type: entity_reference_paragraphs
-    weight: 18
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-    third_party_settings: {  }
-    region: content
-  field_controle_conformite_spe:
-    weight: 46
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_date_creation_fiche:
-    weight: 7
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_date_demande_client:
+    type: paragraphs
     weight: 5
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
     region: content
-  field_date_desiree:
-    weight: 51
-    settings: {  }
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_date_envoi_offre:
-    weight: 6
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_date_livraison_souhaite:
-    weight: 9
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_date_reponse_souhaite:
-    weight: 8
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_demande_cem:
-    weight: 49
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_demande_certif_externe:
-    weight: 51
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_demande_de_certification_e:
+  field_contact_commercial:
+    type: paragraphs
     weight: 55
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  field_contact_technique:
+    type: paragraphs
+    weight: 13
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  field_controle_conformite_spe:
+    type: options_select
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+  field_date_creation_fiche:
+    type: datetime_default
+    weight: 3
     region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_date_demande_client:
+    type: datetime_default
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_date_desiree:
+    type: datetime_default
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_date_envoi_offre:
+    type: datetime_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_date_livraison_souhaite:
+    type: datetime_default
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_date_reponse_souhaite:
+    type: datetime_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_demande_cem:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_demande_certif_externe:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_demande_de_certification_e:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_desc:
-    type: entity_reference_paragraphs
-    weight: 67
+    type: paragraphs
+    weight: 49
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
       edit_mode: open
+      closed_mode: summary
+      autocollapse: none
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
-    region: content
   field_description_emballage:
-    type: entity_reference_paragraphs
-    weight: 66
+    type: paragraphs
+    weight: 50
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
       edit_mode: open
+      closed_mode: summary
+      autocollapse: none
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
-    region: content
   field_emballages:
-    type: entity_reference_paragraphs
-    weight: 9
+    type: paragraphs
+    weight: 0
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
       edit_mode: open
+      closed_mode: summary
+      autocollapse: none
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
-    region: content
   field_en_salle:
-    weight: 36
+    type: options_select
+    weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_environnement_concurrentie:
-    weight: 29
+    type: string_textfield
+    weight: 3
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_espace_disponible_sol:
-    weight: 29
+    type: string_textfield
+    weight: 50
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_etiquettes:
-    type: entity_reference_paragraphs
-    weight: 10
+    type: paragraphs
+    weight: 1
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
       edit_mode: open
+      closed_mode: summary
+      autocollapse: none
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
-    region: content
   field_fax:
-    weight: 10
+    type: telephone_default
+    weight: 3
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: telephone_default
-    region: content
   field_fournisseur_actuel:
-    weight: 22
+    type: string_textarea
+    weight: 4
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_hauteur_convoyeur:
-    weight: 28
+    type: string_textfield
+    weight: 49
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_implantation_sites:
-    weight: 28
+    type: string_textfield
+    weight: 2
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_impression:
-    type: entity_reference_paragraphs
-    weight: 63
+    type: paragraphs
+    weight: 0
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
       edit_mode: open
+      closed_mode: summary
+      autocollapse: none
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
-    region: content
   field_impression_emballages:
-    type: entity_reference_paragraphs
-    weight: 64
+    type: paragraphs
+    weight: 1
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
       edit_mode: open
+      closed_mode: summary
+      autocollapse: none
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
-    region: content
   field_installation_chez_client:
-    weight: 52
+    type: options_select
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_langue:
-    weight: 60
+    type: options_select
+    weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_materiel_impose_par_le_cli:
-    type: entity_reference_paragraphs
-    weight: 62
+    type: paragraphs
+    weight: 0
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
       edit_mode: open
+      closed_mode: summary
+      autocollapse: none
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
-    region: content
   field_milieu:
-    weight: 27
+    type: options_select
+    weight: 48
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_mise_en_route_machine:
-    weight: 54
+    type: options_select
+    weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_nom_commercial:
-    weight: 4
+    type: string_textfield
+    weight: 0
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_nom_de_client:
-    weight: 7
+    type: string_textfield
+    weight: 0
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_nombre_de_:
-    weight: 39
+    type: number
+    weight: 3
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_nombre_de_jour:
-    weight: 38
+    type: number
+    weight: 2
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_nombre_type_machine:
-    weight: 26
+    type: string_textfield
+    weight: 0
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_num_sieret:
-    weight: 16
+    type: number
+    weight: 9
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_numerique:
-    weight: 59
+    type: options_select
+    weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_papier:
-    weight: 56
-    settings: {  }
-    third_party_settings: {  }
     type: options_select
+    weight: 0
     region: content
-  field_pays:
-    weight: 11
     settings: {  }
     third_party_settings: {  }
+  field_pays:
     type: options_select
+    weight: 4
+    region: content
+  field_pays_custom:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        0115eac6-ff2f-4c8d-85a5-b2ad9f052fbe:
+          dependee: field_pays
+          settings:
+            state: required
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Autre
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: dso
+        c6f9c45c-626c-434f-922c-f1f55285c213:
+          dependee: field_pays
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Autre
+            effect: fade
+            effect_options:
+              fade:
+                speed: '400'
+              slide:
+                speed: '400'
+            selector: ''
+          entity_type: node
+          bundle: dso
+    type: string_textfield
     region: content
   field_plan_de_prevention:
     weight: 53
     settings: {  }
     third_party_settings: {  }
+  field_plan_de_prevention:
     type: options_select
+    weight: 1
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_pneumatique:
-    type: entity_reference_paragraphs
-    weight: 45
+    type: paragraphs
+    weight: 50
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
       edit_mode: open
+      closed_mode: summary
+      autocollapse: none
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
-    region: content
   field_quantite:
-    weight: 68
+    type: number
+    weight: 4
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_regime_neutre:
-    weight: 44
+    type: options_select
+    weight: 49
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_remarques:
-    weight: 6
+    type: string_textarea
+    weight: 44
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_remarques_contraintes:
-    type: entity_reference_paragraphs
-    weight: 65
+    type: paragraphs
+    weight: 4
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
       edit_mode: open
+      closed_mode: summary
+      autocollapse: none
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
-    region: content
   field_secteur:
-    weight: 13
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_sens_machine:
-    weight: 25
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_site_de_production:
-    weight: 27
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_sous_secteur:
     weight: 14
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    weight: 6
     region: content
-  field_sur_mach:
-    weight: 35
     settings: {  }
     third_party_settings: {  }
+  field_sens_machine:
     type: options_select
+    weight: 46
     region: content
-  field_telephone:
-    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+  field_site_de_production:
+    type: string_textfield
+    weight: 1
+    region: content
     settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: telephone_default
-    region: content
-  field_tempe_local_travail:
-    weight: 30
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-    type: number
-    region: content
-  field_tension_electrique:
-    weight: 43
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_transport_a_la_charge_de:
-    weight: 61
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_type_client:
+  field_sous_secteur:
     weight: 15
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_sur_mach:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_telephone:
+    type: telephone_default
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_tempe_local_travail:
+    type: number
+    weight: 51
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_tension_electrique:
+    type: options_select
+    weight: 48
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_transport_a_la_charge_de:
+    type: options_select
+    weight: 0
+    region: content
+  field_type_client:
+    weight: 16
+    settings: {  }
+    third_party_settings: {  }
+  field_type_client:
+    type: options_select
+    weight: 8
+    region: content
+  field_validation_dso:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   title:
     type: string_textfield

@@ -52,6 +52,7 @@ dependencies:
     - field.field.node.dso.field_numerique
     - field.field.node.dso.field_papier
     - field.field.node.dso.field_pays
+    - field.field.node.dso.field_pays_custom
     - field.field.node.dso.field_plan_de_prevention
     - field.field.node.dso.field_pneumatique
     - field.field.node.dso.field_quantite
@@ -69,6 +70,7 @@ dependencies:
     - field.field.node.dso.field_test
     - field.field.node.dso.field_transport_a_la_charge_de
     - field.field.node.dso.field_type_client
+    - field.field.node.dso.field_validation_dso
     - node.type.dso
   module:
     - datetime
@@ -84,14 +86,8 @@ third_party_settings:
   field_group:
     group_demande_de_devis:
       children:
-        - group_informations_ds
-        - group_informations_administrativ
-        - group_informations_commerciales
-        - group_emballages_etiquettes
-        - group_environnement_machine
-        - group_materiels_imposes_impresio
-        - group_remarques_contraintes_even
-      parent_name: ''
+        - group_onglet_sous_categ
+      parent_name: group_onglets_dso
       weight: 3
       format_type: tab
       format_settings:
@@ -108,8 +104,8 @@ third_party_settings:
         - field_date_creation_fiche
         - field_date_reponse_souhaite
         - field_date_livraison_souhaite
-      parent_name: group_demande_de_devis
-      weight: 20
+      parent_name: group_onglet_sous_categ
+      weight: 8
       format_type: tab
       format_settings:
         id: ''
@@ -124,6 +120,7 @@ third_party_settings:
         - field_telephone
         - field_fax
         - field_pays
+        - field_pays_custom
         - field_categorie
         - field_secteur
         - field_sous_secteur
@@ -131,8 +128,8 @@ third_party_settings:
         - field_num_sieret
         - group_contact_technique
         - group_contact_commercial
-      parent_name: group_demande_de_devis
-      weight: 21
+      parent_name: group_onglet_sous_categ
+      weight: 9
       format_type: tab
       format_settings:
         id: ''
@@ -144,7 +141,7 @@ third_party_settings:
       children:
         - field_contact_technique
       parent_name: group_informations_administrativ
-      weight: 13
+      weight: 14
       format_type: tab
       format_settings:
         id: ''
@@ -156,7 +153,7 @@ third_party_settings:
       children:
         - field_contact_commercial
       parent_name: group_informations_administrativ
-      weight: 14
+      weight: 15
       format_type: tab
       format_settings:
         id: ''
@@ -168,8 +165,8 @@ third_party_settings:
       children:
         - group_et
         - group_per
-      parent_name: group_demande_de_devis
-      weight: 22
+      parent_name: group_onglet_sous_categ
+      weight: 10
       format_type: tab
       format_settings:
         id: ''
@@ -223,8 +220,8 @@ third_party_settings:
       children:
         - field_emballages
         - field_etiquettes
-      parent_name: group_demande_de_devis
-      weight: 23
+      parent_name: group_onglet_sous_categ
+      weight: 11
       format_type: tab
       format_settings:
         id: ''
@@ -249,8 +246,8 @@ third_party_settings:
         - group_formation
         - group_notices
         - group_transport
-      parent_name: group_demande_de_devis
-      weight: 24
+      parent_name: group_onglet_sous_categ
+      weight: 12
       format_type: tab
       format_settings:
         id: ''
@@ -386,8 +383,8 @@ third_party_settings:
       children:
         - field_materiel_impose_par_le_cli
         - group_impression
-      parent_name: group_demande_de_devis
-      weight: 25
+      parent_name: group_onglet_sous_categ
+      weight: 13
       format_type: tab
       format_settings:
         id: ''
@@ -411,8 +408,8 @@ third_party_settings:
     group_remarques_contraintes_even:
       children:
         - field_remarques_contraintes
-      parent_name: group_demande_de_devis
-      weight: 26
+      parent_name: group_onglet_sous_categ
+      weight: 14
       format_type: tab
       format_settings:
         id: ''
@@ -423,7 +420,7 @@ third_party_settings:
     group_emballage:
       children:
         - field_description_emballage
-      parent_name: ''
+      parent_name: group_onglets_dso
       weight: 4
       format_type: tab
       format_settings:
@@ -435,7 +432,7 @@ third_party_settings:
     group_etiquette:
       children:
         - field_desc
-      parent_name: ''
+      parent_name: group_onglets_dso
       weight: 5
       format_type: tab
       format_settings:
@@ -446,7 +443,7 @@ third_party_settings:
       label: Étiquette
     group_combinaison:
       children: {  }
-      parent_name: ''
+      parent_name: group_onglets_dso
       weight: 6
       format_type: tab
       format_settings:
@@ -455,6 +452,39 @@ third_party_settings:
         formatter: closed
         description: ''
       label: Combinaison
+    group_onglet_sous_categ:
+      children:
+        - group_informations_ds
+        - group_informations_administrativ
+        - group_informations_commerciales
+        - group_emballages_etiquettes
+        - group_environnement_machine
+        - group_materiels_imposes_impresio
+        - group_remarques_contraintes_even
+      parent_name: group_demande_de_devis
+      weight: 7
+      format_type: tabs
+      format_settings:
+        label: 'Onglet sous-catégorie'
+        direction: vertical
+        id: ''
+        classes: ''
+      label: 'Onglet sous-catégorie'
+    group_onglets_dso:
+      children:
+        - group_demande_de_devis
+        - group_emballage
+        - group_etiquette
+        - group_combinaison
+      parent_name: ''
+      weight: 2
+      format_type: tabs
+      format_settings:
+        label: 'Onglets DSO'
+        direction: vertical
+        id: form_onglet
+        classes: ''
+      label: 'Onglets DSO'
 id: node.dso.default
 targetEntityType: node
 bundle: dso
@@ -509,7 +539,7 @@ content:
     type: string
     region: content
   field_categorie:
-    weight: 8
+    weight: 9
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -833,7 +863,7 @@ content:
     type: string
     region: content
   field_num_sieret:
-    weight: 12
+    weight: 13
     label: above
     settings:
       thousand_separator: ''
@@ -861,6 +891,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_pays_custom:
+    weight: 8
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_plan_de_prevention:
     weight: 17
@@ -911,7 +949,7 @@ content:
     third_party_settings: {  }
     region: content
   field_secteur:
-    weight: 9
+    weight: 10
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -933,7 +971,7 @@ content:
     type: string
     region: content
   field_sous_secteur:
-    weight: 10
+    weight: 11
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -980,14 +1018,24 @@ content:
     type: list_default
     region: content
   field_type_client:
-    weight: 11
+    weight: 12
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
-  links:
+  field_validation_dso:
     weight: 1
+    label: inline
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  links:
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
