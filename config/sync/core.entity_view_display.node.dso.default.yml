@@ -462,9 +462,10 @@ third_party_settings:
       weight: 7
       format_type: tabs
       format_settings:
+        label: 'Onglet sous-catégorie'
+        direction: horizontal
         id: ''
         classes: ''
-        direction: vertical
       label: 'Onglet sous-catégorie'
     group_onglets_dso:
       children:
@@ -476,9 +477,10 @@ third_party_settings:
       weight: 2
       format_type: tabs
       format_settings:
+        label: 'Onglets DSO'
+        direction: vertical
         id: ''
         classes: ''
-        direction: horizontal
       label: 'Onglets DSO'
 id: node.dso.default
 targetEntityType: node
