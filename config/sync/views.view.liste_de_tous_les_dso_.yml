@@ -91,9 +91,9 @@ display:
           columns:
             field_validation_dso: field_validation_dso
             title: title
-            uid: uid
             field_date_creation_fiche: field_date_creation_fiche
             link_to_revision: link_to_revision
+            uid: uid
           info:
             field_validation_dso:
               sortable: true
@@ -109,13 +109,6 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            uid:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
             field_date_creation_fiche:
               sortable: true
               default_sort_order: asc
@@ -125,6 +118,13 @@ display:
               responsive: ''
             link_to_revision:
               align: views-align-center
+              separator: ''
+              empty_column: false
+              responsive: ''
+            uid:
+              sortable: true
+              default_sort_order: asc
+              align: ''
               separator: ''
               empty_column: false
               responsive: ''
@@ -301,7 +301,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -310,8 +310,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: author
-          settings: {  }
+          type: entity_reference_label
+          settings:
+            link: true
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -448,14 +449,14 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: '='
+          operator: '!='
           value: '1'
           group: 1
           exposed: true
           expose:
             operator_id: ''
-            label: 'DSO clos'
-            description: ''
+            label: 'Afficher DSO en cours'
+            description: 'Oui : affiche les DSO en cours. || Non : affiche les DSO clos par l''ADV.'
             use_operator: false
             operator: status_op
             identifier: status
@@ -463,10 +464,10 @@ display:
             remember: true
             multiple: false
             remember_roles:
+              authenticated: authenticated
+              administrateur_des_ventes: administrateur_des_ventes
+              administrator: administrator
               anonymous: '0'
-              authenticated: '0'
-              administrateur_des_ventes: '0'
-              administrator: '0'
           is_grouped: false
           group_info:
             label: ''
