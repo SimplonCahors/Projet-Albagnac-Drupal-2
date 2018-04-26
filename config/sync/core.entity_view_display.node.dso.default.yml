@@ -463,7 +463,7 @@ third_party_settings:
       format_type: tabs
       format_settings:
         label: 'Onglet sous-catégorie'
-        direction: horizontal
+        direction: vertical
         id: ''
         classes: ''
       label: 'Onglet sous-catégorie'
@@ -479,7 +479,7 @@ third_party_settings:
       format_settings:
         label: 'Onglets DSO'
         direction: vertical
-        id: ''
+        id: form_onglet
         classes: ''
       label: 'Onglets DSO'
 id: node.dso.default

@@ -252,7 +252,7 @@ third_party_settings:
       format_type: tabs
       format_settings:
         label: 'Onglets Sous Categorie'
-        direction: horizontal
+        direction: vertical
         id: ''
         classes: ''
       label: 'Onglets Sous Categorie'

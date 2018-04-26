@@ -44,7 +44,7 @@ a:hover,
 a:visited,
 a:link,
 a:active {
-    color: rgb(0, 0, 0);
+    color: rgb(77, 70, 70);
     margin-left: 35%;
     text-align: center;
     text-decoration: none !important;
