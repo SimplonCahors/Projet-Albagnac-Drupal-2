@@ -70,6 +70,7 @@ dependencies:
     - field.field.node.dso.field_test
     - field.field.node.dso.field_transport_a_la_charge_de
     - field.field.node.dso.field_type_client
+    - field.field.node.dso.field_validation_dso
     - node.type.dso
   module:
     - datetime
@@ -272,7 +273,7 @@ third_party_settings:
         - group_etiquette
         - group_combinaison
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: tabs
       format_settings:
         label: 'Onglets DSO'
@@ -1064,6 +1065,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_validation_dso:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   title:
     type: string_textfield

@@ -1,0 +1,23 @@
+uuid: a8035e43-6d2c-4ff7-aedd-70ade5f91255
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_validation_dso
+    - node.type.dso
+id: node.dso.field_validation_dso
+field_name: field_validation_dso
+entity_type: node
+bundle: dso
+label: ' DSO validé'
+description: 'Cocher cette case si le DSO est prêt à être validé'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Validé
+  off_label: 'Non validé'
+field_type: boolean

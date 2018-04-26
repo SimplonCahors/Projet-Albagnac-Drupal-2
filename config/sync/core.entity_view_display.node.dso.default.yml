@@ -70,6 +70,7 @@ dependencies:
     - field.field.node.dso.field_test
     - field.field.node.dso.field_transport_a_la_charge_de
     - field.field.node.dso.field_type_client
+    - field.field.node.dso.field_validation_dso
     - node.type.dso
   module:
     - datetime
@@ -996,8 +997,18 @@ content:
     third_party_settings: {  }
     type: list_default
     region: content
-  links:
+  field_validation_dso:
     weight: 1
+    label: inline
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  links:
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
