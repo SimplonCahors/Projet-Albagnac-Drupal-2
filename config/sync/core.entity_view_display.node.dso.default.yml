@@ -84,14 +84,8 @@ third_party_settings:
   field_group:
     group_demande_de_devis:
       children:
-        - group_informations_ds
-        - group_informations_administrativ
-        - group_informations_commerciales
-        - group_emballages_etiquettes
-        - group_environnement_machine
-        - group_materiels_imposes_impresio
-        - group_remarques_contraintes_even
-      parent_name: ''
+        - group_onglet_sous_categ
+      parent_name: group_onglets_dso
       weight: 3
       format_type: tab
       format_settings:
@@ -108,8 +102,8 @@ third_party_settings:
         - field_date_creation_fiche
         - field_date_reponse_souhaite
         - field_date_livraison_souhaite
-      parent_name: group_demande_de_devis
-      weight: 20
+      parent_name: group_onglet_sous_categ
+      weight: 8
       format_type: tab
       format_settings:
         id: ''
@@ -131,8 +125,8 @@ third_party_settings:
         - field_num_sieret
         - group_contact_technique
         - group_contact_commercial
-      parent_name: group_demande_de_devis
-      weight: 21
+      parent_name: group_onglet_sous_categ
+      weight: 9
       format_type: tab
       format_settings:
         id: ''
@@ -168,8 +162,8 @@ third_party_settings:
       children:
         - group_et
         - group_per
-      parent_name: group_demande_de_devis
-      weight: 22
+      parent_name: group_onglet_sous_categ
+      weight: 10
       format_type: tab
       format_settings:
         id: ''
@@ -223,8 +217,8 @@ third_party_settings:
       children:
         - field_emballages
         - field_etiquettes
-      parent_name: group_demande_de_devis
-      weight: 23
+      parent_name: group_onglet_sous_categ
+      weight: 11
       format_type: tab
       format_settings:
         id: ''
@@ -249,8 +243,8 @@ third_party_settings:
         - group_formation
         - group_notices
         - group_transport
-      parent_name: group_demande_de_devis
-      weight: 24
+      parent_name: group_onglet_sous_categ
+      weight: 12
       format_type: tab
       format_settings:
         id: ''
@@ -386,8 +380,8 @@ third_party_settings:
       children:
         - field_materiel_impose_par_le_cli
         - group_impression
-      parent_name: group_demande_de_devis
-      weight: 25
+      parent_name: group_onglet_sous_categ
+      weight: 13
       format_type: tab
       format_settings:
         id: ''
@@ -411,8 +405,8 @@ third_party_settings:
     group_remarques_contraintes_even:
       children:
         - field_remarques_contraintes
-      parent_name: group_demande_de_devis
-      weight: 26
+      parent_name: group_onglet_sous_categ
+      weight: 14
       format_type: tab
       format_settings:
         id: ''
@@ -423,7 +417,7 @@ third_party_settings:
     group_emballage:
       children:
         - field_description_emballage
-      parent_name: ''
+      parent_name: group_onglets_dso
       weight: 4
       format_type: tab
       format_settings:
@@ -435,7 +429,7 @@ third_party_settings:
     group_etiquette:
       children:
         - field_desc
-      parent_name: ''
+      parent_name: group_onglets_dso
       weight: 5
       format_type: tab
       format_settings:
@@ -446,7 +440,7 @@ third_party_settings:
       label: Étiquette
     group_combinaison:
       children: {  }
-      parent_name: ''
+      parent_name: group_onglets_dso
       weight: 6
       format_type: tab
       format_settings:
@@ -455,6 +449,37 @@ third_party_settings:
         formatter: closed
         description: ''
       label: Combinaison
+    group_onglet_sous_categ:
+      children:
+        - group_informations_ds
+        - group_informations_administrativ
+        - group_informations_commerciales
+        - group_emballages_etiquettes
+        - group_environnement_machine
+        - group_materiels_imposes_impresio
+        - group_remarques_contraintes_even
+      parent_name: group_demande_de_devis
+      weight: 7
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: 'Onglet sous-catégorie'
+    group_onglets_dso:
+      children:
+        - group_demande_de_devis
+        - group_emballage
+        - group_etiquette
+        - group_combinaison
+      parent_name: ''
+      weight: 2
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: 'Onglets DSO'
 id: node.dso.default
 targetEntityType: node
 bundle: dso
