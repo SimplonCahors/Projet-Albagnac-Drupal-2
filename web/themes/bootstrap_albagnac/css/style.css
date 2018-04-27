@@ -40,7 +40,7 @@ html{
 /*  view dso : all labels + value */
 
 .field--item {
-    margi.n-bottom: 8px;
+    margin-bottom: 8px;
 }
 
 /*  view dso : title  */
@@ -80,6 +80,28 @@ html{
 
 }
 
+/* creer dso */
+.node-dso-form>.field-group-tabs-wrapper>div>ul.nav.nav-tabs {
+    padding-bottom: 0;
+    width: 100%;
+}
+
+.node-dso-form>.field-group-tabs-wrapper>div>ul.nav.nav-tabs>li {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 2px;
+}
+
+.node-dso-form>.field-group-tabs-wrapper>div>ul.nav.nav-tabs>li>a,
+.node-dso-form>.field-group-tabs-wrapper>div>ul.nav.nav-tabs>li>a:hover,
+.node-dso-form>.field-group-tabs-wrapper>div>ul.nav.nav-tabs>li.active>a {
+    border-bottom: 0 none;
+    border-color: #dddddd #dddddd rgba(0, 0, 0, 0) #dddddd;
+    border-radius: 4px 4px 0 0;
+    margin-bottom: 0;
+}
+
+/* voir dso */
 .content>.field-group-tabs-wrapper>div>ul.nav.nav-tabs {
     padding-bottom: 0;
     width: 100%;
@@ -100,7 +122,7 @@ html{
     margin-bottom: 0;
 }
 
-
+/* modifier dso */
 .node-dso-edit-form.node-form>.field-group-tabs-wrapper>div>ul.nav.nav-tabs {
     padding-bottom: 0;
     width: 100%;
@@ -120,3 +142,138 @@ html{
     border-radius: 4px 4px 0 0;
     margin-bottom: 0;
 }
+
+
+/* all pages theme */
+
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+.navbar-default{
+    background-color: rgb(212, 231, 198);
+    color: rgb(0, 0, 0);
+}
+
+.navbar-nav li>a{
+    color: rgb(0, 0, 0) !important;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background-color: rgb(171, 202, 148) !important;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: rgb(171, 202, 148) !important;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > .is-active {
+    background-color: rgb(171, 202, 148) !important;
+}
+
+/* .navbar-default .navbar-toggle {
+    border-color: #1e2f1a;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #1f2f1a;
+} */
+
+.navbar-default .navbar-brand {
+    display: none;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    background-color: rgb(212, 231, 198) !important;
+    color: #ffffff;
+}
+
+/* dropdown menu from navbar */
+.dropdown-menu{
+    background-color: rgb(212, 231, 198);
+    color: rgb(0, 0, 0); 
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-color: rgb(171, 202, 148) !important;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > .is-active {
+    background-color: rgb(171, 202, 148) !important;
+}
+
+a:hover,
+a:visited,
+a:link,
+a:active {
+    color: rgb(54, 51, 51);
+}
+
+/* buttons */
+.btn-info, .btn-primary, .btn-success, .btn-default{
+    background-color: rgb(179, 209, 157);
+    border-color: rgb(179, 209, 157);
+    color: rgb(0, 0, 0);
+}
+
+.btn-info:hover, .btn-primary:hover, .btn-success:hover , .btn-default:hover,.btn-default:focus{
+    background-color: rgb(203, 233, 180);
+    border-color: rgb(171, 202, 148);
+    color: rgb(0, 0, 0);
+}
+
+.btn-default.active:hover, .open > .dropdown-toggle.btn-default:hover, .btn-default:active:focus, .btn-default.active:focus, .open > .dropdown-toggle.btn-default:focus, .btn-default:active.focus, .btn-default.active.focus, .open > .dropdown-toggle.btn-default.focus {
+    background-color: rgb(203, 233, 180);
+    border-color: rgb(171, 202, 148);
+    color: rgb(0, 0, 0);
+}
+
+/* liste de tous les dso : "créé par" color was grey */
+caption{
+    color: rgb(0, 0, 0);
+}
+
+/* tables one row out of two bg color */
+.table-striped > tbody > tr:nth-of-type(2n+1) {
+    background-color: rgb(216, 241, 198);
+}
+
+/* user admin hide stuff */
+#views-exposed-form-user-admin-people-page-1>.form-inline{
+    display: none;
+}
+#edit-user-bulk-form--2{
+    display: none;
+}
+
+.view-user-admin-people.view-id-user_admin_people.view-display-id-page_1 div.view-content div.views-form form div#edit-actions.form-actions.form-group.js-form-wrapper.form-wrapper{
+    display: none;
+}
+
+.views-field-user-bulk-form{
+    display: none;
+}
+
+.region.region-header ul.list-inline.local-actions li{
+    height: 50px !important;
+}
+
+.region.region-header ul.list-inline.local-actions li a.btn.btn-xs.btn-success{
+    height: 100% !important;
+    padding: 5% 5% 5% 5%;
+    font-size: 20px;
+}
+/* END user admin hide stuff */
+
+/* dso admin hide stuff */
+
+/* need to correct this */
+.path-admin .views-exposed-form div.form--inline.form-inline.clearfix{
+    display: none;
+}
+
+/* if this is uncommented, all buttons bottom page will disappear, do not do it */
+/* #edit-actions.form-actions.form-group.js-form-wrapper.form-wrapper{
+    display: none;
+} */
+/* END dso admin hide stuff */

@@ -368,14 +368,14 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: '!='
+          operator: '='
           value: '1'
           group: 1
           exposed: true
           expose:
             operator_id: ''
             label: 'Afficher DSO en cours'
-            description: 'Oui : affiche les DSO en cours. || Non : affiche les DSO clos par l''ADV.'
+            description: 'Oui : affiche les DSO en cours. || Non : affiche les DSO clos par l''ADV. Les commerciaux ne peuvent pas consulter les DSO clos.'
             use_operator: false
             operator: status_op
             identifier: status
@@ -551,8 +551,13 @@ display:
       path: liste-dso
       menu:
         type: normal
-        title: 'Liste DSO'
+        title: 'Mes DSO'
         menu_name: main
+        weight: -48
+        description: ''
+        parent: ''
+        expanded: false
+        enabled: true
     cache_metadata:
       max-age: -1
       contexts:
