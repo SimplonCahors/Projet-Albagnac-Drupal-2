@@ -53,7 +53,6 @@ html{
 
 /* button to go on top of the page */
 #ok{
-    
     width : 50px;
     height : 50px;
     background-color : rgba(100, 100, 100, 0.6);
@@ -64,6 +63,7 @@ html{
     left : 92%;
     top : 80%;
     z-index:9999;
+    display: none;
 }
 #ok:hover{
     background-color : rgba(100, 100, 100, 0.9);
