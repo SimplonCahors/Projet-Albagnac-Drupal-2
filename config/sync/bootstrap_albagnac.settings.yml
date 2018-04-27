@@ -3,7 +3,7 @@ schemas:
   bootstrap_albagnac: 8000
 favicon:
   mimetype: image/png
-  path: 'public://favicon_0.png'
+  path: themes/bootstrap_albagnac/images/favicon.png
   url: 'http://127.0.0.1/themes/bootstrap_albagnac/favicon.ico'
   use_default: false
 cdn_jsdelivr_theme: flatly
@@ -13,7 +13,7 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  path: 'public://logo.png'
+  path: themes/bootstrap_albagnac/images/logo.png
   url: ''
   use_default: false
 table: ''
